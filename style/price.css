@@ -1,0 +1,377 @@
+@font-face {
+    font-family: PTSans NarrowBold;
+    src: url(../fonts/web/ptsansnarrowbold.woff);
+}
+
+body {
+    font-family: "PTSans NarrowBold", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    min-width: 960px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+/*Стили для header*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.main-header {
+    margin-bottom: 55px;
+    background: black;
+   
+}
+
+.container {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.main-navigation {
+    width: 780px;
+    float: left;
+    min-height: 70px;
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.main-navigation a {
+    display: block;
+    padding: 26px 20px;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: PTSans NarrowBold;
+    text-decoration: none;
+}
+
+ .logo a {
+    padding: 23px 20px;
+}
+
+.main-navigation a:hover {
+    background: #242424;
+}
+
+.logo a:hover {
+    background: black;
+}
+
+
+.main-navigation li {
+    display: inline-block;
+    vertical-align: top;
+    
+    
+}
+
+
+.user-block {
+    max-width: 140px;
+    float: right;
+    min-height: 70px;
+}
+
+.login {
+    position: relative;
+    display: inline-block;
+    padding: 26px 20px;
+    padding-left: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.login:hover {
+    background: #242424;
+}
+
+.login::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    width: 18px;
+    height: 18px;
+    background: url("../img/index/icon-login.hover.png") no-repeat;
+    opacity: 0.3;
+}
+
+.login:hover::before {
+    opacity: 1;
+}
+
+/*Стили для main*/
+
+.product-price{
+    font-family: "PTSans NarrowBold", sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.nav-store a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-family: "PTSans NarrowBold", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.nav-store-main {
+    position: relative;
+    padding-right: 25px;
+}
+
+.nav-store-main::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background: black;
+    margin-right: 3px;
+    transform: rotate(45deg);
+}
+
+.nav-store-price {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.price-header h1 {
+    position: relative;
+    font-family: "PTSans NarrowBold", sans-serif;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 700;
+    padding: 0 180px;
+}
+
+.price-header h1::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 160px;
+    height: 2px;
+    background: url("../img/line-price.png") no-repeat center;
+}
+
+.price-header h1::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 160px;
+    height: 2px;
+    background: url("../img/line-price.png") no-repeat center;
+}
+
+
+.content-container {
+    margin-bottom: 80px;
+}
+
+.price-content-left {
+    float: left;
+    width: 390px;
+}
+
+
+
+.price-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   
+}
+
+.price-list li {
+    position: relative;
+    display:block;
+    margin-bottom: 20px;
+    padding-left: 21px;
+    font-family: "PTSans NarrowBold", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.price-list li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: black;
+    transform: rotate(45deg);
+}
+
+
+.price-content-left b {
+    font-family: "PTSans NarrowBold", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.price-content-right {
+    float: right;
+    width: 460px;
+}
+
+
+
+table{
+    border-collapse: collapse;
+    margin-left: 0;
+   margin-bottom: 110px;
+}
+
+td {
+    border: 2px solid black;
+    padding: 11px 16px;
+    padding-right: 110px;
+}
+
+.text-align {
+    padding: 11px 94px;
+    text-align: center;
+}
+
+.price-content-name {
+    display: block;
+    margin-top: 50px;
+    font-family: "PTSans NarrowBold", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+
+
+/*стили для footer*/
+.main-footer {
+    padding: 60px 40px;
+    color: white;
+    background: #252525 url("../img/index/patern-footer.jpg");
+}
+
+.footer-contacts {
+    float: left;
+    width: 320px;
+    margin-right: 60px;
+}
+
+.footer-social {
+    float: left;
+    width: 180px;
+    text-align: center;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    margin: 0 2px;
+    font-size: 0;
+    text-decoration: none;
+    transition: 
+        background-position 0.5s,
+        background-color 1s;
+}
+
+.btn {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 33px;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    vertical-align: top;
+    text-align: center;
+    font-family: PTSans NarrowBold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #663d15;
+}
+
+
+.social-btn-vk {
+    background: black url("../img/v.png") no-repeat center;
+}
+
+.social-btn-vk:hover {
+    background: white url("../img/v-hover.png") no-repeat center;
+}
+
+.social-btn-fb {
+    background: black url("../img/f.png") no-repeat center;    
+}
+
+.social-btn-fb:hover {
+    background: white url("../img/f-hover.png") no-repeat center;
+}
+
+.social-btn-inst {
+    background: black url("../img/i.png") no-repeat center;
+}
+
+.social-btn-inst:hover {
+    background: white url("../img/i-hover.png") no-repeat center;
+} 
+
+.footer-social p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.footer-copyright {
+    float: right;
+    max-width: 180px;
+}
+
+.footer-copyright p {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-copyright .btn {
+    margin-right: 0;
+}
