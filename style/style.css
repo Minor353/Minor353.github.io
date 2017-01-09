@@ -246,6 +246,7 @@ body {
 
 .galery-content {
     height: 164px;
+    width: 285px;
     margin: 0;
     border: 7px solid white;
     background-color: grey;
@@ -255,7 +256,8 @@ body {
     position: absolute;
     bottom: 0;
     width: 140px;
-    margin: 0
+    margin: 0;
+    margin-right: 20px;
 }
 
 .galery-prev {
