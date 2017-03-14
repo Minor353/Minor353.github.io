@@ -1,4 +1,20 @@
 @charset "UTF-8";
+/*Шрифты*/
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/opensans.woff);
+  src: url(../fonts/opensans.woff2); }
+
+@font-face {
+  font-family: OpenSansBold;
+  src: url(../fonts/opensansbold.woff);
+  src: url(../fonts/opensansbold.woff2); }
+
+@font-face {
+  font-family: OpenSansLight;
+  src: url(../fonts/opensanslight.woff);
+  src: url(../fonts/opensanslight.woff2); }
+
 /*Вспомогательное*/
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
@@ -357,21 +373,6 @@ th {
 
 /*****************************/
 /*Общие блоки*/
-@font-face {
-  font-family: OpenSans;
-  src: url(../fonts/opensans.woff);
-  src: url(../fonts/opensans.woff2); }
-
-@font-face {
-  font-family: OpenSansBold;
-  src: url(../fonts/opensansbold.woff);
-  src: url(../fonts/opensansbold.woff2); }
-
-@font-face {
-  font-family: OpenSansLight;
-  src: url(../fonts/opensanslight.woff);
-  src: url(../fonts/opensanslight.woff2); }
-
 /*************Mobile ver.****************/
 .clearfix::after {
   content: "";
@@ -383,7 +384,7 @@ th {
   margin: 0 auto; }
 
 .page-header {
-  font-family: OpenSansBold;
+  font-family: OpenSansBold, Verdana, sans-serif;
   text-transform: uppercase;
   background: #283645; }
 
@@ -420,10 +421,47 @@ th {
 
 /****************************************/
 /**************Mobile ver.*******************/
-.page-footer {
-  padding: 0 70px; }
+.page-footer__link-logo {
+  text-align: center;
+  margin-bottom: 35px; }
+
+.page-footer__copyright {
+  font-family: OpenSans, Verdana, sans-serif;
+  line-height: 1.2em;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 35px; }
+
+.page-footer__copyright-link {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  width: 35px;
+  height: 35px;
+  background: url("../../img/htmlacademy.svg") no-repeat center; }
 
 /********************************************/
+.socials {
+  text-align: center;
+  margin-bottom: 35px; }
+
+.socials__link {
+  display: inline-block;
+  font-size: 0;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #e9ebec;
+  border-radius: 50%; }
+
+.socials__link--tw {
+  background: url("../../img/icon-twitter.svg") no-repeat center; }
+
+.socials__link--fb {
+  background: url("../../img/icon-facebook.svg") no-repeat center; }
+
+.socials__link--yt {
+  background: url("../../img/icon-youtube.svg") no-repeat center; }
+
 /***************************************************/
 /*Блоки index*/
 /*************Mobile ver.********************/
@@ -444,12 +482,12 @@ th {
 
 .download-page__link--btn {
   display: block;
-  font-family: OpenSansBold;
+  font-family: OpenSansBold, Verdana, sans-serif;
   line-height: 1em;
   font-size: 18px;
   color: #ffffff;
   text-align: center;
-  border: 3px solid white;
+  border: 3px solid #ffffff;
   border-radius: 25px;
   width: 275px;
   padding: 15px 0;
@@ -484,7 +522,7 @@ th {
   width: 50px; }
 
 .download-page__description {
-  font-family: OpenSansLight;
+  font-family: OpenSansLight, Verdana, sans-serif;
   line-height: 1.7em;
   font-size: 14px;
   font-weight: lighter;
@@ -495,7 +533,7 @@ th {
 /********************************************/
 /**************Mobile ver.*******************/
 .features__titles {
-  font-family: OpenSansLight;
+  font-family: OpenSansLight, Verdana, sans-serif;
   line-height: 1.2em;
   font-size: 24px;
   text-align: center;
@@ -526,7 +564,7 @@ th {
   border-right: 320px solid #f2f2f2; }
 
 .features__item {
-  font-family: OpenSansLight;
+  font-family: OpenSansLight, Verdana, sans-serif;
   line-height: 1.7em;
   font-size: 14px;
   text-align: center;
@@ -534,7 +572,7 @@ th {
   margin-bottom: 30px; }
 
 .features__item-caption {
-  font-family: OpenSansBold;
+  font-family: OpenSansBold, Verdana, sans-serif;
   line-height: 0.5em;
   font-size: 18px; }
 
@@ -563,8 +601,8 @@ th {
 #reviews-input-1:checked ~ .slider__toggles .slider__toggle[for="reviews-input-1"],
 #reviews-input-2:checked ~ .slider__toggles .slider__toggle[for="reviews-input-2"],
 #reviews-input-3:checked ~ .slider__toggles .slider__toggle[for="reviews-input-3"] {
-  background: white;
-  border: 3px solid black; }
+  background: #ffffff;
+  border: 3px solid #000000; }
 
 #reviews-input-1:checked ~ .reviews__items .slider__item {
   transform: translate(0); }
@@ -582,7 +620,7 @@ th {
 .reviews__items {
   margin: 0;
   padding: 0;
-  font-family: OpenSans;
+  font-family: OpenSans, Verdana, sans-serif;
   width: 300%;
   padding-top: 40px;
   padding-bottom: 30px; }
@@ -626,8 +664,8 @@ th {
 #price-input-1:checked ~ .slider__toggles .slider__toggle[for="price-input-1"],
 #price-input-2:checked ~ .slider__toggles .slider__toggle[for="price-input-2"],
 #price-input-3:checked ~ .slider__toggles .slider__toggle[for="price-input-3"] {
-  background: white;
-  border: 3px solid black; }
+  background: #ffffff;
+  border: 3px solid #000000; }
 
 #price-input-1:checked ~ .price__items .price__item {
   transform: translate(20px); }
@@ -648,6 +686,9 @@ th {
   background: #f2f2f2;
   padding-top: 60px;
   padding-bottom: 45px;
+  /*overflow: hidden;*/ }
+
+.price__wrapper {
   overflow: hidden; }
 
 .price__decoration {
@@ -672,23 +713,23 @@ th {
 
 .price__title {
   background: #283645;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 15px 0;
-  border-left: 2px solid white;
-  border-right: 2px solid white; }
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #ffffff; }
 
 .price__title--hit {
   position: relative; }
 
 .price__item-title {
-  font-family: OpenSansBold;
+  font-family: OpenSansBold, Verdana, sans-serif;
   line-height: 1.6em;
   font-size: 18px;
   margin-bottom: 7px; }
 
 .price__value {
-  font-family: OpenSansLight;
+  font-family: OpenSansLight, Verdana, sans-serif;
   line-height: 1.2em;
   font-size: 24px; }
 
@@ -701,9 +742,9 @@ th {
   top: 0; }
 
 .price__access {
-  background: white;
+  background: #ffffff;
   color: #283645;
-  font-family: OpenSans;
+  font-family: OpenSans, Verdana, sans-serif;
   line-height: 2.1em;
   font-size: 14px;
   padding: 15px 20px;
@@ -762,10 +803,13 @@ th {
 /***************************************************/
 /*Блоки form*/
 /**************Mobile ver.*******************/
+.contest {
+  margin-bottom: 50px; }
+
 .contest__title {
   text-align: center;
   color: #c6cace;
-  font-family: OpenSansLight;
+  font-family: OpenSansLight, Verdana, sans-serif;
   line-height: 1.2em;
   font-size: 24px;
   background: url(../../img/bg-back-mobile@1x.jpg) no-repeat;
@@ -778,7 +822,7 @@ th {
 .contest__description {
   text-align: center;
   color: #535e6a;
-  font-family: OpenSans;
+  font-family: OpenSans, Verdana, sans-serif;
   line-height: 2.1em;
   font-size: 14px;
   padding-top: 42px;
@@ -793,7 +837,7 @@ th {
 
 .contest__form-label {
   color: #d22856;
-  font-family: OpenSans;
+  font-family: OpenSans, Verdana, sans-serif;
   line-height: 2.1em;
   font-size: 14px; }
 
@@ -801,7 +845,7 @@ th {
   display: block;
   width: 255px;
   text-align: left;
-  font-family: OpenSans;
+  font-family: OpenSans, Verdana, sans-serif;
   line-height: 1.6em;
   font-size: 18px;
   border: 2px solid #e5e5e5;
@@ -817,14 +861,14 @@ th {
 .contest__form-legend {
   text-align: center;
   color: #d22856;
-  font-family: OpenSans;
+  font-family: OpenSans, Verdana, sans-serif;
   line-height: 1.2em;
   font-size: 14px;
   margin-bottom: 30px; }
 
 .contest__label-chekbox {
   display: block;
-  font-family: OpenSans;
+  font-family: OpenSans, Verdana, sans-serif;
   line-height: 1.6em;
   font-size: 18px;
   margin-bottom: 40px; }
@@ -834,13 +878,13 @@ th {
 
 .contest__label-radio {
   display: block;
-  font-family: OpenSans;
+  font-family: OpenSans, Verdana, sans-serif;
   line-height: 1.6em;
   font-size: 18px;
   margin-bottom: 40px; }
 
 .contest__btn {
-  font-family: OpenSansBold;
+  font-family: OpenSansBold, Verdana, sans-serif;
   line-height: 1.6em;
   font-size: 18px;
   text-transform: uppercase;
@@ -853,11 +897,157 @@ th {
 
 .contest__reminder {
   text-align: center;
-  font-family: OpenSans;
+  font-family: OpenSans, Verdana, sans-serif;
   line-height: 2.1em;
   font-size: 14px; }
 
 /********************************************/
 /***************************************************/
 /*Блоки photo*/
+/****************************Mobile ver.*********************************/
+.user-gallery__title {
+  text-align: center;
+  color: #c6cace;
+  font-family: OpenSansLight;
+  line-height: 1.2em;
+  font-size: 24px;
+  background: url(../../img/bg-back-mobile@1x.jpg) no-repeat;
+  background-position: -195px -75px;
+  padding-top: 25px;
+  padding-bottom: 75px;
+  padding-left: 45px;
+  padding-right: 45px; }
+
+.user-gallery__text-preview {
+  text-align: center;
+  color: #535e6a;
+  font-family: OpenSans;
+  line-height: 2.1em;
+  font-size: 14px;
+  padding-top: 42px;
+  padding-bottom: 45px;
+  padding-left: 35px;
+  padding-right: 35px; }
+
+.user-gallery__user-post--position {
+  position: relative; }
+
+/**************Стили на время, потом удалю****************************/
+.user-gallery__user-foto--top {
+  width: 280px;
+  height: 180px; }
+
+/******************************************/
+.user-gallery__user-top {
+  font-family: OpenSansBold;
+  line-height: 2em;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #d22856;
+  padding: 5px 18px;
+  position: absolute;
+  right: 20px; }
+
+.user-gallery__wrapper {
+  padding: 0 20px;
+  font-family: OpenSans;
+  line-height: 1.7em;
+  font-size: 14px; }
+
+.user-gallery__user-post {
+  background: #f2f2f2;
+  margin-bottom: 20px; }
+
+.user-gallery__items--inine {
+  display: inline-block; }
+
+.user-gallery__user-name {
+  font-family: OpenSansBold, Verdana, sans-serif; }
+
+.user-gallery__time-writing {
+  font-family: OpenSansLight, Verdana, sans-serif;
+  line-height: 2em;
+  font-size: 12px; }
+
+.user-gallery__items {
+  padding-left: 17px;
+  padding-right: 20px;
+  padding-bottom: 25px; }
+
+.user-gallery__likes {
+  margin-top: 20px; }
+
+.user-gallery__likes-timer {
+  font-family: OpenSans, Verdana, sans-serif;
+  line-height: 1.7em;
+  font-size: 12px;
+  color: #db5e80; }
+
+.user-gallery__text-end {
+  text-align: center;
+  font-family: OpenSans, Verdana, sans-serif;
+  line-height: 2.1em;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 40px; }
+
+/************************************************************************/
+/****************Mibile ver.***********************/
+.photo-editor {
+  background: #f2f2f2;
+  margin-bottom: 40px; }
+
+.photo-editor__picture {
+  padding: 0 20px;
+  padding-top: 20px; }
+
+.photo-editor__wrapper {
+  border-bottom: 1px solid #dddfe0; }
+
+.photo-editor__items {
+  padding: 0 50px; }
+
+.photo-editor__item {
+  display: inline-block; }
+
+.photo-editor__item--crop {
+  width: 50px;
+  height: 50px;
+  background: url("../../img/icon-editor-crop.svg") no-repeat center;
+  margin: 35px 0; }
+
+.photo-editor__item--fill {
+  width: 50px;
+  height: 50px;
+  background: url("../../img/icon-editor-fill.svg") no-repeat center;
+  margin: 35px 0;
+  margin-left: 30px; }
+
+.photo-editor__item--contrast {
+  width: 50px;
+  height: 50px;
+  background: url("../../img/icon-editor-contrast.svg") no-repeat center;
+  margin: 35px 0;
+  margin-left: 30px; }
+
+.photo-editor__buttons {
+  padding: 40px 0; }
+
+.photo-editor__button {
+  display: block;
+  width: 275px;
+  font-family: OpenSansBold, Verdana, sans-serif;
+  line-height: 1em;
+  font-size: 18px;
+  color: #d22856;
+  padding: 16px 20px;
+  border: 3px solid #d22856;
+  border-radius: 25px;
+  margin: 0 auto; }
+
+.photo-editor__button-confirm {
+  margin-bottom: 12px; }
+
+/***************************************************/
 /***************************************************/
