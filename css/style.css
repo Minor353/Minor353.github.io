@@ -420,6 +420,16 @@ th {
   display: block; }
 
 /****************************************/
+/*******************Tablet ver.*******************************/
+@media (min-width: 700px) {
+  .container {
+    width: 700px;
+    margin: 0 auto; }
+  .main-nav__panel {
+    padding: 40px;
+    /*padding-top: 25px;*/ } }
+
+/*************************************************************/
 /**************Mobile ver.*******************/
 .page-footer__link-logo {
   text-align: center;
@@ -440,7 +450,28 @@ th {
   height: 35px;
   background: url("../../img/htmlacademy.svg") no-repeat center; }
 
+.page-footer-index {
+  display: none; }
+
 /********************************************/
+/************Tablet ver.********************/
+@media (min-width: 700px) {
+  .page-footer-index {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-align: center;
+        align-items: center; }
+  .page-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-align: center;
+        align-items: center; } }
+
+/*******************************************/
 .socials {
   text-align: center;
   margin-bottom: 35px; }
@@ -466,7 +497,8 @@ th {
 /*Блоки index*/
 /*************Mobile ver.********************/
 .download-page {
-  background: #1d2631; }
+  background: #1d2631;
+  position: relative; }
 
 .download-page__background-image {
   position: relative;
@@ -479,6 +511,9 @@ th {
 
 .download-page__link {
   text-decoration: none; }
+
+.download-page__title {
+  display: none; }
 
 .download-page__link--btn {
   display: block;
@@ -496,7 +531,8 @@ th {
   margin-bottom: 30px; }
 
 .download-page__link-holder {
-  padding: 0 50px; }
+  width: 220px;
+  margin: 0 auto; }
 
 .download-page__link--apple {
   display: inline-block;
@@ -531,6 +567,32 @@ th {
   text-align: center; }
 
 /********************************************/
+/*******************tablet ver.**************************/
+@media (min-width: 700px) {
+  .download-page__background-image {
+    height: 620px;
+    background-size: cover; }
+  .download-page__image {
+    height: 545px;
+    left: 185px; }
+  .download-page__title {
+    display: block;
+    width: 195px;
+    margin: 0 auto;
+    font-family: OpenSansLight, Verdana, sans-serif;
+    line-height: 1.2em;
+    font-size: 40px;
+    color: #c3c5c8;
+    text-align: center; }
+  .download-page__holder {
+    width: 280px;
+    position: absolute;
+    top: 90px;
+    left: 40px; }
+  .download-page__description {
+    padding: 35px 0; } }
+
+/********************************************************/
 /**************Mobile ver.*******************/
 .features__titles {
   font-family: OpenSansLight, Verdana, sans-serif;
@@ -550,7 +612,6 @@ th {
 .features__items {
   background: #f2f2f2;
   padding-top: 50px;
-  padding-bottom: 285px;
   position: relative; }
 
 .features__decoration {
@@ -577,11 +638,66 @@ th {
   font-size: 18px; }
 
 .features__image {
-  position: absolute;
-  bottom: -5px;
-  left: 80px; }
+  width: 160px;
+  margin: 0 auto; }
 
 /********************************************/
+/********************Tablet ver.*********************/
+@media (min-width: 700px) {
+  .features__titles {
+    font-size: 40px; }
+  .features__title {
+    margin: 0; }
+  .features__title--bottom {
+    width: 340px;
+    margin: 0 auto;
+    margin-bottom: 90px; }
+  .features__item-holder {
+    float: right;
+    width: 310px; }
+  .features__image {
+    float: left; }
+  .features__image img {
+    width: 275px;
+    background-size: cover; }
+  .features__item {
+    text-align: left; }
+  .features__decoration {
+    border-right: 700px solid #f2f2f2; } }
+
+/*****************************************************/
+/*******************Mobile ver.*******************************/
+.research {
+  display: none; }
+
+/*************************************************************/
+/**********************Tablet ver.****************************/
+@media (min-width: 700px) {
+  .research {
+    display: block; }
+  .research__timer {
+    display: inline-block;
+    width: 238px;
+    height: 276px;
+    background: url("../../img/24.png") no-repeat center; }
+  .research__content {
+    display: inline-block;
+    width: 300px; }
+  .research__title {
+    font-family: OpenSansBold, Verdana, sans-serif;
+    line-height: 1.2em;
+    font-size: 30px; }
+  .research__content-text {
+    font-family: OpenSans, Verdana, sans-serif;
+    line-height: 1.7em;
+    font-size: 14px; }
+  .research__link {
+    font-family: OpenSans, Verdana, sans-serif;
+    line-height: 1.7em;
+    font-size: 14px;
+    color: #d22856; } }
+
+/*************************************************************/
 /***************Mobile ver.**********************/
 /*Слайдер отзывов*/
 .slider__input {
@@ -645,6 +761,34 @@ th {
   padding-bottom: 65px; }
 
 /************************************************/
+/**************Tablet ver.**********************/
+@media (min-width: 700px) {
+  .reviews__item {
+    width: 620px;
+    padding: 0 40px; }
+  #reviews-input-1:checked ~ .reviews__items .slider__item {
+    transform: translate(0); }
+  #reviews-input-2:checked ~ .reviews__items .slider__item {
+    transform: translate(-700px); }
+  #reviews-input-3:checked ~ .reviews__items .slider__item {
+    transform: translate(-1400px); }
+  .reviews__item-title {
+    font-size: 20px;
+    line-height: 1.5em; }
+  .reviews__item-relation {
+    font-family: OpenSansLight, Verdana, sans-serif;
+    line-height: 2.1em;
+    font-size: 14px; }
+  .reviews__item-description {
+    line-height: 1.6em;
+    font-size: 18px; }
+  .reviews__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; } }
+
+/***********************************************/
 /**************Mobile ver.*******************/
 /*Слайдер цен*/
 .price__input {
@@ -759,6 +903,16 @@ th {
   background: url("../../img/table-no.png") no-repeat center; }
 
 /********************************************/
+/****************Tablet ver.*******************/
+@media (min-width: 700px) {
+  .price__item {
+    width: 155px; }
+  .price__access {
+    font-size: 0; }
+  .price__toggles {
+    /*display: none;*/ } }
+
+/**********************************************/
 /**************Mobile ver.*******************/
 .contacts__wraper {
   padding-top: 40px;
@@ -798,6 +952,16 @@ th {
   border: 160px solid transparent;
   border-top: 32px solid white;
   border-bottom: 0; }
+
+/********************************************/
+/***************Tablet ver.******************/
+@media (min-width: 700px) {
+  .contacts__title {
+    width: 370px;
+    margin: 0 auto;
+    font-size: 40px; }
+  .contacts__item {
+    display: inline-block; } }
 
 /********************************************/
 /***************************************************/
@@ -902,6 +1066,34 @@ th {
   font-size: 14px; }
 
 /********************************************/
+/*****************Tablet ver.****************/
+@media (min-width: 700px) {
+  .contest__title {
+    font-size: 50px;
+    padding-top: 70px;
+    padding-bottom: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-position: center; }
+  .contest__description {
+    line-height: 1.6em;
+    font-size: 18px;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px; }
+  .contest__form-label {
+    display: block; }
+  .contest__input {
+    display: inline-block;
+    width: 80%; }
+  .contest__user-date-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; } }
+
+/********************************************/
 /***************************************************/
 /*Блоки photo*/
 /****************************Mobile ver.*********************************/
@@ -932,12 +1124,6 @@ th {
 .user-gallery__user-post--position {
   position: relative; }
 
-/**************Стили на время, потом удалю****************************/
-.user-gallery__user-foto--top {
-  width: 280px;
-  height: 180px; }
-
-/******************************************/
 .user-gallery__user-top {
   font-family: OpenSansBold;
   line-height: 2em;
@@ -993,6 +1179,46 @@ th {
   padding-bottom: 40px; }
 
 /************************************************************************/
+/************************Tablet ver.******************************/
+@media (min-width: 700px) {
+  .user-gallery__title {
+    font-size: 50px;
+    padding-top: 80px;
+    padding-bottom: 140px;
+    padding-left: 175px;
+    padding-right: 170px;
+    background-position: center; }
+  .user-gallery__text-preview {
+    line-height: 1.6em;
+    font-size: 18px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-left: 130px;
+    padding-right: 130px; }
+  .user-gallery__wrapper {
+    padding: 0 40px; }
+  .user-gallery__user-post {
+    width: 300px; }
+  .user-gallery__user-foto {
+    width: 300px;
+    height: 300px; }
+  .user-gallery__user-post-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .user-gallery__user-post--position {
+    display: block;
+    width: 620px; }
+  .user-gallery__text-end {
+    line-height: 1.6em;
+    font-size: 18px;
+    padding-top: 65px;
+    padding-bottom: 65px; } }
+
+/**************************************************************/
 /****************Mibile ver.***********************/
 .photo-editor {
   background: #f2f2f2;
@@ -1001,9 +1227,6 @@ th {
 .photo-editor__picture {
   padding: 0 20px;
   padding-top: 20px; }
-
-.photo-editor__wrapper {
-  border-bottom: 1px solid #dddfe0; }
 
 .photo-editor__items {
   padding: 0 50px; }
@@ -1050,4 +1273,30 @@ th {
   margin-bottom: 12px; }
 
 /***************************************************/
+/**************Tablet ver.**********************/
+@media (min-width: 700px) {
+  .photo-editor {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 50px 40px; }
+  .photo-editor__picture {
+    padding: 0; }
+  .photo-editor__items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    padding: 0 40px;
+    margin-bottom: 75px; }
+  .photo-editor__item {
+    border-bottom: 2px solid #dddfe0;
+    margin: 0;
+    width: 275px;
+    background-position: left; }
+  .photo-editor__buttons {
+    padding: 0; }
+  .photo-editor__button-confirm {
+    margin-bottom: 25px; } }
+
+/***********************************************/
 /***************************************************/
