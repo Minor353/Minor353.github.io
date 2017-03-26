@@ -5,6 +5,8 @@
 
 @import "util/normalize.scss";
 
+@import "util/variable.scss";
+
 /*****************************/
 
 /*Общие блоки*/
@@ -13,6 +15,8 @@
 @import "components/page-footer.scss";
 
 @import "components/social.scss";
+
+@import "general/container.scss";
 
 /***************************************************/
 

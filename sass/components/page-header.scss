@@ -6,10 +6,7 @@
     clear: both;
 }
 
-.container {
-    width: 320px;
-    margin: 0 auto;
-}
+
 
 .page-header {
     font-family: OpenSansBold, Verdana, sans-serif;
@@ -18,16 +15,16 @@
 }
 
 .main-nav__panel {
+    display: flex;
     padding: 20px; 
-    border-bottom: 1px groove #000000;  
+    border-bottom: 1px groove $black;  
 }
 
 .main-nav__logo {
-    float: left;
+    margin-right: auto;
 }
 
 .main-nav__toggle {
-    float: right;
     background: url(../../img/icon-menu-cross.svg) no-repeat;
     width: 28px;
     height: 28px;
@@ -48,8 +45,8 @@
     text-decoration: none;
     line-height: 1.7em;
     font-size: 18px;
-    color: #ffffff;
-    border-bottom: 1px groove #000000;
+    color: $white;
+    border-bottom: 1px groove $black;
     padding: 15px 0;
     display: block;
 }
@@ -59,17 +56,57 @@
 
 /*******************Tablet ver.*******************************/
 
-@media (min-width: 700px) {
-    .container {   
-    width: 700px;
-    margin: 0 auto;
+@media (min-width: $tablet) {
+   .main-nav__panel {
+        padding: 40px;  
+    }    
 }
+
+/*************************************************************/
+
+/*******************Desktop ver.******************************/
+
+@media (min-width: $desk) {
+    body {
+        position: relative;
+    }
+    
+    .main-nav {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 120px;
+        background-color: rgba(40, 54, 69, 0.5);;
+    }
+    
+    .main-nav__wrapper {
+        margin-left: 160px;
+    }
     
     .main-nav__panel {
-        padding: 40px;
-        /*padding-top: 25px;*/
-        
-    }    
+        padding: 0;  
+        border: 0;
+        margin-left: 130px; /***Уберу костыль на этапи адаптации графики**/
+    }
+    
+    .main-nav__toggle {
+        display: none;
+    }
+    
+    .main-nav__item {
+      display: inline-block;
+    }
+    
+    .main-nav__link {
+        font-family: OpenSans, Verdana, sans-serif;
+        line-height: 1em;
+        border-bottom: 0px solid;
+        text-transform: none;
+        padding: 35px 0;
+        margin-left: 80px;
+    }
 }
 
 /*************************************************************/
