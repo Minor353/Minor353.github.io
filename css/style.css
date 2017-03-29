@@ -376,24 +376,23 @@ th {
 /*****************************/
 /*Общие блоки*/
 /*************Mobile ver.****************/
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both; }
-
 .page-header {
   font-family: OpenSansBold, Verdana, sans-serif;
   text-transform: uppercase;
   background: #283645; }
+  .page-header .container {
+    width: 100%; }
 
 .main-nav__panel {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   padding: 20px;
   border-bottom: 1px groove #000000; }
 
-.main-nav__logo {
-  margin-right: auto; }
+.main-nav__items {
+  width: 100%; }
 
 .main-nav__toggle {
   background: url(../../img/icon-menu-cross.svg) no-repeat;
@@ -414,56 +413,61 @@ th {
   line-height: 1.7em;
   font-size: 18px;
   color: #FFFFFF;
-  border-bottom: 1px groove #000000;
-  padding: 15px 0;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000000;
+  padding: 16px 0;
   display: block; }
 
 /****************************************/
 /*******************Tablet ver.*******************************/
 @media (min-width: 768px) {
   .main-nav__panel {
-    padding: 40px; } }
+    padding: 40px 65px; } }
 
 /*************************************************************/
 /*******************Desktop ver.******************************/
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   body {
     position: relative; }
-  .main-nav {
+  .page-header {
     position: absolute;
     z-index: 2;
+    background-color: rgba(40, 54, 69, 0.5);
+    width: 100%; }
+    .page-header .container {
+      width: 960px; }
+  .main-nav {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
         justify-content: space-between;
     -ms-flex-align: center;
         align-items: center;
-    padding-right: 120px;
-    background-color: rgba(40, 54, 69, 0.5); }
-  .main-nav__wrapper {
-    margin-left: 160px; }
+    margin: 0 auto;
+    padding: 0 20px; }
+  .main-nav__items {
+    width: 66%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
   .main-nav__panel {
     padding: 0;
-    border: 0;
-    margin-left: 130px;
-    /***Уберу костыль на этапи адаптации графики**/ }
+    border: 0; }
   .main-nav__toggle {
     display: none; }
-  .main-nav__item {
-    display: inline-block; }
   .main-nav__link {
     font-family: OpenSans, Verdana, sans-serif;
     line-height: 1em;
     border-bottom: 0px solid;
     text-transform: none;
-    padding: 35px 0;
-    margin-left: 80px; } }
+    padding: 44px 0; } }
 
 /*************************************************************/
 /**************Mobile ver.*******************/
 .page-footer__link-logo {
   text-align: center;
-  margin-bottom: 35px; }
+  margin-bottom: 34px; }
 
 .page-footer__copyright {
   font-family: OpenSans, Verdana, sans-serif;
@@ -498,10 +502,13 @@ th {
 /*******************************************/
 .socials {
   text-align: center;
-  margin-bottom: 35px; }
+  margin-bottom: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .socials__link {
-  display: inline-block;
   font-size: 0;
   width: 45px;
   height: 45px;
@@ -512,7 +519,8 @@ th {
   background: url("../../img/icon-twitter.svg") no-repeat center; }
 
 .socials__link--fb {
-  background: url("../../img/icon-facebook.svg") no-repeat center; }
+  background: url("../../img/icon-facebook.svg") no-repeat center;
+  margin: 0 16px; }
 
 .socials__link--yt {
   background: url("../../img/icon-youtube.svg") no-repeat center; }
@@ -526,7 +534,7 @@ th {
     width: 700px;
     margin: 0 auto; } }
 
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   .container {
     width: 960px;
     margin: 0 auto; } }
@@ -540,13 +548,12 @@ th {
 
 .download-page__background-image {
   position: relative;
-  height: 395px;
-  background: url(../../img/bg-back-mobile@1x.jpg) no-repeat bottom; }
+  background: url(../../img/bg-back-mobile@1x.jpg) no-repeat bottom;
+  background-position: 50% -76px;
+  background-size: 710px; }
 
 .download-page__image {
-  position: absolute;
-  bottom: 0;
-  right: 65px; }
+  padding-top: 108px; }
 
 .download-page__link {
   text-decoration: none; }
@@ -562,18 +569,20 @@ th {
   color: #FFFFFF;
   text-align: center;
   border: 3px solid #FFFFFF;
-  border-radius: 25px;
+  border-radius: 30px;
   width: 275px;
-  padding: 15px 0;
+  padding: 14px 0;
   margin: 0 auto;
-  margin-top: 25px;
-  margin-bottom: 30px; }
+  margin-top: 27px;
+  margin-bottom: 35px; }
 
 .download-page__link-holder {
   display: -ms-flexbox;
   display: flex;
   width: 220px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 6px;
+  box-sizing: border-box; }
 
 .download-page__link--apple {
   font-size: 0;
@@ -601,18 +610,22 @@ th {
   font-size: 14px;
   font-weight: lighter;
   color: #c3c5c8;
-  padding: 35px 40px;
+  padding: 35px 39px;
+  padding-top: 24px;
   text-align: center; }
 
 /********************************************/
 /*******************tablet ver.**************************/
 @media (min-width: 768px) {
   .download-page__background-image {
-    height: 620px;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center; }
   .download-page__image {
+    display: block;
+    margin-left: auto;
     height: 545px;
-    right: 40px; }
+    padding: 0;
+    padding-top: 70px; }
   .download-page__title {
     display: block;
     width: 195px;
@@ -623,26 +636,44 @@ th {
     color: #c3c5c8;
     text-align: center; }
   .download-page__holder {
-    width: 280px;
+    width: 295px;
     position: absolute;
     top: 90px;
-    left: 50px; }
+    left: 80px; }
+  .download-page__link--btn {
+    width: 100%;
+    margin-bottom: 50px; }
   .download-page__description {
-    padding: 35px 0; } }
+    padding: 35px 0;
+    font-family: OpenSansLight, Verdana, sans-serif;
+    line-height: 1.3em;
+    font-size: 18px;
+    text-align: center; } }
 
 /********************************************************/
 /*******************Desktop ver.******************************/
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   .download-page__background-image {
-    height: 850px;
-    background-size: 160%; }
+    background-size: 160%;
+    padding-top: 106px; }
   .download-page__image {
-    left: 475px;
-    height: 645px; }
+    position: inherit;
+    height: 645px;
+    padding-top: 98px; }
   .download-page__holder {
-    left: 130px;
-    top: 215px;
-    width: 300px; }
+    position: inherit;
+    width: 300px;
+    margin-bottom: 80px; }
+  .download-page__position-holder {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: end;
+        align-items: flex-end;
+    height: 100%; }
   .download-page__title {
     font-size: 50px;
     width: 230px; }
@@ -653,7 +684,8 @@ th {
   .download-page__description {
     line-height: 1.3em;
     font-size: 18px;
-    padding: 50px 0; } }
+    padding: 58px 0;
+    padding-bottom: 44px; } }
 
 /*************************************************************/
 /**************Mobile ver.*******************/
@@ -662,19 +694,17 @@ th {
   line-height: 1.2em;
   font-size: 24px;
   text-align: center;
-  padding-top: 40px;
-  padding-right: 50px;
-  padding-left: 50px; }
+  padding-top: 37px; }
 
 .features__title {
-  margin-bottom: 25px; }
+  margin-bottom: 28px; }
 
 .features__title--bottom {
   margin-bottom: 60px; }
 
 .features__items {
   background: #f2f2f2;
-  padding-top: 50px;
+  padding-top: 55px;
   position: relative; }
 
 .features__decoration {
@@ -685,19 +715,28 @@ th {
   height: 0;
   border: 30px solid transparent;
   border-bottom: 0;
-  border-right: 320px solid #f2f2f2; }
+  border-right: 100vw solid #f2f2f2; }
+
+.features__items-holder {
+  box-sizing: border-box;
+  padding: 0 19px; }
 
 .features__item {
   font-family: OpenSansLight, Verdana, sans-serif;
   line-height: 1.7em;
   font-size: 14px;
   text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 34px; }
 
 .features__item-caption {
   font-family: OpenSansBold, Verdana, sans-serif;
   line-height: 0.5em;
   font-size: 18px; }
+
+.features__item-description {
+  font-family: OpenSans, Verdana, sans-serif;
+  line-height: 1.7em;
+  font-size: 14px; }
 
 .features__image--display {
   display: none; }
@@ -710,7 +749,10 @@ th {
       flex-direction: column-reverse; }
 
 .features__image--position {
-  margin-top: 40px; }
+  margin: 0 auto;
+  margin-top: 30px; }
+  .features__image--position img {
+    display: block; }
 
 /********************************************/
 /********************Tablet ver.*********************/
@@ -749,7 +791,7 @@ th {
 
 /*****************************************************/
 /*******************Desktop ver.******************************/
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   .features__titles {
     font-size: 50px;
     padding-top: 70px;
@@ -758,6 +800,8 @@ th {
   .features__title--bottom {
     width: 440px;
     margin-bottom: 160px; }
+  .features__items {
+    width: 100%; }
   .features__item {
     text-align: center; }
   .features__decoration {
@@ -824,11 +868,12 @@ th {
 
 /*************************************************************/
 /****************Desktop ver.***********************************/
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   .research {
     background: #f2f2f2; }
-  .research__timer {
-    margin-left: 100px; }
+  .research__holder {
+    display: -ms-flexbox;
+    display: flex; }
   .research__content {
     width: auto;
     margin-top: 80px; }
@@ -898,9 +943,13 @@ th {
   line-height: 1.6em;
   font-size: 18px; }
 
+.reviews__item-relation {
+  display: none; }
+
 .reviews__item-description {
   line-height: 2.1em;
-  font-size: 14px; }
+  font-size: 14px;
+  margin-bottom: 35px; }
 
 .reviews__toggles {
   text-align: center;
@@ -936,7 +985,7 @@ th {
 
 /***********************************************/
 /****************Desktop ver.***********************************/
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   .reviews__item {
     width: 780px;
     padding: 0 85px;
@@ -1003,7 +1052,7 @@ th {
   height: 0;
   border: 25px solid transparent;
   border-bottom: 0;
-  border-right: 320px solid #f2f2f2; }
+  border-right: 100vw solid #f2f2f2; }
 
 .price__items {
   display: -ms-flexbox;
@@ -1024,7 +1073,7 @@ th {
   color: #FFFFFF;
   text-align: center;
   text-transform: uppercase;
-  padding: 15px 0;
+  padding: 16px 0;
   border-left: 2px solid #FFFFFF;
   border-right: 2px solid #FFFFFF; }
 
@@ -1056,7 +1105,8 @@ th {
   font-family: OpenSans, Verdana, sans-serif;
   line-height: 2.1em;
   font-size: 14px;
-  padding: 15px 20px;
+  text-transform: uppercase;
+  padding: 16px 20px;
   border-left: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
   border-bottom: 2px solid #e5e5e5; }
@@ -1078,7 +1128,7 @@ th {
     top: -54px;
     border: 55px solid transparent;
     border-bottom: 0;
-    border-right: 705px solid #f2f2f2; }
+    border-right: 100vw solid #f2f2f2; }
   .price__item {
     width: 155px; }
   .price__item-hidden {
@@ -1119,7 +1169,7 @@ th {
 
 /**********************************************/
 /*******************Descktop ver.**************************/
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   .price {
     padding-top: 60px;
     padding-bottom: 70px; }
@@ -1136,7 +1186,7 @@ th {
     top: -89px;
     border: 90px solid transparent;
     border-bottom: 0;
-    border-right: 960px solid #f2f2f2; } }
+    border-right: 100vw solid #f2f2f2; } }
 
 /**********************************************************/
 /**************Mobile ver.*******************/
@@ -1152,7 +1202,7 @@ th {
   font-family: OpenSansLight;
   line-height: 1.2em;
   font-size: 24px;
-  margin-bottom: 25px; }
+  margin-bottom: 35px; }
 
 .contacts__item-title {
   font-family: OpenSansBold;
@@ -1160,7 +1210,7 @@ th {
   font-size: 18px; }
 
 .contacts__item {
-  margin-bottom: 15px; }
+  margin-bottom: 22px; }
 
 .contacts__item--style {
   text-decoration: none;
@@ -1387,7 +1437,7 @@ th {
 
 /********************************************/
 /*********************Desktop ver.*****************************/
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   .contest__title {
     background-size: 160%;
     font-size: 50px;
@@ -1436,8 +1486,8 @@ th {
   line-height: 1.2em;
   font-size: 24px;
   background: url(../../img/bg-back-mobile@1x.jpg) no-repeat center;
-  padding-top: 25px;
-  padding-bottom: 75px;
+  padding-top: 28px;
+  padding-bottom: 86px;
   padding-left: 45px;
   padding-right: 45px;
   background-size: cover; }
@@ -1448,8 +1498,8 @@ th {
   font-family: OpenSans;
   line-height: 2.1em;
   font-size: 14px;
-  padding-top: 42px;
-  padding-bottom: 45px;
+  padding-top: 46px;
+  padding-bottom: 52px;
   padding-left: 35px;
   padding-right: 35px; }
 
@@ -1480,6 +1530,7 @@ th {
   background: #FFFFFF; }
 
 .user-gallery__wrapper {
+  box-sizing: border-box;
   padding: 0 20px; }
 
 .user-gallery__user-text {
@@ -1489,7 +1540,7 @@ th {
 
 .user-gallery__user-post {
   background: #f2f2f2;
-  margin-bottom: 20px; }
+  margin-bottom: 16px; }
 
 .user-gallery__items--inine {
   display: inline-block; }
@@ -1503,14 +1554,14 @@ th {
   font-size: 12px; }
 
 .user-gallery__items {
-  padding-top: 15px;
+  padding-top: 18px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 25px;
   background: #f2f2f2; }
 
 .user-gallery__likes {
-  margin-top: 20px; }
+  margin-top: 12px; }
 
 .user-gallery__likes-timer {
   font-family: OpenSans, Verdana, sans-serif;
@@ -1523,8 +1574,8 @@ th {
   font-family: OpenSans, Verdana, sans-serif;
   line-height: 2.1em;
   font-size: 14px;
-  padding-top: 20px;
-  padding-bottom: 40px; }
+  padding-top: 12px;
+  padding-bottom: 46px; }
 
 /************************************************************************/
 /************************Tablet ver.******************************/
@@ -1576,7 +1627,7 @@ th {
 
 /**************************************************************/
 /*******************Desktop ver.******************************/
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   .user-gallery__title {
     padding-top: 170px;
     padding-bottom: 100px;
@@ -1636,7 +1687,8 @@ th {
   margin-left: 30px; }
 
 .photo-editor__buttons {
-  padding: 40px 0; }
+  padding: 66px 0;
+  padding-bottom: 44px; }
 
 .photo-editor__button {
   display: block;
@@ -1681,7 +1733,7 @@ th {
 
 /***************************************************/
 /*******************Desktop ver.******************************/
-@media (min-width: 1210px) {
+@media (min-width: 991px) {
   .photo-editor {
     box-sizing: border-box;
     padding-left: 80px; }

@@ -61,7 +61,7 @@
     height:0;
     border: 25px solid transparent;
     border-bottom: 0;
-    border-right: 320px solid $coffe;
+    border-right: 100vw solid $coffe;
 }
 
 .price__items {
@@ -85,7 +85,7 @@
     color: $white;
     text-align: center;
     text-transform: uppercase;
-    padding: 15px 0;
+    padding: 16px 0;
     border-left: 2px solid $white;
     border-right: 2px solid $white;
 }
@@ -122,7 +122,8 @@
     font-family: OpenSans, Verdana, sans-serif;
     line-height: 2.1em;
     font-size: 14px;
-    padding: 15px 20px;
+    text-transform: uppercase;
+    padding: 16px 20px;
     border-left: 1px solid $milk; 
     border-right: 1px solid $milk;
     border-bottom: 2px solid $milk;
@@ -146,11 +147,11 @@
     }
     
     .price__decoration {
-    right: 0px;
-    top: -54px;
-    border: 55px solid transparent;
-    border-bottom: 0;
-    border-right: 705px solid $coffe;
+        right: 0px;
+        top: -54px;
+        border: 55px solid transparent;
+        border-bottom: 0;
+        border-right: 100vw solid $coffe;
     }
     
     .price__item {
@@ -245,7 +246,7 @@
         top: -89px;
         border: 90px solid transparent;
         border-bottom: 0;
-        border-right: 960px solid $coffe;
+        border-right: 100vw solid $coffe;
     }
     
 }
