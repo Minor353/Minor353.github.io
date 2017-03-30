@@ -638,8 +638,8 @@ th {
   .download-page__holder {
     width: 295px;
     position: absolute;
-    top: 90px;
-    left: 80px; }
+    top: 95px;
+    left: 76px; }
   .download-page__link--btn {
     width: 100%;
     margin-bottom: 50px; }
@@ -758,21 +758,29 @@ th {
 /********************Tablet ver.*********************/
 @media (min-width: 768px) {
   .features__titles {
-    font-size: 40px; }
+    font-size: 40px;
+    padding-top: 50px; }
   .features__title {
     margin: 0; }
   .features__title--bottom {
     width: 340px;
     margin: 0 auto;
-    margin-bottom: 90px; }
+    margin-bottom: 55px; }
   .features__image img {
     width: 275px;
     background-size: cover; }
   .features__item {
-    text-align: left; }
+    text-align: left;
+    margin-bottom: 24px; }
   .features__decoration {
-    top: -29px;
-    border-right: 700px solid #f2f2f2; }
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border: 52px solid transparent;
+    border-top: 0;
+    border-left: 100vw solid #FFFFFF; }
   .features__item-holder {
     width: 310px; }
   .features__items-holder {
@@ -783,7 +791,9 @@ th {
         flex-direction: column;
     -ms-flex-align: end;
         align-items: flex-end;
-    padding-bottom: 20px; }
+    padding-bottom: 0;
+    padding-right: 38px;
+    margin-top: 14px; }
   .features__image--position {
     position: absolute;
     left: 40px;
@@ -843,23 +853,29 @@ th {
 /**********************Tablet ver.****************************/
 @media (min-width: 768px) {
   .research {
+    display: block; }
+  .research__holder {
     display: -ms-flexbox;
     display: flex;
-    padding-top: 50px;
+    padding-top: 56px;
     padding-bottom: 40px; }
   .research__timer {
     margin-left: 40px;
     margin-right: 75px; }
   .research__content {
-    width: 300px; }
+    width: 295px;
+    margin-top: 40px; }
   .research__title {
     font-family: OpenSansBold, Verdana, sans-serif;
     line-height: 1.2em;
-    font-size: 30px; }
+    font-size: 30px;
+    width: 170px;
+    margin-bottom: 10px; }
   .research__content-text {
     font-family: OpenSans, Verdana, sans-serif;
     line-height: 1.7em;
-    font-size: 14px; }
+    font-size: 14px;
+    margin-bottom: 14px; }
   .research__link {
     font-family: OpenSans, Verdana, sans-serif;
     line-height: 1.7em;
@@ -967,10 +983,14 @@ th {
     transform: translate(-700px); }
   #reviews-input-3:checked ~ .reviews__items .slider__item {
     transform: translate(-1400px); }
+  .reviews__item-holder {
+    margin-top: 6px;
+    margin-bottom: 34px; }
   .reviews__item-title {
     font-size: 20px;
     line-height: 1.5em; }
   .reviews__item-relation {
+    display: block;
     font-family: OpenSansLight, Verdana, sans-serif;
     line-height: 2.1em;
     font-size: 14px; }
@@ -1121,7 +1141,7 @@ th {
 /****************Tablet ver.*******************/
 @media (min-width: 768px) {
   .price {
-    padding-top: 30px;
+    padding-top: 42px;
     padding-bottom: 70px; }
   .price__decoration {
     right: 0px;
@@ -1135,7 +1155,8 @@ th {
     display: block; }
   .price__item-title {
     line-height: 1.8em;
-    font-size: 16px; }
+    font-size: 16px;
+    margin: 0; }
   .price__title {
     padding: 10px 0; }
   .price__value {
@@ -1144,18 +1165,19 @@ th {
   .price__access {
     font-size: 0;
     padding: 0;
-    height: 50px; }
+    height: 45px; }
   .price__access--show {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
         align-items: center;
+    text-transform: inherit;
     line-height: 2.1em;
     font-size: 14px;
     padding: 0;
     padding-left: 10px; }
   .price__title-hidden {
-    height: 83px; }
+    height: 76px; }
   .price__toggles {
     display: none; }
   #price-input-2:checked ~ .price__items .price__item {
@@ -1285,15 +1307,16 @@ th {
 
 .contest__user-date {
   border: 0px solid;
-  margin: 0;
   margin-bottom: 40px;
-  padding: 30px 20px; }
+  padding: 30px 20px;
+  box-sizing: border-box; }
 
 .contest__form-label {
   color: #d22856;
   font-family: OpenSans, Verdana, sans-serif;
   line-height: 2.1em;
-  font-size: 14px; }
+  font-size: 14px;
+  text-transform: uppercase; }
 
 .contest__input {
   display: block;
@@ -1306,11 +1329,17 @@ th {
   border-radius: 2px;
   padding: 15px 0;
   padding-left: 20px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  resize: none; }
 
 .contest__user-achieve {
   background: #f2f2f2;
   padding: 30px 20px; }
+
+.contest__mobile-bg {
+  padding-top: 35px;
+  background: #f2f2f2;
+  width: 100%; }
 
 .contest__form-legend {
   text-align: center;
@@ -1328,6 +1357,51 @@ th {
   font-size: 18px;
   margin-bottom: 40px; }
 
+/*********Стилизация чекбоксов*************/
+.contest__label-chekbox input:enabled,
+.contest__label-chekbox input:disabled {
+  display: none; }
+
+.contest__label-chekbox input:enabled + .contest__chekbox-indicator,
+.contest__label-chekbox input:disabled + .contest__chekbox-indicator {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  vertical-align: middle;
+  margin-right: 30px; }
+
+.contest__label-chekbox input:checked + .contest__chekbox-indicator {
+  background: url("../../img/icon-yes.svg") no-repeat center; }
+
+/*******************************************/
+/*********Стилизация радиобатонов*************/
+.contest__label-radio input:enabled,
+.contest__label-radio input:disabled {
+  display: none; }
+
+.contest__label-radio input:enabled + .contest__radio-indicator,
+.contest__label-radio input:disabled + .contest__radio-indicator {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 30px;
+  background: #FFFFFF; }
+  .contest__label-radio input:enabled + .contest__radio-indicator div,
+  .contest__label-radio input:disabled + .contest__radio-indicator div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 10px; }
+
+.contest__label-radio input:checked + .contest__radio-indicator div {
+  background: #d22856; }
+
+/*********************************************/
 .contest__user-soft {
   background: #f2f2f2; }
 
@@ -1382,6 +1456,8 @@ th {
     -ms-flex-align: center;
         align-items: center;
     margin-bottom: 50px; }
+  .contest__mobile-bg {
+    background: #FFFFFF; }
   .contest__form-label {
     text-transform: uppercase;
     margin-right: 20px; }
@@ -1399,7 +1475,6 @@ th {
     margin-bottom: 0; }
   .contest__user-date {
     border: 2px solid #e5e5e5;
-    margin: 0;
     margin-bottom: 56px;
     padding: 30px 57px; }
   .contest__user-date--style {
@@ -1700,10 +1775,45 @@ th {
   padding: 16px 20px;
   border: 3px solid #d22856;
   border-radius: 25px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #f2f2f2; }
 
 .photo-editor__button-confirm {
   margin-bottom: 12px; }
+
+.photo-editor__button-cancel {
+  color: #dddfe0;
+  border: 3px solid #dddfe0; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 240px;
+  margin-left: 40px; }
+
+input[type=range]:focus {
+  outline: none; }
+
+/* Полоса */
+input[type=range]::-webkit-slider-runnable-track {
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #000000; }
+
+/* Бегунок */
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000;
+  border: 2px solid #d22856;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px; }
+
+.none {
+  display: none; }
 
 /***************************************************/
 /**************Tablet ver.**********************/

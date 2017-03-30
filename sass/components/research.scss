@@ -10,8 +10,12 @@
 
 @media (min-width: $tablet) {
     .research {
+        display: block;
+    }
+    
+    .research__holder {
         display: flex;
-        padding-top: 50px;
+        padding-top: 56px;
         padding-bottom: 40px;
     }
     
@@ -21,19 +25,23 @@
     }
     
     .research__content {
-        width: 300px;
+        width: 295px;
+        margin-top: 40px;
     }
     
     .research__title {
         font-family: OpenSansBold, Verdana, sans-serif;
         line-height: 1.2em;
         font-size: 30px;
+        width: 170px;
+        margin-bottom: 10px;
     }
     
     .research__content-text {
         font-family: OpenSans, Verdana, sans-serif;
         line-height: 1.7em;
         font-size: 14px;
+        margin-bottom: 14px;
     }
     
     .research__link {

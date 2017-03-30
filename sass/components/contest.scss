@@ -37,9 +37,9 @@
 
 .contest__user-date {
     border: 0px solid;
-    margin: 0;
     margin-bottom: 40px;
     padding: 30px 20px;
+    box-sizing: border-box;
 }
 
 .contest__form-label {
@@ -47,7 +47,7 @@
     font-family: OpenSans, Verdana, sans-serif;
     line-height: 2.1em;
     font-size: 14px; 
-    
+    text-transform: uppercase;
 }
 
 .contest__input {
@@ -62,12 +62,19 @@
     padding: 15px 0;
     padding-left: 20px;
     margin-bottom: 15px;
+    resize: none;
 }
 
 
 .contest__user-achieve {
     background: $coffe;
     padding: 30px 20px;
+}
+
+.contest__mobile-bg {
+    padding-top: 35px;
+    background: $coffe;
+    width: 100%;
 }
 
 .contest__form-legend {
@@ -88,6 +95,63 @@
     font-size: 18px;
     margin-bottom: 40px;
 }
+
+/*********Стилизация чекбоксов*************/
+
+.contest__label-chekbox input:enabled,
+.contest__label-chekbox input:disabled {
+    display: none;
+}
+
+.contest__label-chekbox input:enabled + .contest__chekbox-indicator,
+.contest__label-chekbox input:disabled + .contest__chekbox-indicator
+{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid $milk;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+.contest__label-chekbox input:checked + .contest__chekbox-indicator {
+    background: url("../../img/icon-yes.svg") no-repeat center;
+}
+
+/*******************************************/
+
+/*********Стилизация радиобатонов*************/
+
+.contest__label-radio input:enabled,
+.contest__label-radio input:disabled {
+    display: none;
+}
+
+.contest__label-radio input:enabled + .contest__radio-indicator,
+.contest__label-radio input:disabled + .contest__radio-indicator
+{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid $milk;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 30px;
+    background: $white;
+    div {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+}
+
+.contest__label-radio input:checked + .contest__radio-indicator div {
+   background: $pink;
+}
+
+/*********************************************/
 
 .contest__user-soft {
     background: $coffe;
@@ -154,6 +218,10 @@
         margin-bottom: 50px;
     } 
     
+    .contest__mobile-bg {
+        background: $white;
+    }
+    
     .contest__form-label {
         text-transform: uppercase;
         margin-right: 20px;
@@ -179,7 +247,6 @@
     
     .contest__user-date {
         border: 2px solid $milk;
-        margin: 0;
         margin-bottom: 56px;
         padding: 30px 57px;
     }
