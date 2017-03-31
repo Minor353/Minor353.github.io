@@ -493,11 +493,15 @@ th {
   .page-footer {
     display: -ms-flexbox;
     display: flex;
+    box-sizing: border-box;
     -ms-flex-pack: justify;
         justify-content: space-between;
     -ms-flex-align: center;
         align-items: center;
-    padding-top: 35px; } }
+    padding: 0 38px;
+    padding-top: 38px; }
+  .page-footer__link-logo {
+    margin-bottom: 40px; } }
 
 /*******************************************/
 .socials {
@@ -525,6 +529,12 @@ th {
 .socials__link--yt {
   background: url("../../img/icon-youtube.svg") no-repeat center; }
 
+/************Tablet ver.********************/
+@media (min-width: 768px) {
+  .socials {
+    margin-bottom: 40px; } }
+
+/*******************************************/
 .container {
   width: 320px;
   margin: 0 auto; }
@@ -780,7 +790,7 @@ th {
     height: 0;
     border: 52px solid transparent;
     border-top: 0;
-    border-left: 100vw solid #FFFFFF; }
+    border-left: calc(100vw - 52px) solid #FFFFFF; }
   .features__item-holder {
     width: 310px; }
   .features__items-holder {
@@ -1434,20 +1444,22 @@ th {
 /********************************************/
 /*****************Tablet ver.****************/
 @media (min-width: 768px) {
+  .contest .container {
+    width: 620px; }
   .contest__title {
     font-size: 50px;
-    padding-top: 70px;
-    padding-bottom: 90px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 68px;
+    padding-bottom: 80px;
+    padding-left: 95px;
+    padding-right: 95px;
     background-position: center; }
   .contest__description {
     line-height: 1.6em;
     font-size: 18px;
-    padding-top: 90px;
+    padding-top: 94px;
     padding-bottom: 30px;
-    padding-left: 100px;
-    padding-right: 100px; }
+    padding-left: 110px;
+    padding-right: 110px; }
   .contest__description-request {
     display: inline; }
   .contest__user-date-holder {
@@ -1455,33 +1467,44 @@ th {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    margin-bottom: 50px; }
+    margin-bottom: 52px; }
+  .contest__user-date-holder :last-child {
+    margin-bottom: 0; }
   .contest__mobile-bg {
-    background: #FFFFFF; }
+    background: #FFFFFF;
+    padding-top: 32px; }
   .contest__form-label {
     text-transform: uppercase;
     margin-right: 20px; }
   .contest__input {
-    width: 100%;
+    width: 95%;
     margin-bottom: 10px; }
   .contest__user-date-wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse; }
-  .contest__user-soft {
-    background: #FFFFFF; }
+        flex-direction: column-reverse;
+    margin-top: 17px; }
   .contest__user-soft :last-child {
     margin-bottom: 0; }
   .contest__user-date {
     border: 2px solid #e5e5e5;
-    margin-bottom: 56px;
+    margin-bottom: 66px;
     padding: 30px 57px; }
   .contest__user-date--style {
     border: 0px solid;
     padding: 30px 0;
     -ms-flex-order: 1;
-        order: 1; }
+        order: 1;
+    margin-bottom: 0; }
+  .contest__user-date-contact {
+    padding: 32px 57px;
+    padding-top: 36px;
+    margin-bottom: 22px; }
+  .contest__user-soft {
+    background: #FFFFFF;
+    padding-top: 44px;
+    padding-bottom: 44px; }
   .contest__user-date--style :last-child {
     margin-bottom: 0; }
   .contest__form-holder {
@@ -1492,21 +1515,35 @@ th {
   .contest__form-label--position {
     margin-left: 20px;
     margin-bottom: 35px; }
+  .contest__label-chekbox input:enabled + .contest__chekbox-indicator, .contest__label-chekbox input:disabled + .contest__chekbox-indicator {
+    margin-right: 18px; }
+  .contest__label-radio input:enabled + .contest__radio-indicator,
+  .contest__label-radio input:disabled + .contest__radio-indicator {
+    margin-right: 18px; }
   .contest__form-label--margin {
     margin-bottom: 0; }
   .contest__user-achieve {
-    background: #FFFFFF; }
+    background: #FFFFFF;
+    padding-top: 44px;
+    padding-bottom: 6px;
+    margin-bottom: 58px; }
   .contest__form-legend {
     padding: 0 23px;
     width: auto; }
+  .contest__label-radio {
+    margin-bottom: 36px; }
   .contest__label-chekbox--margin {
     margin-bottom: 0; }
+  .contest__label-chekbox {
+    margin-bottom: 43px; }
+  .contest__btn-wrapper {
+    padding-top: 12px; }
   .contest__btn {
     margin: 0;
     padding: 15px 57px; }
   .contest__reminder {
     display: inline-block;
-    margin-left: 220px; }
+    margin-left: 145px; }
   .contest__input--width {
     width: 95%; } }
 
@@ -1657,7 +1694,7 @@ th {
 @media (min-width: 768px) {
   .user-gallery__title {
     font-size: 50px;
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 140px;
     padding-left: 175px;
     padding-right: 170px;
@@ -1672,7 +1709,8 @@ th {
   .user-gallery__wrapper {
     padding: 0 40px; }
   .user-gallery__user-post {
-    width: 300px; }
+    width: 300px;
+    margin-bottom: 44px; }
   .user-gallery__user-foto {
     width: 300px;
     height: 300px; }
@@ -1686,6 +1724,9 @@ th {
   .user-gallery__user-post--position {
     display: block;
     width: 100%; }
+  .user-gallery__items {
+    padding: 0 40px;
+    padding-top: 25px; }
   .user-gallery__user-foto--top {
     width: 100%;
     height: 500px; }
@@ -1693,7 +1734,9 @@ th {
     top: 55px;
     right: 40px; }
   .user-gallery__holder-top {
-    padding: 0 40px; }
+    box-sizing: border-box;
+    padding: 0 72px;
+    margin-bottom: 40px; }
   .user-gallery__text-end {
     line-height: 1.6em;
     font-size: 18px;
@@ -1705,9 +1748,9 @@ th {
 @media (min-width: 991px) {
   .user-gallery__title {
     padding-top: 170px;
-    padding-bottom: 100px;
-    padding-left: 428px;
-    padding-right: 428px;
+    padding-bottom: 90px;
+    padding-left: 0;
+    padding-right: 0;
     background-size: 160%; }
   .user-gallery__text-preview {
     padding-left: 300px;
@@ -1785,6 +1828,7 @@ th {
   color: #dddfe0;
   border: 3px solid #dddfe0; }
 
+/*ползунок для Хрома*/
 input[type=range] {
   -webkit-appearance: none;
   width: 240px;
@@ -1812,32 +1856,80 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -7px; }
 
-.none {
+/*Ползунок для лисы*/
+/* Полоса */
+input[type=range]::-moz-range-track {
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #000000; }
+
+/* Бегунок*/
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000;
+  border: 2px solid #d22856;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px; }
+
+.photo-editor__range-visibility {
   display: none; }
 
 /***************************************************/
 /**************Tablet ver.**********************/
 @media (min-width: 768px) {
   .photo-editor {
+    margin-bottom: 0; }
+  .photo-editor__wrapper {
     display: -ms-flexbox;
     display: flex;
-    padding: 50px 40px; }
+    padding: 56px 44px;
+    box-sizing: border-box; }
   .photo-editor__picture {
     padding: 0; }
+    .photo-editor__picture img {
+      height: 402px; }
   .photo-editor__items {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
     padding: 0 40px;
-    margin-bottom: 75px; }
+    margin-bottom: 72px; }
   .photo-editor__item {
     border-bottom: 2px solid #dddfe0;
     margin: 0;
     width: 275px;
-    background-position: left; }
+    background-position: left;
+    background-size: 25px;
+    padding-bottom: 15px; }
+  .photo-editor__items-wrapper {
+    position: relative; }
+  .photo-editor__range {
+    position: absolute;
+    top: 18px;
+    left: 98px; }
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 200px;
+    margin-left: 0; }
+  .photo-editor__range-visibility {
+    display: inline-block;
+    margin-bottom: 56px; }
+  @-moz-document url-prefix() {
+    .photo-editor__range-visibility {
+      margin-bottom: 42px; } }
   .photo-editor__buttons {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
+  .photo-editor__button {
+    width: 270px;
+    padding: 14px 20px;
+    border-radius: 25px; }
   .photo-editor__button-confirm {
     margin-bottom: 25px; } }
 
