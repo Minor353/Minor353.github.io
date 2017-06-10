@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header"  id="header">
         <nav class="nav-panel">
             <ul class="nav-panel__wrapper">
                 <li class="nav-panel__btn"><a href="#">Главная</a></li>
-                <li class="nav-panel__btn"><a href="#">Условия</a></li>
+                <li class="nav-panel__btn"><a href="#feature">Условия</a></li>
                 <li class="nav-panel__logo"></li>
-                <li class="nav-panel__btn"><a href="#">Фото</a></li>
-                <li class="nav-panel__btn"><a href="#">Контакты</a></li>
+                <li class="nav-panel__btn"><a href="#photo">Фото</a></li>
+                <li class="nav-panel__btn"><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
 
@@ -30,7 +30,7 @@
     </header>
 
     <main class="main">
-        <section class="main-description">
+        <section class="main-description"  id="feature">
             <div class="main-description__feature">Приглашаем Вас!</div>
             <p class="main-description__text">отдохнуть на берегу Азовского моря в экологически чистом районе, вдали от промышленных предприятий в городе Приморск (Запорожская обл.). 1,5 км отделяет нашего постояльца от благоустроенных пляжей и теплого моря. Уютный, тихий дворик скроет вас от суеты будничных дней. К вашим услугам комфортабельные номера, сауна, бесплатная автостоянка, место для отдыха с мангалом.</p>
             <p class="main-description__text">Номера с удобствами вмещают: 4 односпальные кровати, шкаф для одежды, прикроватная тумбочка, вентилятор, санузел (душевая кабина, туалет, умывальник).
@@ -38,7 +38,7 @@
             <p class="main-description__text">Номера без удобств вмещают: 4 односпальные кровати, шкаф для одежды, прикроватная тумбочка, вентилятор, санузел (душевые, туалеты и умывальники) находится на территории дворика.</p>
         </section>
 
-        <section class="main-photo">
+        <section class="main-photo"  id="photo">
             <div class="main-photo__wrapper">
                 <div class="main-photo__img"><img src="img/photo_1.jpg" alt="Фото номера"></div>
                 <div class="main-photo__img"><img src="img/photo_2.jpg" alt="Фото номера"></div>
@@ -52,7 +52,8 @@
         </section>
 
         <section class="main-stock">
-            <div class="main-stock__description" id="stock">
+            <div class="main-stock__logo"   id="stock"></div>
+            <div class="main-stock__description">
                 <p class="main-stock__description-text"><span class="main-stock__description-icon-before">«Скидка длительного проживания»</span><br>При условии длительного проживания (от 7 ночей), предоставляется скидка в размере 10%!
                 </p>
                 <hr>
@@ -74,7 +75,7 @@
     </main>
 
     <footer class="footer">
-        <section class="footer-contacts">
+        <section class="footer-contacts"  id="contacts">
             <div class="footer-contacts__wraper">
                 <div class="footer-contacts__title">
                     Остались вопросы?<br> Свяжитесь с нами!
@@ -97,22 +98,19 @@
         </section>
 
         <section class="footer-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1425.528888213115!2d36.37374002299417!3d46.72856027179749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d46.728689599999996!2d36.3745207!5e1!3m2!1sru!2sru!4v1496686940669"  height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1425.528888213115!2d36.37374002299417!3d46.72856027179749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d46.728689599999996!2d36.3745207!5e1!3m2!1sru!2sru!4v1496686940669" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
 
         <section class="footer-copyright">
-            <div>Created by NikitenkoGV</div>
-            <div>
-                <a href="#">
-                    <div>VK</div>
-                </a>
-                <a href="#">
-                    <div>Gmail</div>
-                </a>
-                <a href="#">
-                    <div>GitHub</div>
-                </a>
+            <div class="footer-copyright__dev-name">Created by NikitenkoGV 2017</div>
+            <div class="footer-copyright__links">
+                <a class="footer-copyright__link  footer-copyright__link--Li" href="#">Li</a>
+                <a class="footer-copyright__link  footer-copyright__link--Fb" href="#">Fb</a>
+                <a class="footer-copyright__link  footer-copyright__link--Git" href="#">GitHub</a>
             </div>
+            <a href="#header"  class="footer-copyright__arrow">
+                <div class="footer-copyright__up-arrow"></div>
+            </a>
         </section>
     </footer>
 </body>

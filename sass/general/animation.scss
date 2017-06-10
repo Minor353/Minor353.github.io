@@ -1,0 +1,30 @@
+.nav-panel__btn {
+    a:hover {
+        border-radius: 10px;
+        box-shadow:0 0 10px #226b36;
+    }
+}
+
+.main-header__stock:hover {
+    background-color: #f4867b;
+}
+
+.contacts__item--style:hover {
+    color: #ae2341;
+}
+
+.footer-copyright__up-arrow:hover {
+    background-image: url(../../img/up-arrow-hover.svg);
+}
+
+.footer-copyright__link--Li:hover {
+    background-image: url(../../img/Social%20media%20Badge-06-hover.svg);
+}
+
+.footer-copyright__link--Fb:hover {
+    background-image: url(../../img/Social%20media%20Badge-04-hover.svg);
+}
+
+.footer-copyright__link--Git:hover {
+    background-image: url(../../img/Social%20media%20Badge-07-hover.svg);
+}
