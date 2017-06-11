@@ -4,6 +4,7 @@
 }
 
 .main-photo__wrapper {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     max-width: 900px;
@@ -26,4 +27,16 @@
 
 .main-photo__img--no-margin {
     margin-right: 0;
+}
+
+.main-photo__img--click {
+    img {
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        width: 900px;
+        height: 470px;
+        border: 8px solid #00a99d;
+        border-radius: 5px;
+    }
 }
