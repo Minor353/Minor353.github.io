@@ -77,7 +77,7 @@
   cursor: default; }
 
 .main-description {
-  max-width: 750px;
+  max-width: 679px;
   padding: 20px 20px;
   margin: 0 auto;
   text-align: center;
@@ -117,7 +117,8 @@
   .main-photo__img img {
     border-radius: 50%;
     width: 170px;
-    height: 170px; }
+    height: 170px;
+    transition: width 0.3s, height 0.3s; }
 
 .main-photo__img--no-margin {
   margin-right: 0; }
@@ -129,7 +130,18 @@
   width: 900px;
   height: 470px;
   border: 8px solid #00a99d;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: width 0.2s, height 0.2s; }
+
+.main-photo__img-vertical--click img {
+  position: absolute;
+  top: 10px;
+  left: 185px;
+  width: 500px;
+  height: 515px;
+  border: 8px solid #00a99d;
+  border-radius: 5px;
+  transition: width 0.3s, height 0.3s; }
 
 .main-stock {
   width: 100%;
@@ -268,17 +280,22 @@
 .footer-copyright__links {
   text-align: center;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+  width: 240px;
+  padding-right: 100px;
+  -ms-flex-item-align: center;
+      align-self: center; }
 
 .footer-copyright__link {
   font-size: 0;
   width: 45px;
   height: 45px;
-  border-radius: 50%;
-  margin-right: 20px; }
+  border-radius: 50%; }
 
 .footer-copyright__dev-name {
-  margin-right: 30%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center; }
@@ -311,7 +328,9 @@
   transform: rotate(180deg); }
 
 .footer-copyright__arrow {
-  margin-left: auto; }
+  border: 3px solid white;
+  border-radius: 8px;
+  padding: 3px 0; }
 
 @font-face {
   font-family: Muller;
@@ -339,6 +358,10 @@ body {
 
 .main-header__stock:hover {
   background-color: #f4867b; }
+
+.main-photo__img:hover {
+  border-radius: 50%;
+  box-shadow: 0 0 40px #226b36; }
 
 .contacts__item--style:hover {
   color: #ae2341; }
