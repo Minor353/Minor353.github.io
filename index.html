@@ -1,83 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <!-- head -->
+<html lang="ru">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-        Карусель
-    </title>
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/docs.theme.min.css">
-
-    <!-- Owl Stylesheets -->
-    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-</head>
-
-<body>
-    <section id="demos">
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="owl-carousel owl-theme">
-                    <div class="item" style="height:300px">
-                        <h4>1</h4>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+      <header class="page-header">
+          <nav class="main-nav  container  main-nav--closed  main-nav--nojs">
+              <div class="main-nav__panel">
+              <div class="main-nav__logo">
+              </div>
+              <button class="main-nav__toggle" type="button"></button>
+              </div>
+                  <ul class="main-nav__items">
+                      <li class="main-nav__item"><a class="main-nav__link" href="">Главная</a></li>
+                      <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+                      <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+                      <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+                  </ul>
+          </nav>
+      </header>
+      
+      <section class="download-page">
+          <div class="download-page__background-image">
+             <div class="download-page__position-holder  container">
+             <picture>
+                 <source media="(min-width: 1024px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+                 <source media="(min-width: 700px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+                 <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" class="download-page__image" alt="iphone-hand">
+             </picture>
+          
+          <div class="download-page__holder">
+              <div class="download-page__title">Взгляните на жизнь иначе!</div>
+              <a href="#" class="download-page__link  download-page__link--btn"><span>Скачать приложение</span></a>
+              <div class="download-page__link-holder">
+                  <a href="#" class="download-page__link  download-page__link--apple">Apple</a>
+                  <a href="#" class="download-page__link  download-page__link--android">Android</a>
+                  <a href="#" class="download-page__link download-page__link--win">Win</a>
+              </div>
+              <div class="download-page__description">
+                  Дотупно для iPhone, iPad, Android,
+                  Windows Phone, OS X, Windows 8
+              </div>
+          </div>
+              </div>
+          </div>
+      </section>
+      
+      <section class="features">
+          <div class="features__titles  container">
+              <div class="features__title">
+                  Устали от серости мегаполиса?
+              </div>
+              <div class="features__title features__title--bottom">
+                  Нам есть, что вам предложить!
+              </div>
+          </div>
+          
+          <div class="features__items">
+              <div class="features__decoration"></div>
+              <div class="features__items-holder  container">
+                  <div class="features__item">
+                     <div class="features__image  features__image--display">
+                         <picture>
+                             <source media="(min-width: 1024px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+                             <img src="img/iphone-screen-1-tablet@1x.png" srcset="img/iphone-screen-1-tablet@2x.png 2x" alt="Pink image">
+                         </picture>
+                     </div>
+                     <div class="features__item-holder">
+                         <b class="features__item-caption">Поднимает настроение</b>
+                         <p class="features__item-description">
+                              Приложение позволит вам победить
+                              осеннюю хандру и депрессию
+                              буквально в несколько кликов!
+                         </p>
+                     </div> 
+                  </div>
+                  <div class="features__item">
+                      <div class="features__image  features__image--display">
+                          <picture>
+                             <source media="(min-width: 1024px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
+                             <img src="img/iphone-screen-2-tablet@1x.png" srcset="iphone-screen-2-tablet@2x.png 2x" alt="Pink image">
+                         </picture>
+                      </div>
+                      <div class="features__item-holder  features__item-holder--margin">
+                          <b class="features__item-caption">Меняет мир вокруг</b>
+                          <p class="features__item-description">
+                              Сделайте снимок и украсьте его
+                              смайликом или текстовой подписью,
+                              чтобы усилить эффект
+                          </p>
+                     </div>
+                  </div>
+                  <div class="features__item  features__item--invert">
+                      <div class="features__image  features__image--position">
+                         <picture>
+                             <source media="(min-width: 1024px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+                             <source media="(min-width: 768px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+                             <img src="img/pink-index-mobile_03.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Pink image">
+                         </picture>
+                      </div>
+                      <div class="features__item-holder">
+                          <b class="features__item-caption">Заводит новых друзей</b>
+                          <p class="features__item-description">
+                              Ставьте лайки, комментируйте, делитесь
+                              фотографиями с друзьями и заводите 
+                              новых
+                          </p>
+                     </div> 
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <section class="research">
+         <div class="research__holder  container">
+          <div class="research__timer">
+              <img src="img/24.png" alt="timer">
+          </div>
+          <div class="research__content">
+              <div class="research__title">Эффект на 24 часа!</div>
+              <div class="research__content-text">
+                  Британские ученые провели иследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+              </div>
+              <a class="research__link" href="#">Узнать больше об иследованиях</a>
+          </div>
+          </div>
+      </section>
+      
+      <section class="reviews container">
+          <div class="reviews__wrapper  slider">
+              <input class="slider__input" type="radio"  name="reviews" id="reviews-input-1" checked>
+              <input class="slider__input" type="radio"  name="reviews" id="reviews-input-2">
+              <input class="slider__input" type="radio"  name="reviews" id="reviews-input-3">
+              <ul class="reviews__items">
+                  <li class="reviews__item  slider__item">
+                     <div class="reviews__quotes"></div>
+                     <div class="reviews__btn-prev"></div> <div class="reviews__btn-next"></div>
+                      <div class="reviews__item-holder">
+                          <b class="reviews__item-title">
+                              Николай Петров
+                          </b>
+                          <div class="reviews__item-relation">25 лет, водитель трамвая</div>
+                      </div>
+                      <p class="reviews__item-description">
+                          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                      </p>
+                  </li>
+                   <li class="reviews__item  slider__item  reviews__item--none">
+                      <div class="reviews__quotes"></div>
+                      <div class="reviews__btn-prev"></div> <div class="reviews__btn-next"></div>
+                      <div class="reviews__item-holder">
+                          <b class="reviews__item-title">
+                            Юрий Шатунов
+                          </b>
+                          <div class="reviews__item-relation">43 года, певец</div>
+                      </div>
+                      <p class="reviews__item-description">
+                          «Я думал, круче чем я, ничего нет! Увидев это приложение, я понял, что ошибался! Ставлю 5+ Буду советовать всем своим друзьям.»
+                      </p>
+                  </li>
+                   <li class="reviews__item  slider__item  reviews__item--none">
+                      <div class="reviews__quotes"></div>
+                      <div class="reviews__btn-prev"></div> <div class="reviews__btn-next"></div>
+                      <div class="reviews__item-holder">
+                          <b class="reviews__item-title">
+                              Юрий Петров
+                          </b>
+                          <div class="reviews__item-relation">34 года, домохозяйка</div>
+                      </div>
+                      <p class="reviews__item-description">
+                          «Это приложение  позволило по-новому взглянуть на привычные серые вещи! Pink, это то, в чем нуждался мир! Это лучше чем зефир!»
+                      </p>
+                  </li>
+              </ul>
+              <div class="reviews__toggles  slider__toggles">
+                  <label class="slider__toggle" for="reviews-input-1"></label>
+                  <label class="slider__toggle" for="reviews-input-2"></label>
+                  <label class="slider__toggle" for="reviews-input-3"></label>
+              </div>
+          </div>
+      </section>
+      
+      <section class="price">
+         <div class="price__holder  container">
+          <div class="price__decoration"></div>
+          <div class="price__wrapper  slider">
+              <input class="price__input" type="radio"  name="price" id="price-input-1">
+              <input class="price__input" type="radio"  name="price" id="price-input-2" checked>
+              <input class="price__input" type="radio"  name="price" id="price-input-3">
+              <ul class="price__items">
+                   <li class="price__item  price__item-hidden">
+                    <div class="price__title-hidden"></div>
+                    <div class="price__access  price__access--show">
+                          Розовый фильтр
                     </div>
-                    <div class="item" style="height:100px">
-                        <h4>2</h4>
+                    <div class="price__access  price__access--show">
+                          Самйлики
                     </div>
-                    <div class="item" style="height:280px">
-                        <h4>3</h4>
+                    <div class="price__access  price__access--show">
+                          Комментарии
                     </div>
-                    <div class="item" style="height:250px">
-                        <h4>4</h4>
+                  </li>
+                  
+                  <li class="price__item">
+                    <div class="price__title">
+                        <div class="price__item-title">База</div>
+                        <div class="price__value">1,99 USD</div>
                     </div>
-                    <div class="item" style="height:400px">
-                        <h4>5</h4>
+                    <div class="price__access  price__access--yes">
+                          Розовый фильтр
                     </div>
-                    <div class="item" style="height:500px">
-                        <h4>6</h4>
+                    <div class="price__access  price__access--no">
+                          Самйлики
                     </div>
-                    <div class="item" style="height:600px">
-                        <h4>7</h4>
+                    <div class="price__access  price__access--no">
+                          Комментарии
                     </div>
-                    <div class="item" style="height:400px">
-                        <h4>8</h4>
+                  </li>
+                  
+                  <li class="price__item">
+                    <div class="price__title  price__title--hit">
+                        <div class="price__hit"></div>
+                        <div class="price__item-title">Стандарт</div>
+                        <div class="price__value">3,99 USD</div>
                     </div>
-                    <div class="item" style="height:300px">
-                        <h4>9</h4>
+                    <div class="price__access  price__access--yes">
+                          Розовый фильтр
                     </div>
-                    <div class="item" style="height:350px">
-                        <h4>10</h4>
+                    <div class="price__access  price__access--yes">
+                          Самйлики
                     </div>
-                    <div class="item" style="height:200px">
-                        <h4>11</h4>
+                    <div class="price__access  price__access--no">
+                          Комментарии
                     </div>
-                    <div class="item" style="height:150px">
-                        <h4>12</h4>
+                  </li>
+                  
+                  <li class="price__item">
+                    <div class="price__title">
+                        <div class="price__item-title">Анлим</div>
+                        <div class="price__value">9,99 USD</div>
                     </div>
-                </div>
+                    <div class="price__access  price__access--yes">
+                          Розовый фильтр
+                    </div>
+                    <div class="price__access  price__access--yes">
+                          Самйлики
+                    </div>
+                    <div class="price__access  price__access--yes">
+                          Комментарии
+                    </div>
+                  </li>
+              </ul>
+              <div class="price__toggles  slider__toggles">
+                  <label class="slider__toggle" for="price-input-1"></label>
+                  <label class="slider__toggle" for="price-input-2"></label>
+                  <label class="slider__toggle" for="price-input-3"></label>
+              </div>
+          </div>
+          </div>
+     </section>
+     
+     <section class="contacts container">
+        <div class="contacts__wraper">
+            <div class="contacts__title">
+                Остались вопросы? Свяжитесь с нами!
             </div>
-        </div>
-    </section>
-
-    <script src="assets/vendors/jquery.min.js"></script>
-    <script src="assets/owlcarousel/owl.carousel.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.owl-carousel').owlCarousel({
-                items: 1,
-                margin: 10,
-                autoHeight: true
-            });
-        })
-
-    </script>
-</body>
-
+            <div class="contacts__items-holder">
+            <div class="contacts__item  contacts__tell">
+                <b class="contacts__item-title">Звоните:</b><br>
+                <a class="contacts__item-tel  contacts__item--style" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </div>
+            <div class="contacts__item  contacts__email">
+                <b class="contacts__item-title">Пишите:</b><br>
+                <a class="contacts__item-email  contacts__item--style" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </div>
+            <div class="contacts__item  contacts__addres  contacts__item--width">
+                <b class="contacts__item-title">Приезжайте в гости:</b>
+                <a class="contacts__item-address  contacts__item--style" href="#">ул.Большая Конюшенна, 19/8</a>
+            </div>
+         </div> 
+       </div>
+     </section>
+     
+      <div class="map">
+          <div class="map__decoration"></div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651616!2d30.32089461610066!3d59.938794181876204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1491411754446" width="320" height="500" style="border:0" allowfullscreen></iframe>
+     </div>
+     
+     <footer class="page-footer page-footer--index  container">
+              <div class="page-footer__link-logo">
+                  <a href="index.html"><div class="page-footer__logo"></div></a>
+              </div>
+              
+              <div class="socials">
+                  <a class="socials__link socials__link--tw" href="#">twitter</a>
+                  <a class="socials__link socials__link--fb" href="#">facebook</a>
+                  <a class="socials__link socials__link--yt" href="#">youtube</a>  
+              </div>
+              
+              <div class="page-footer__copyright">
+                  Разработано <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </div>
+    </footer>
+    <script type="application/javascript" src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>										
+  </body>
 </html>
