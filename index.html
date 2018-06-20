@@ -58,8 +58,10 @@
           <ul class="categories_wrap">
             <li class="categories_item">
               <div class="categories_item-title">
-                <div class="categories_title-img">
-                  <img src="./assets/images/icon-cat-slim.svg" alt="cat-slim" class="categories_title-img-slim">
+                <div class="categories_title-img-wrap">
+                  <div class="categories_title-img">
+                    <img src="./assets/images/icon-cat-slim.svg" alt="cat-slim" class="categories_title-img-slim">
+                  </div>
                 </div>
                 <div class="categories_title-text">Похудение</div>
               </div>
@@ -71,8 +73,10 @@
             </li>
             <li class="categories_item">
               <div class="categories_item-title">
-                <div class="categories_title-img">
-                  <img src="./assets/images/icon-cat-pro.svg" alt="cat-pro" class="categories_title-img-pro">
+                <div class="categories_title-img-wrap">
+                  <div class="categories_title-img">
+                    <img src="./assets/images/icon-cat-pro.svg" alt="cat-pro" class="categories_title-img-pro">
+                  </div>
                 </div>
                 <div class="categories_title-text">Набор массы</div>
               </div>
@@ -115,19 +119,21 @@
             <h3 class="example_left-title">Живой пример</h3>
             <div class="example_left-text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих
               тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </div>
-            <ul class="exemple_left-features">
-              <li class="exemple_left-feature">
-                <div class="exemple_left-feature-title">5 кг</div>
-                <div class="exemple_left-feature-text">снижение веса</div>
-              </li>
-              <li class="exemple_left-feature">
-                <div class="exemple_left-feature-title">60 дней</div>
-                <div class="exemple_left-feature-text">затрачено времени</div>
-              </li>
-            </ul>
-            <div class="exemple_left-cost">
-              <span>Затраты на питание:</span>
-              <span>15 000 РУБ.</span>
+            <div class="exemple_left-features-wrap">
+              <ul class="exemple_left-features">
+                <li class="exemple_left-feature">
+                  <div class="exemple_left-feature-title">5 кг</div>
+                  <div class="exemple_left-feature-text">снижение веса</div>
+                </li>
+                <li class="exemple_left-feature">
+                  <div class="exemple_left-feature-title">60 дней</div>
+                  <div class="exemple_left-feature-text">затрачено времени</div>
+                </li>
+              </ul>
+              <div class="exemple_left-cost">
+                <span>Затраты на питание:</span>
+                <span>15 000 РУБ.</span>
+              </div>
             </div>
           </div>
           <div class="example_right">
@@ -206,16 +212,12 @@
           lng: 35.05997
         },
         coordinatesMarker = {
-          lat: 48.358899,
-          lng: 35.621237
+          lat: 48.391454,
+          lng: 35.352715
         }
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: myMap
-      });
-      var marker = new google.maps.Marker({
-        position: myMap,
-        map: map
       });
       var image = 'assets/images/map-pin.png';
       var marker = new google.maps.Marker({

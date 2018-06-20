@@ -98,19 +98,19 @@
           <div class="form_section  form_section-data  form_section--padding">
             <h5 class="form_section-title">Дополнительно</h5>
             <div class="form_block-checkbox-wrap">
-              <label class="form_block">
+              <label class="form_block  form_block-checkbox-label">
                 <input type="checkbox" name="sugar" class="form_block-checkbox">
                 <div class="form_block-name  form_block-name-checkbox">Сахарозаменитель</div>
               </label>
-              <label class="form_block">
+              <label class="form_block  form_block-checkbox-label">
                 <input type="checkbox" name="water" class="form_block-checkbox">
                 <div class="form_block-name  form_block-name-checkbox">Питевая вода</div>
               </label>
-              <label class="form_block">
+              <label class="form_block  form_block-checkbox-label">
                 <input type="checkbox" name="milk" class="form_block-checkbox">
                 <div class="form_block-name  form_block-name-checkbox">Молоко</div>
               </label>
-              <label class="form_block">
+              <label class="form_block  form_block-checkbox-label">
                 <input type="checkbox" name="vit" class="form_block-checkbox">
                 <div class="form_block-name  form_block-name-checkbox">Витамины</div>
               </label>
@@ -186,16 +186,12 @@
           lng: 35.05997
         },
         coordinatesMarker = {
-          lat: 48.358899,
-          lng: 35.621237
+          lat: 48.391454,
+          lng: 35.352715
         }
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: myMap
-      });
-      var marker = new google.maps.Marker({
-        position: myMap,
-        map: map
       });
       var image = 'assets/images/map-pin.png';
       var marker = new google.maps.Marker({

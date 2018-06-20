@@ -229,28 +229,28 @@
                 <span class="extras_item-title">Сахорозаменитель</span>
                 <span class="extras_item-amount">1 Упаковка(100 г)</span>
                 <span class="extras_item-cost">200 р.</span>
-                <a href="#" class="btn-order  btn-order--margin">Заказать</a>
+                <a href="#" class="btn-order  btn-order--margin  btn-order--size">Заказать</a>
               </li>
 
               <li class="extras_item">
                 <span class="extras_item-title">Питьевая вода</span>
                 <span class="extras_item-amount">5 литров</span>
                 <span class="extras_item-cost">50 р.</span>
-                <a href="#" class="btn-order  btn-order--margin">Заказать</a>
+                <a href="#" class="btn-order  btn-order--margin  btn-order--size">Заказать</a>
               </li>
 
               <li class="extras_item">
                 <span class="extras_item-title">Молоко</span>
                 <span class="extras_item-amount">1 литров</span>
                 <span class="extras_item-cost">100 р.</span>
-                <a href="#" class="btn-order  btn-order--margin">Заказать</a>
+                <a href="#" class="btn-order  btn-order--margin  btn-order--size">Заказать</a>
               </li>
 
               <li class="extras_item">
                 <span class="extras_item-title">Витамины</span>
                 <span class="extras_item-amount">1 упаковка (30г)</span>
                 <span class="extras_item-cost">300 р.</span>
-                <a href="#" class="btn-order  btn-order--margin">Заказать</a>
+                <a href="#" class="btn-order  btn-order--margin  btn-order--size">Заказать</a>
               </li>
             </ul>
 
@@ -328,16 +328,12 @@
           lng: 35.05997
         },
         coordinatesMarker = {
-          lat: 48.358899,
-          lng: 35.621237
+          lat: 48.391454,
+          lng: 35.352715
         }
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: myMap
-      });
-      var marker = new google.maps.Marker({
-        position: myMap,
-        map: map
       });
       var image = 'assets/images/map-pin.png';
       var marker = new google.maps.Marker({
