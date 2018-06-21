@@ -58,15 +58,14 @@
           <div class="prev-section_right">
             <div class="prev-section_product">
               <picture>
-                <source srcset="./assets/images/index-background-mobile@1x.webp" media="(max-width: 480px)">
-                <img srcset="./assets/images/index-background-desktop@1x.webp 1x, ./assets/images/index-background-desktop@2x.webp 2x" alt="bg"
+                <source srcset="./assets/images/index-background-mobile@1x.jpg 1x, ./assets/images/index-background-mobile@2x.jpg 2x" media="(max-width: 480px)">
+                <img srcset="./assets/images/index-background-desktop@1x.jpg 1x, ./assets/images/index-background-desktop@2x.jpg 2x" alt="bg"
                   class="prev-section_product-bg">
               </picture>
               <picture>
-                <source srcset="./assets/images/index-can-mobile@1x.webp 1x, ./assets/images/index-can-mobile@2x.webp 2x" media="(max-width: 480px)">
-                <source srcset="./assets/images/index-can-tablet@1x.webp 1x, ./assets/images/index-can-tablet@2x.webp 2x" media="(max-width: 768px)">
-                <img srcset="./assets/images/index-can-desktop@1x.webp 1x, ./assets/images/index-can-desktop@2x.webp 2x" alt="index-can"
-                  class="prev-section_product-img">
+                <source srcset="./assets/images/index-can-mobile@1x.png 1x, ./assets/images/index-can-mobile@2x.png 2x" media="(max-width: 480px)">
+                <source srcset="./assets/images/index-can-tablet@1x.jpg 1x, ./assets/images/index-can-tablet@2x.jpg 2x" media="(max-width: 768px)">
+                <img srcset="./assets/images/index-can-desktop@1x.png 1x, ./assets/images/index-can-desktop@2x.png 2x" alt="index-can" class="prev-section_product-img">
               </picture>
             </div>
           </div>
@@ -157,9 +156,9 @@
           <div class="example_right">
             <div class="exemple_right-img">
               <picture>
-                <source srcset="./assets/images/before-mobile@1x.webp 1x, ./assets/images/before-mobile@2x.webp 2x" media="(max-width: 480px)">
-                <source srcset="./assets/images/before-tablet@1x.webp 1x, ./assets/images/before-tablet@2x.webp 2x" media="(max-width: 768px)">
-                <img srcset="./assets/images/before-desktop@1x.webp 1x, ./assets/images/before-desktop@2x.webp 2x" alt="before">
+                <source srcset="./assets/images/before-mobile@1x.png 1x, ./assets/images/before-mobile@2x.png 2x" media="(max-width: 480px)">
+                <source srcset="./assets/images/before-tablet@1x.png 1x, ./assets/images/before-tablet@2x.png 2x" media="(max-width: 768px)">
+                <img srcset="./assets/images/before-desktop@1x.png 1x, ./assets/images/before-desktop@2x.png 2x" alt="before">
               </picture>
             </div>
             <div class="exemple_right-range">
@@ -230,23 +229,13 @@
   <script>
     function initMap() {
       var myMap = {
-          lat: 48.415578,
-          lng: 35.05997
-        },
-        coordinatesMarker = {
-          lat: 48.391454,
-          lng: 35.352715
-        }
+        lat: 48.415578,
+        lng: 35.05997
+      }
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: myMap
       });
-      var image = 'assets/images/map-pin.png';
-      var marker = new google.maps.Marker({
-        position: coordinatesMarker,
-        map: map,
-        icon: image
-      })
     }
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuLjb-iV3X_4aUsa2TbUyXn4NxU_RdUv4&amp;callback=initMap"></script>
