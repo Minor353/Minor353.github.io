@@ -155,16 +155,20 @@
           </div>
           <div class="example_right">
             <div class="exemple_right-img">
-              <picture>
+              <picture class="exemple_right-img-before">
                 <source srcset="./assets/images/before-mobile@1x.png 1x, ./assets/images/before-mobile@2x.png 2x" media="(max-width: 480px)">
                 <source srcset="./assets/images/before-tablet@1x.png 1x, ./assets/images/before-tablet@2x.png 2x" media="(max-width: 768px)">
                 <img srcset="./assets/images/before-desktop@1x.png 1x, ./assets/images/before-desktop@2x.png 2x" alt="before">
               </picture>
+              <picture class="exemple_right-img-after  exemple_right-img--inactive">
+                <source srcset="./assets/images/after-mobile@1x.png 1x, ./assets/images/after-mobile@2x.png 2x" media="(max-width: 480px)">
+                <source srcset="./assets/images/after-tablet@1x.png 1x, ./assets/images/after-tablet@2x.png 2x" media="(max-width: 768px)">
+                <img srcset="./assets/images/after-desktop@1x.png 1x, ./assets/images/after-desktop@2x.png 2x" alt="before">
+              </picture>
             </div>
             <div class="exemple_right-range">
-              <span class="exemple_right-range-text">Было</span>
-              <input type="range" class="exemple_input-range">
-              <span class="exemple_right-range-text">Стало</span>
+              <span class="exemple_right-range-text  exemple_right-range--before  exemple_right-range-text--active">Было</span>
+              <span class="exemple_right-range-text  exemple_right-range--after">Стало</span>
             </div>
           </div>
         </section>
