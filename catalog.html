@@ -17,7 +17,11 @@
       <header class="header">
         <div class="logo">
           <a href="#" class="logo_link">
-            <img src="./assets/images/logo-desktop.svg" alt="Logo">
+            <picture>
+              <source srcset="./assets/images/logo-mobile.svg" media="(max-width: 480px)">
+              <source srcset="./assets/images/logo-tablet.svg" media="(max-width: 768px)">
+              <img srcset="./assets/images/logo-desktop.svg" alt="Logo">
+            </picture>
           </a>
         </div>
 
@@ -34,6 +38,11 @@
             </li>
           </ul>
         </nav>
+
+        <a href="#" class="burger-wrap">
+          <div class="burger">
+          </div>
+        </a>
       </header>
 
       <main class="catalog-main">
@@ -214,9 +223,9 @@
               <div class="products-catalog_more-img">
                 <img src="./assets/images/icon-plus-mobile.svg" alt="product">
               </div>
-              <h5 class="products-catalog_more-title">Показать еще</h5>
+              <h5 class="products-catalog_more-title">Показать больше</h5>
               <div class="products-catalog_more-text">На самом деле, вкусов гораздо больше!</div>
-              <a href="#" class="btn-show">Показать все</a>
+              <a href="#" class="btn-show">Показать еще</a>
             </li>
           </ul>
         </section>
