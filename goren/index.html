@@ -466,7 +466,7 @@
                     </label>
                     <label>
                       <i class="fas fa-phone"></i>
-                      <input type="text" placeholder="+380__-___-__-__">
+                      <input id="phone" type="text" placeholder="+380__-___-__-__">
                     </label>
                     <button class="btn-submit" type="submit">ОТПРАВИТЬ</button>
                   </form>
@@ -840,6 +840,15 @@
     
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG94N1bV6jGbbgTdW0jFgUDuajVBLt99k&callback=initMap"></script>
+<script src="jquery.maskedinput.js"></script>
+<script>
+  //Код jQuery, установливающий маску для ввода телефона элементу input
+  //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+  $(function(){
+    //2. Получить элемент, к которому необходимо добавить маску
+    $("#phone").mask("+38(099) 999-99-99");
+  });
+  </script>
 </body>
 
 </html>
