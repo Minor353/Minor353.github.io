@@ -1085,6 +1085,44 @@ input {
     border-bottom: 4px solid;
 }
 
+
+/*Попап*/
+.form-popup {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(grey, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.form-popup-active {
+    display: flex;
+}
+
+.form-popup__wrapper {
+    background-color: white;
+    padding: 20px 18px;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    
+}
+
+.form-popup__name {
+    font-family: 'Sansus-Webissimo-Regular';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 35px;
+}
+
 /*****************************************/
 .section-fifth {
     background-image: url('../img/5.png');

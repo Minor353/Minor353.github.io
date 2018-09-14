@@ -459,14 +459,14 @@
                   </div>
                   <p class="section-fourth_callback-text">Оставьте свои данные, и наш менеджер свяжется с вами в
                     максимально короткие сроки.</p>
-                  <form class="section-fourth_callback-form" action="#" method="post">
+                  <form id="form" class="section-fourth_callback-form" action="form.php" method="post">
                     <label>
                       <i class="fas fa-user"></i>
-                      <input type="text" placeholder="Ваше имя">
+                      <input type="text" placeholder="Ваше имя" name="name">
                     </label>
                     <label>
                       <i class="fas fa-phone"></i>
-                      <input id="phone" type="text" placeholder="+380__-___-__-__">
+                      <input id="phone" type="text" placeholder="+380__-___-__-__" name="phone">
                     </label>
                     <button class="btn-submit" type="submit">ОТПРАВИТЬ</button>
                   </form>
@@ -496,6 +496,12 @@
                       <path class="c" d="M -1933.002075195313 87.10649871826172 L -1929.895263671875 83.99970245361328 L -1933.000244140625 83.99970245361328 L -1936.10888671875 83.99970245361328 L -1933.002075195313 87.10649871826172 M -1933.000244140625 83.99970245361328 L -1933.000244140625 36.99990081787109 L -1933.000244140625 83.99970245361328 M -1933.002075195313 88.52070617675781 L -1933.709228515625 87.81360626220703 L -1936.816040039063 84.70680999755859 L -1938.523071289063 82.99970245361328 L -1936.10888671875 82.99970245361328 L -1934.000244140625 82.99970245361328 L -1934.000244140625 36.99990081787109 L -1932.000244140625 36.99990081787109 L -1932.000244140625 82.99970245361328 L -1929.895263671875 82.99970245361328 L -1927.481079101563 82.99970245361328 L -1929.188110351563 84.70680999755859 L -1932.294921875 87.81360626220703 L -1933.002075195313 88.52070617675781 Z" />
                     </g>
                   </svg>
+                </div>
+              </div>
+
+              <div class="form-popup">
+                <div class="form-popup__wrapper">
+                  <h5 class="form-popup__name"></h5><a class="close-popup-btn" href="#">Закрыть</a>
                 </div>
               </div>
             </li>

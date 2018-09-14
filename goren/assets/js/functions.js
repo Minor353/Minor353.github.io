@@ -282,7 +282,7 @@ $( document ).ready(function() {
 
 /***************************************************************************************/
 /***************************************************************************************/
-
+/**Переключение страниц по различным пунктам навигации**/
 const slideToggle = function() {
   const sideItems = document.querySelectorAll('.side-item');
   const headerItems = document.querySelectorAll('.header_nav-item');
@@ -338,6 +338,7 @@ const slideToggle = function() {
 slideToggle();
 
 /***************************************************************************************************/
+/**Открытие доп секций на странице Услуги **/
 
 const servicesPageOpen = function() {
   const pageBtn = document.querySelectorAll('.section-second_services-item');
@@ -362,21 +363,51 @@ servicesPageOpen();
 
 /****************************************************************************************************/
 
+/**Обработка формы*/
 
-const slideNavSlider = function () {
-  const btnPrev = document.querySelector('.section-third_gallery-nav .slick-prev');
-  const btnNext = document.querySelector('.section-third_gallery-nav .slick-next');
+$('#form').on('submit', submitForm);
 
-btnPrev.addEventListener('click', function(){
-  
-  
-});
-  
-  
+function submitForm(e) {
+    e.preventDefault();
+
+    var form = $(e.target),
+        data = form.serialize(),
+        url = form.attr('action');
+
+    var request = $.ajax({
+        type: 'POST',
+        url: url,
+        data: data
+    });
+
+    let formPopup = document.querySelector('.form-popup'),
+        formPopupName = document.querySelector('.form-popup__name');
+
+    request.done(function (msg) {
+        formPopup.classList.add('form-popup-active');
+        formPopupName.textContent = 'Сообщение отправлено';
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        formPopup.classList.add('form-popup-active');
+        formPopupName.textContent = 'Произошла ошибка! Сообщение не отправлено.';
+    })
 };
 
 
-slideNavSlider();
+
+const closeFormPopup = function () {
+    let formPopup = document.querySelector('.form-popup');
+    let closeBtn = document.querySelector('.close-popup-btn');
+
+    closeBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        formPopup.classList.remove('form-popup-active');
+        $("form")[0].reset();
+    })
+};
+closeFormPopup();
 
 
 
