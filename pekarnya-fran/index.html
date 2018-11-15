@@ -152,7 +152,7 @@
         <div class="faq_content-decor-top"></div>
         <div class="faq_content">
           <div class="faq_content-title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</div>
-          <div class="faq_content-subtitle">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</div>
+          <div class="faq_content-subtitle">Мы подготовили ответы чтобы сэкономить ваше время.</div>
           <div class="faq_content-main">
             <dl class="js-accordeon">
               <dt class="faq_accordeon-header-title"><i class="fas fa-caret-right fa-caret-right--active"></i>Я никогда не занимался общепитом, какую помощь с открытием бизнеса я получу?</dt>
@@ -262,58 +262,62 @@
     <script src="assets/scripts/index-min.js"></script>
 
     <script>
-        function initMap() {
-            var coordinates = {
-                    lat: 59.947976,
-                    lng: 30.390183
-                },
-                coordinatesSecond = {
-                    lat: 59.967774,
-                    lng: 30.312137
-                },
-                coordinateThird = {
-                    lat: 59.889911,
-                    lng: 30.474285
-                },
-                coordinateFourth = {
-                    lat: 59.892959,
-                    lng: 30.315831
-                },
-                center = {
-                  lat: 59.947976,
-                    lng: 30.390183
-                };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 11,
-                center: center,
-                disableDefaultUI: true,
-                scrollwheel: true,
-                draggable: true
-            });
-            var image = 'assets/images/icons/icon.png';
-            var marker = new google.maps.Marker({
-                    position: coordinates,
-                    map: map,
-                    icon: image
-                }),
-                markerSecond = new google.maps.Marker({
-                    position: coordinatesSecond,
-                    map: map,
-                    icon: image
-                }),
-                markerThird = new google.maps.Marker({
-                    position: coordinateThird,
-                    map: map,
-                    icon: image
-                }),
-                markerFourth = new google.maps.Marker({
-                    position: coordinateFourth,
-                    map: map,
-                    icon: image
-                });
-        }
+      function initMap() {
+        var coordinates = {
+            lat: 48.487085,  
+            lng: 35.065636
+          },
+          coordinatesSecond = {
+            lat: 48.462715,  
+            lng: 35.049910
+          },
+          coordinateThird = {
+            lat: 48.495152,    
+            lng: 35.021637
+          },
+          coordinateFourth = {
+            lat: 48.480312,  
+            lng: 35.020517
+          },
+          center = {
+            lat: 48.480312,  
+            lng: 35.020517
+          };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: center,
+          disableDefaultUI: false,
+          scrollwheel: true,
+          draggable: true
+        });
+        var image = 'assets/images/icons/icon.png';
+        var marker = new google.maps.Marker({
+            position: coordinates,
+            map: map,
+            icon: image,
+            title: 'График работы: с 9:00 до 18:30'
+          }),
+          markerSecond = new google.maps.Marker({
+            position: coordinatesSecond,
+            map: map,
+            icon: image,
+            title: 'График работы: с 9:00 до 18:30'
+          }),
+          markerThird = new google.maps.Marker({
+            position: coordinateThird,
+            map: map,
+            icon: image,
+            title: 'График работы: с 9:00 до 18:30'
+          }),
+          markerFourth = new google.maps.Marker({
+            position: coordinateFourth,
+            map: map,
+            icon: image,
+            title: 'График работы: с 9:00 до 18:30'
+          });
+      }
     </script>
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuLjb-iV3X_4aUsa2TbUyXn4NxU_RdUv4&callback=initMap"></script>
+  
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo7hljuelb86soVC97y4atK-n_brWfc34&callback=initMap"></script>
   </body>
 </html>
