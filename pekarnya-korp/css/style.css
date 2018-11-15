@@ -11018,6 +11018,12 @@ header *+.btn {
   cursor: pointer;
 }
 
+.addres-list_link {
+  width: max-content;
+  display: block;
+  margin-left: auto;
+}
+
 
 /****************************************/
 @media screen and (max-width: 1600px) {
