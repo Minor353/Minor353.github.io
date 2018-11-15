@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Перша пекарня</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/single-style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main-bg-wrap">
+            <div class="container">
+                <header class="header">
+                    <div class="header_logo">
+                        <img src="img/single/logo.svg" alt="Logo">
+                    </div>
+                    <div class="header_text">
+                        <span>Уютное кафе</span><br> со вкусной выпечкой
+                    </div>
+                    <div class="header_btn">ОСТАВИТЬ ПРЕДЗАКАЗ</div>
+                </header>
+
+                <div class="stock">
+                    <div class="stock_title">АКЦИЯ!</div>
+                    <div class="stock_content">
+                        <div class="stock_content-img">
+                            <img src="img/single/insta_big.svg" alt="Insta">
+                        </div>
+                        <div class="stock_content-text">
+                            ОТМЕТЬСЯ С ХЭШТЕГОМ <span>#ППТМ</span><br> И ВЫИГРАЙ ПРИЗ!!!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <div class="contact_content">
+                        <div class="contact_content-title">МЫ СОВСЕМ РЯДОМ</div>
+                        <div class="contact_content-adress">
+                            <div>Адрес:</div>
+                            <div><i class="fas fa-map-marker-alt"></i>Киев. ул Ленина 17</div>
+                        </div>
+                        <div class="contact_content-time">
+                            <div>График работы:</div>
+                            <div><i class="fas fa-clock"></i>08:00 - 22:00</div>
+                        </div>
+                        <div class="contact_content-btn">ОСТАВИТЬ ОТЗЫВ</div>
+                    </div>
+
+                    <div class="contact_map">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery_wrap">
+                <div class="gallery_title">ГАЛЕРЕЯ</div>
+                <div class="gallery_subtitle">Живые фото пекарни по адресу: <span>Киев. ул Ленина 17</span></div>
+                <div class="gallery_content">
+                    <div class="gallery_content-item">
+                        <img src="img/single/img_1.png" alt="Фото">
+                    </div>
+                    <div class="gallery_content-item">
+                        <img src="img/single/img_2.png" alt="Фото">
+                    </div>
+                    <div class="gallery_content-item">
+                        <img src="img/single/img_3.png" alt="Фото">
+                    </div>
+                    <div class="gallery_content-item">
+                        <img src="img/single/img_4.png" alt="Фото">
+                    </div>
+                    <div class="gallery_content-item">
+                        <img src="img/single/img_5.png" alt="Фото">
+                    </div>
+                    <div class="gallery_content-item">
+                        <img src="img/single/img_6.png" alt="Фото">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pre-order">
+            <div class="pre-order_wrap">
+                <div class="pre-order_form">
+                    <div class="pre-order_form-title">Оформите предзаказ!</div>
+                    <div class="pre-order_form-subtitle">Не хотите ждать в очереди?<br> Оставьте заявку</div>
+                    <form action="#" method="post">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Телефон">
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+
+                <div class="pre-order_img">
+                    <img src="img/single/povar.png" alt="Повар">
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews" id="reviews">
+            <div class="reviews_decor-top"></div>
+            <div class="reviews-title">Отзывы наших клиентов</div>
+            <div class="reviews_content">
+                <div class="reviews_slider">
+                    <div class="reviews_slider-wrap">
+                        <div class="reviews_slider-item">
+                            <div class="reviews_slider-item-img"><img src="img/content/ava1.jpg" alt="Фото"></div>
+                            <div class="reviews_slider-item-name">Игорь Романенко</div>
+                            <div class="reviews_slider-item-text">Давно выяснено, что при оценке дизайна и композиции
+                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот
+                                обеспечивает более или менее стандартное заполнение шаблона, а также реальное
+                                распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+                                "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."</div>
+                        </div>
+                        <div class="reviews_slider-item">
+                            <div class="reviews_slider-item-img"><img src="img/content/ava2.png" alt="Фото"></div>
+                            <div class="reviews_slider-item-name">Арнольд Романенко</div>
+                            <div class="reviews_slider-item-text">Давно выяснено, что при оценке дизайна и композиции
+                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот
+                                обеспечивает более или менее стандартное заполнение шаблона, а также реальное
+                                распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+                                "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."</div>
+                        </div>
+                        <div class="reviews_slider-item">
+                            <div class="reviews_slider-item-img"><img src="img/content/ava1.jpg" alt="Фото"></div>
+                            <div class="reviews_slider-item-name">Дмитрий Романенко</div>
+                            <div class="reviews_slider-item-text">Давно выяснено, что при оценке дизайна и композиции
+                                читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот
+                                обеспечивает более или менее стандартное заполнение шаблона, а также реальное
+                                распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+                                "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer_social">
+                <div class="footer_social-item">
+                    <a href="#"><img src="img/single/fb.svg" alt="fb"></a>
+                </div>
+                <div class="footer_social-item">
+                    <a href="#"><img src="img/single/insta.svg" alt="insta"></a>
+                </div>
+                <div class="footer_social-item">
+                    <a href="#"><img src="img/single/youtube.svg" alt="youtube"></a>
+                </div>
+                <div class="footer_social-item">
+                    <a href="#"><img src="img/single/vk.svg" alt="vk"></a>
+                </div>
+            </div>
+
+            <div class="footer_social-contact">
+                <a href="tel:+" class="footer_social-contact-link">066 123 45 67</a>
+                <a href="tel:+" class="footer_social-contact-link">066 123 45 67</a>
+                <a href="tel:+" class="footer_social-contact-link">066 123 45 67</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function initMap() {
+            var coordinates = {
+                    lat: 48.456909,
+                    lng: 35.060118
+                },
+                center = {
+                    lat: 48.456909,
+                    lng: 35.060118
+                };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: center,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                draggable: false
+            });
+            var image = 'img/single/marker.png';
+            var marker = new google.maps.Marker({
+                position: coordinates,
+                map: map,
+                icon: image
+            });
+        }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuLjb-iV3X_4aUsa2TbUyXn4NxU_RdUv4&callback=initMap">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.reviews_slider-wrap').slick({
+            centerMode: true,
+            centerPadding: '200px',
+            slidesToShow: 1,
+            arrows: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            responsive: [{
+                    breakpoint: 850,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '0px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
