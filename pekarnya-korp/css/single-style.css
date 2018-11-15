@@ -136,12 +136,16 @@
     font-size: 16px;
     padding: 27px 34px;
     background-color: #FCD73F;
+    border: 1px solid #FCD73F;
     width: max-content;
     height: max-content;
+    transition: 0.3s;
 }
 
 .header_btn:hover {
     cursor: pointer;
+    background-color: transparent;
+    transition: 0.3s;
 }
 
 
@@ -192,6 +196,9 @@
 
 
 /*************Gallery****************/
+.br-none {
+    display: none;
+}
 
 .gallery {
     background-image: url('../img/single/patern-bg.png');
@@ -330,8 +337,15 @@ form button {
     padding: 27px 89px;
     background-color: #000;
     width: max-content;
-    border-color: transparent;
     text-transform: uppercase;
+    border-color: transparent;
+    transition: 0.3s;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: grey;
+    transition: 0.3s;
 }
 
 /*************Contact*****************/
@@ -409,6 +423,17 @@ form button {
     padding: 27px 58px;
     border: 3px solid #FCD73F;
     width: max-content;
+    transition: 0.3s;
+}
+
+.contact_content-btn:hover {
+    background-color: #FCD73F;
+    color: #000;
+    transition: 0.3s;
+}
+
+.contact_content-btn-link {
+    text-decoration: none;
 }
 
 .contact_map {
@@ -443,6 +468,18 @@ form button {
     background-repeat: no-repeat;
     background-size: cover;
     height: 150px;
+}
+
+.reviews_decor-bottom {
+    position: absolute;
+    bottom: -99px;
+    left: 0;
+    right: 0;
+    background-image: url('../img/single/bottom.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
 }
 
 
@@ -532,6 +569,7 @@ form button {
 .footer {
     background-color: #000;
     padding: 70px 0;
+    padding-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -548,15 +586,23 @@ form button {
 .footer_social-item {
     width: 25px;
     height: 25px;
-    box-sizing: border-box;
     overflow: hidden;
     margin-right: 40px;
+    border: 1px solid transparent;
+    padding: 3px;
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
 .footer_social-item img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.footer_social-item:hover {
+    border-color: #FCD73F;
+    transition: 0.3s;
 }
 
 .footer_social-item:last-child {
@@ -574,4 +620,379 @@ form button {
     font-size: 28px;
     text-decoration: none;
     margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer_social-contact-link:hover {
+    color: #FCD73F;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1100px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .header_logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header_text {
+        font-size: 40px;
+    }
+
+    .stock_title {
+        font-size: 38px;
+    }
+
+    .stock_content-text {
+        font-size: 26px; 
+    }
+
+    .stock_content-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 15px;
+        margin: 0 auto;
+        margin-top: 49px;
+    }
+
+    .contact_content {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contact_map {
+        position: initial;
+    }
+
+    .contact_content-title {
+        font-size: 36px;
+    }
+
+    .contact_content-time {
+        margin-bottom: 60px;
+    }
+
+    .contact_content-btn {
+        margin: 0 auto;
+    }
+
+    /*******************/
+
+    .gallery_wrap {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .pre-order_wrap {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form input {
+        width: max-content;
+    }
+    
+    form input:first-child {
+        margin-bottom: 20px;
+    }
+
+    form input:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    .pre-order {
+        padding-bottom: 130px;
+        padding-top: 80px;
+    }
+
+    form button {
+        padding: 27px 96px;
+    }
+
+    .reviews_content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .header {
+        padding: 35px 0;
+    }
+
+    .header_logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .header_text {
+        font-size: 34px;
+    }
+
+    .header_btn {
+        font-size: 15px;
+        padding: 22px 25px;
+    }
+
+    .contact {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .stock_title {
+        padding: 28px 60px;
+        font-size: 32px;
+    }
+
+    .stock_content-text {
+        font-size: 24px;
+    }
+    .stock_content-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery {
+        margin-top: -90px;
+        margin-bottom: -95px;
+    }
+
+    .pre-order {
+        padding-bottom: 185px;
+        padding-top: 30px;
+    }
+
+    .pre-order_form {
+        margin: 0 auto;
+    }
+
+    .pre-order_img {
+        display: none;
+    }
+
+    form input {
+        margin: 0 auto;
+    }
+
+    form input:first-child {
+        margin-right: auto;
+    }
+
+    form {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .header_text {
+        font-size: 26px;
+    }
+
+    .header_btn {
+        font-size: 14px;
+        padding: 20px 22px;
+    }
+
+    .stock_title {
+        padding: 24px 50px;
+        font-size: 30px;
+    }
+
+    .stock_content-text {
+        font-size: 20px;
+    }
+
+    .gallery {
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 680px) { 
+    .header_text {
+        font-size: 22px;
+    }
+
+    .header_btn {
+        font-size: 12px;
+        padding: 18px 20px;
+    }
+
+    .stock_title {
+        padding: 20px 40px;
+        font-size: 24px;
+    }
+
+    .stock_content-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .stock_content-text {
+        font-size: 16px;
+    }
+
+    .contact_content-title {
+        font-size: 30px;
+    }
+
+    .contact_content-adress div:nth-child(2) {
+        font-size: 22px;
+    }
+
+    .contact_content-time div:nth-child(2) {
+        font-size: 22px;
+    }
+
+    .contact_map {
+        width: 100%;
+    }
+
+    .gallery_subtitle {
+        font-size: 20px;
+    }
+
+    .pre-order_form-subtitle {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .pre-order_form-title {
+        font-size: 45px;
+    }
+
+    .reviews-title {
+        font-size: 45px;
+    }
+
+    .footer_social {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 580px) { 
+    .header_logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .header_text {
+        font-size: 18px;
+    }
+
+    .header_btn {
+        padding: 16px 12px;
+    }
+
+    .stock_title {
+        padding: 16px 34px;
+        font-size: 20px;
+    }
+
+    .stock_content-text {
+        font-size: 14px;
+    }
+
+    .gallery_subtitle {
+        font-size: 16px;
+    }
+
+    .gallery_title {
+        font-size: 45px;
+    }
+
+    .pre-order_form-title {
+        text-align: center;
+    }
+
+    .footer_social-contact-link {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) { 
+    .header_text {
+        display: none;
+    }
+
+    .stock_title {
+        display: none;
+    }
+
+    .stock_content {
+        padding: 10px;
+    }
+
+    .contact_content-title {
+        font-size: 26px;
+    }
+
+    .contact_content-adress div:nth-child(2) {
+        font-size: 20px;
+    }
+
+    .contact_content-time div:nth-child(2) {
+        font-size: 20px;
+    }
+
+    .contact_map {
+        height: 400px;
+    }
+
+    .br-none {
+        display: initial;
+    }
+
+    .gallery {
+        padding: 75px 0;
+    }
+
+    .gallery_title {
+        font-size: 40px;
+    }
+
+    .pre-order_form-title {
+        font-size: 40px;
+    }
+
+    .pre-order_form-subtitle {
+        font-size: 26px;
+    }
+
+    .reviews-title {
+        font-size: 40px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer_social {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .reviews_slider-item-name {
+        font-size: 24px;
+    }
+
+    .reviews_slider-item-name {
+        font-size: 14px;
+    }
 }

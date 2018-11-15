@@ -15,7 +15,7 @@ var $html = $('html'),
 // Scripts initialize
 // ===================
 
-document.write('<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyAYjhWq7DvCwCiRKotPu9_IXQxupSQbhuo" type="text/javascript"></script>');
+
 
 $(window).on('load', function () {
 

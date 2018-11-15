@@ -50,7 +50,7 @@
                             <div>График работы:</div>
                             <div><i class="fas fa-clock"></i>08:00 - 22:00</div>
                         </div>
-                        <div class="contact_content-btn">ОСТАВИТЬ ОТЗЫВ</div>
+                        <a href="#" class="contact_content-btn-link"><div class="contact_content-btn">ОСТАВИТЬ ОТЗЫВ</div></a>
                     </div>
 
                     <div class="contact_map">
@@ -63,7 +63,7 @@
         <div class="gallery">
             <div class="gallery_wrap">
                 <div class="gallery_title">ГАЛЕРЕЯ</div>
-                <div class="gallery_subtitle">Живые фото пекарни по адресу: <span>Киев. ул Ленина 17</span></div>
+                <div class="gallery_subtitle">Живые фото пекарни по адресу:<br class="br-none"> <span>Киев. ул Ленина 17</span></div>
                 <div class="gallery_content">
                     <div class="gallery_content-item">
                         <img src="img/single/img_1.png" alt="Фото">
@@ -141,6 +141,7 @@
                     </div>
                 </div>
             </div>
+            <div class="reviews_decor-bottom"></div>
         </div>
 
         <footer class="footer">
@@ -182,7 +183,7 @@
                 center: center,
                 disableDefaultUI: true,
                 scrollwheel: false,
-                draggable: false
+                draggable: true
             });
             var image = 'img/single/marker.png';
             var marker = new google.maps.Marker({
