@@ -11293,6 +11293,15 @@ header *+.btn {
   .section1-content_left-item .section1-content_item-content:nth-child(1) {
     margin-right: 0;
   }
+
+  .section1-content_wrapp {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .section1-content_right .section1-content_item-content {
+    width: 100%;
+  }
 }
 
 
