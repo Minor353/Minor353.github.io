@@ -10575,7 +10575,7 @@ html.fp-enabled,
 }
 
 .header-bar_logo {
-  height: 26px;
+  height: 44px;
   width: 190px;
 }
 
@@ -10677,6 +10677,7 @@ header *+.btn {
   font-size: 36px;
   line-height: 52px;
   text-align: center;
+  
 }
 
 .about-title {
@@ -11075,7 +11076,7 @@ header *+.btn {
   }
 
   .header-bar_logo {
-    height: 20px;
+    height: 44px;
     width: 175px;
   }
 
@@ -11159,7 +11160,141 @@ header *+.btn {
   .reviews_content {
     width: 600px;
   }
+
+  .about-wraper {
+    padding-left: 0px;
+  }
+
+  .contact-wraper {
+    padding-left: 15px;
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .header-bar-main {
+    padding: 20px 50px;
+  }
+
+  .header-bar-main_logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .main-section_text-wrap h1 {
+    font-size: 60px;
+    line-height: 80px;
+  }
+
+  .section1-content_item-content {
+    width: 100%;
+  }
+
+  .section1-content_left-item .section1-content_item-content:nth-child(2) {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-section_text-wrap h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .main-section_text-wrap h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .about-title {
+    font-size: 40px;
+  }
+
+  .header-bar_logo {
+    height: 30px;
+    width: 140px;
+  }
+
+  .header-bar_btn {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header-bar {
+    padding: 10px 15px;
+  }
+
+  .header-bar_logo {
+    height: 30px;
+    width: 120px;
+  }
+
+  .header-bar_btn {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+
+  .main-section_text-wrap h1 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 20px;
+  }
+
+  .main-section_text-wrap h2 {
+    font-size: 20px;
+    line-height: 34px;
+  }
+
+  .btn-main {
+    padding: 15px 25px;
+  }
+
+  .btn-main span {
+    font-size: 16px;
+  }
+
+  .section1-content_left-item {
+    width: 100%;
+  }
+
+  .about-section_content-text {
+    width: 100%;
+  }
+
+  .about-section_features:after {
+    display: none;
+  }
+
+  .about-section_features {
+    padding-left: 0;
+  }
+
+  .about-section_features-title {
+    width: auto;
+  }
+
+  .about-section_features-text {
+    text-align: center;
+  }
+
+  .reviews_content {
+    width: 340px;
+  }
+  
+  .reviews_slider-item {
+    padding: 48px 15px;
+  }
+
+  .reviews_content {
+    padding: 0 10px;
+  }
+
+  .section1-content_left-item .section1-content_item-content:nth-child(1) {
+    margin-right: 0;
+  }
+}
+
 
 /*
 * 21. Main
