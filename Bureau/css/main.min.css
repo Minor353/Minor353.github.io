@@ -1307,6 +1307,11 @@ a:hover {
   transition: all .3s ease
 }
 
+.media-project:hover .bg-overlay {
+  opacity: 1;
+  transition: all .3s ease
+}
+
 .media-project .media__img {
   overflow: hidden
 }
@@ -1530,6 +1535,24 @@ a:hover {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%)
+}
+
+.media-project:hover .media__body .address,
+.media-project:hover .media__body .title {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.media-project:hover .line:before {
+  width: 100%;
+}
+
+.media-project:hover .line:after {
+  height: 100%;
 }
 
 @media (max-width:1199px) {
@@ -2007,12 +2030,15 @@ a:hover {
 .media-service .media__title .title a {
   font-size: 18px;
   color: #222;
-  text-transform: uppercase
+  text-transform: uppercase;
+  font-family: 'Istok Web', sans-serif;
 }
 
 .media-service .media__title .title a:hover {
   color: #666
 }
+
+
 
 .media-service .media__title .number {
   font-size: 72px;
@@ -2251,7 +2277,7 @@ a:hover {
 }
 
 .media-statistic-2 .media__number {
-  font-size: 30px;
+  font-size: 28px;
   color: #222;
   font-weight: 700;
   display: inline-block;
@@ -3397,7 +3423,7 @@ button {
 }
 
 .title-1 {
-  width: 577px;
+  max-width: 577px;
   margin: 0 auto;
   font-weight: 700;
   font-size: 38px;
@@ -5321,7 +5347,7 @@ button {
   position: relative
 }
 
-.menu-mobile .menu-item.menu-item-has-children>a::after {
+/*.menu-mobile .menu-item.menu-item-has-children>a::after {
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -5350,11 +5376,11 @@ button {
   top: 0;
   font-size: 18px;
   font-weight: 700
-}
+}*/
 
-.menu-mobile .menu-item.menu-item-has-children>a.active::after {
+/*.menu-mobile .menu-item.menu-item-has-children>a.active::after {
   content: '\f273'
-}
+}*/
 
 .menu-mobile .sub-menu {
   position: static;
@@ -17297,11 +17323,13 @@ button:focus {
 
 .media-project-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .media-project-item {
   width: 32%;
+  min-width: 300px;
   height: 600px;
   position: relative;
   overflow: hidden;
@@ -17593,4 +17621,29 @@ button:focus {
 .scroller-third:before,
 .scroller-third:after {
   background: #fff;
+}
+
+.client-title {
+  width: 315px;
+  font-size: 36px;
+}
+
+.widget_text,
+.widget_pages {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 14px;
+
+  color: #FFFFFF;
+}
+
+.widget-text p {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 14px;
+
+  color: #FFFFFF;
+}
+
+.media__img .number,
+.desc {
+  font-family: 'Istok Web', sans-serif;
 }
