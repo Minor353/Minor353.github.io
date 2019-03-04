@@ -336,15 +336,38 @@ button {
 .swal-button {
   display: inline-block;
   line-height: 43px;
-  border: 1px solid #888;
+  position: relative;
+  z-index: 5;
   padding: 0 23px;
   font-size: 13px;
   color: #555;
   transition: all .3s ease;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  border-radius: 0
+  border-radius: 0;
+  font-family: 'Istok Web', sans-serif;
+  min-height: 52px;
 }
+
+.au-btn svg {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px
+}
+
+.media__body .au-btn svg rect {
+  stroke: #555555;
+  fill: transparent;
+  transition: 0.3s !important;
+}
+
+.media__body .au-btn svg path {
+  stroke: #555555;
+}
+
 
 .au-btn .ic-arrow,
 .swal-button .ic-arrow {
@@ -355,14 +378,17 @@ button {
   transition: inherit
 }
 
+.au-btn:hover svg rect {
+  fill: #C44C28;
+  transition: 0.3s !important;
+}
+
 .au-btn:hover,
 .swal-button:hover {
   color: #fff;
-  background: #222;
-  border-color: transparent
+  transition: 0.3s;
 }
 
-.au-btn:hover .ic-arrow,
 .swal-button:hover .ic-arrow {
   color: #fff;
   -webkit-transform: translateX(5px);
@@ -1352,6 +1378,9 @@ a:hover {
   transform: translateY(50px)
 }
 
+
+
+
 .media-project .media__body .title a {
   font-size: 24px;
   color: #fff;
@@ -1368,8 +1397,9 @@ a:hover {
   -moz-transition-delay: 50ms;
   -o-transition-delay: 50ms;
   transition-delay: 50ms;
-  font-size: 11px;
-  color: #ececec
+  font-size: 14px;
+  color: #ececec;
+  font-family: 'Istok Web', sans-serif;
 }
 
 .media-project .line {
@@ -2455,7 +2485,8 @@ a:hover {
   font-size: 11px;
   color: #888;
   position: relative;
-  z-index: 99
+  z-index: 99;
+  font-family: 'Istok Web', sans-serif;
 }
 
 .media-testi-2 {
@@ -2727,10 +2758,13 @@ a:hover {
 
 .rev-btn-1,
 .rev-btn-2 {
+  font-family: 'Istok Web', sans-serif;
+  position: relative;
+  z-index: 5;
   display: inline-block;
   line-height: 43px;
   padding: 0 22px;
-  border: 1px solid #ececec;
+  border: 1px solid transparent;
   font-size: 13px;
   color: #fff;
   text-transform: capitalize;
@@ -2741,7 +2775,31 @@ a:hover {
   font-family: 'Istok Web', sans-serif;
 }
 
-.rev-btn-1:hover,
+.rev-btn-1 svg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.tp-mask-wrap {
+  overflow: visible !important;
+}
+
+.rev-btn-1 svg rect {
+  fill: transparent;
+  transition: 0.3s !important;
+}
+
+.rev-btn-1:hover svg rect {
+  fill: #C44C28;
+  transition: 0.3s !important;
+}
+
+
 .rev-btn-2:hover {
   background: #ececec;
   color: #222
@@ -3400,7 +3458,8 @@ button {
   font-size: 18px;
   line-height: -webkit-calc(40/18);
   line-height: -moz-calc(40/18);
-  line-height: calc(40/18)
+  line-height: calc(40/18);
+  font-family: 'Istok Web', sans-serif;
 }
 
 .text--c2 {
@@ -3532,8 +3591,9 @@ button {
 }
 
 .title-sub--sm {
-  font-size: 11px;
-  color: #888
+  font-size: 14px;
+  color: #888;
+  font-family: 'Istok Web', sans-serif;
 }
 
 .title-number {
@@ -3759,7 +3819,8 @@ button {
   line-height: 1.25;
   padding: 17px 20px;
   color: #333;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  font-family: 'Istok Web', sans-serif;
 }
 
 .au-input::-webkit-input-placeholder,
@@ -4030,6 +4091,10 @@ button {
 .media__img,
 .media__img>img {
   display: block
+}
+
+.media__img>svg {
+  display: block;
 }
 
 .media__img--slide .slick__dots {
@@ -4924,7 +4989,7 @@ button {
 
 .footer {
   position: relative;
-  padding: 75px 0 95px;
+  padding: 40px 0 40px;
   background-image: url(../images/bg-footer-01.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -6095,10 +6160,10 @@ button {
 
 .project-style-1 .entry-title,
 .project-style-4 .entry-title {
-  font-size: 60px;
+  font-size: 38px;
   color: #222;
-  text-transform: capitalize;
-  margin-bottom: 45px
+  margin-bottom: 45px;
+  letter-spacing: 1px;
 }
 
 .project-style-1 .entry-meta,
@@ -17330,11 +17395,8 @@ button:focus {
 .media-project-item {
   width: 32%;
   min-width: 300px;
-  height: 600px;
   position: relative;
   overflow: hidden;
-  opacity: 0.5;
-  transition: 0.3s;
 }
 
 .media-project-item:hover {
@@ -17415,8 +17477,8 @@ button:focus {
   content: " ";
   display: block;
   width: 7px;
-  height: 9999px;
   position: absolute;
+  top: 0;
   left: 50%;
   margin-left: -3.5px;
   z-index: 30;
@@ -17506,7 +17568,6 @@ button:focus {
   content: " ";
   display: block;
   width: 7px;
-  height: 9999px;
   position: absolute;
   left: 50%;
   margin-left: -3.5px;
@@ -17597,7 +17658,6 @@ button:focus {
   content: " ";
   display: block;
   width: 7px;
-  height: 9999px;
   position: absolute;
   left: 50%;
   margin-left: -3.5px;
@@ -17645,5 +17705,54 @@ button:focus {
 
 .media__img .number,
 .desc {
+  font-family: 'Istok Web', sans-serif;
+}
+
+
+
+
+.media__text {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 14px;
+}
+
+.title-1-main {
+  margin: 0;
+}
+
+.media-project_desc {
+  max-width: 415px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.media-project_desc-title {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #1B1B1B;
+}
+
+.media-project_desc-text {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+
+  color: #555555;
+}
+
+.value {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 14px;
+}
+
+.entry-content {
   font-family: 'Istok Web', sans-serif;
 }
