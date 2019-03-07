@@ -32,6 +32,8 @@
 
     <!-- Main CSS-->
     <link href="css/main.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <!--Favicons-->
     <link rel="shortcut icon" href="images/icon/favicon.jpg">
@@ -57,16 +59,16 @@
                                 <div class="header__content-right">
                                     <nav class="header-nav-menu">
                                         <ul class="menu nav-menu">
-                                            <li class="menu-item menu-item-has-children">
+                                            <li class="menu-item">
                                                 <a href="index.html">главная</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="about-us.html">о нас</a>
                                             </li>
-                                            <li class="menu-item menu-item-has-children">
+                                            <li class="menu-item">
                                                 <a href="project-grid-full.html">проекты</a>
                                             </li>
-                                            <li class="menu-item menu-item-has-children">
+                                            <li class="menu-item">
                                                 <a href="my-account.html">прайс</a>
                                             </li>
                                             <li class="menu-item">
@@ -122,16 +124,16 @@
                 <nav class="header-nav-menu-mobile">
                     <div class="container-fluid">
                         <ul class="menu nav-menu menu-mobile">
-                            <li class="menu-item menu-item-has-children">
-                                <a href="home-main.html">главная</a>
+                            <li class="menu-item">
+                                <a href="index.html">главная</a>
                             </li>
                             <li class="menu-item">
                                 <a href="about-us.html">о нас</a>
                             </li>
-                            <li class="menu-item menu-item-has-children">
+                            <li class="menu-item">
                                 <a href="project-grid-full.html">проекты</a>
                             </li>
-                            <li class="menu-item menu-item-has-children">
+                            <li class="menu-item">
                                 <a href="my-account.html">прайс</a>
                             </li>
                             <li class="menu-item">
@@ -220,13 +222,71 @@
                             </div>
                         </div>
                     </div>
-                    <img class="wp-post-image" src="images/post-01.jpg" alt="Post 1">
-                    <img class="wp-post-image" src="images/post-02.jpg" alt="Post 2">
-                    <img class="wp-post-image" src="images/post-03.jpg" alt="Post 3">
-                    <img class="wp-post-image" src="images/post-04.jpg" alt="Post 4">
+                    <div class="post-image-wrap">
+                        <img src="images/post-01.jpg" alt="post">
+                        <img src="images/post-04.jpg" alt="post">
+                    </div>
+                    <div class="post-image-wrap">
+                        <img src="images/post-02.jpg" alt="post">
+                        <img src="images/post-03.jpg" alt="post">
+                    </div>
                 </article>
             </div>
 
+            <div class="post-slider-wrap">
+                <div class="post-slider">
+                    <div class="post-slider-img-wrap">
+                        <div class="post-slider-img">
+                            <img src="images/post-01.jpg" alt="post">
+                            <img src="images/post-04.jpg" alt="post">
+                            <img src="images/post-02.jpg" alt="post">
+                            <img src="images/post-03.jpg" alt="post">
+                            <img src="images/post-04.jpg" alt="post">
+                            <img src="images/post-02.jpg" alt="post">
+                        </div>
+                    </div>
+
+                    <div class="post-slider-nav-wrap">
+                        <div class="post-slider-nav">
+                            <img src="images/post-01.jpg" alt="post">
+                            <img src="images/post-04.jpg" alt="post">
+                            <img src="images/post-02.jpg" alt="post">
+                            <img src="images/post-03.jpg" alt="post">
+                            <img src="images/post-04.jpg" alt="post">
+                            <img src="images/post-02.jpg" alt="post">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="post-form-wrap">
+                <div class="post-form">
+                    <h5 class="post-form-title">Понравился дизайн интерьера?</h5>
+                    <p class="post-form-subtitle">Оставьте заявку и наш менеджер свяжется с Вами</p>
+                    <form class="form-contact js-contact-form" method="POST" action="#">
+                        <div class="form-row no-gutters">
+                            <div class="col-md-6">
+                                <input class="au-input" type="text" name="name" placeholder="Ваше имя" required="required">
+                                <input class="au-input" type="email" name="email" placeholder="Ваш email" required="required"
+                                    pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+                                <input class="au-input" type="text" name="phone" placeholder="Ваш телефон" required="required">
+                            </div>
+                            <div class="col-md-6 p-r-0">
+                                <textarea class="au-textarea" name="message" placeholder="Ваш комментарий" required="required"></textarea>
+                                <div class="text-right">
+                                    <button class="au-btn au-btn--solid" type="submit">ОТПРАВИТЬ
+                                        <svg width="173" height="50" viewBox="0 0 173 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M169.793 44V49H1.40094V4H5.41026" stroke="#555555" />
+                                            <rect x="5.1084" y="0.5" width="167.392" height="44" fill="" stroke="#555555" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
         <!-- END MAIN-->
 
@@ -340,7 +400,60 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
+    <script src="js/jquery.event.move.js" type="text/javascript"></script>
+    <script src="js/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(function () {
+            $(".post-image-wrap").twentytwenty({
+                before_label: 'До', // Set a custom before label
+                after_label: 'После', // Set a custom after label
+            });
+        });
+    </script>
 
+    <script>
+        $('.post-slider-img').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.post-slider-nav'
+        });
+        $('.post-slider-nav').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            asNavFor: '.post-slider-img',
+            dots: false,
+            focusOnSelect: true,
+            centerMode: true,
+            centerPadding: '125px',
+            arrows: false,
+            vertical: true,
+            responsive: [{
+                    breakpoint: 769,
+                    settings: {
+                        vertical: false,
+                        centerPadding: '10px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        vertical: false,
+                        centerPadding: '10px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
 </body>
 
 </html>

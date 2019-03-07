@@ -35,6 +35,7 @@
 
     <!-- Main CSS-->
     <link href="css/main.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen" />
 
     <!--Favicons-->
     <link rel="shortcut icon" href="images/icon/favicon.jpg">
@@ -60,16 +61,16 @@
                                 <div class="header__content-right">
                                     <nav class="header-nav-menu">
                                         <ul class="menu nav-menu">
-                                            <li class="menu-item menu-item-has-children">
+                                            <li class="menu-item">
                                                 <a href="index.html">главная</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="about-us.html">о нас</a>
                                             </li>
-                                            <li class="menu-item menu-item-has-children">
+                                            <li class="menu-item">
                                                 <a href="project-grid-full.html">проекты</a>
                                             </li>
-                                            <li class="menu-item menu-item-has-children">
+                                            <li class="menu-item">
                                                 <a href="my-account.html">прайс</a>
                                             </li>
                                             <li class="menu-item">
@@ -125,16 +126,16 @@
                 <nav class="header-nav-menu-mobile">
                     <div class="container-fluid">
                         <ul class="menu nav-menu menu-mobile">
-                            <li class="menu-item menu-item-has-children">
-                                <a href="home-main.html">главная</a>
+                            <li class="menu-item">
+                                <a href="index.html">главная</a>
                             </li>
                             <li class="menu-item">
                                 <a href="about-us.html">о нас</a>
                             </li>
-                            <li class="menu-item menu-item-has-children">
+                            <li class="menu-item">
                                 <a href="project-grid-full.html">проекты</a>
                             </li>
-                            <li class="menu-item menu-item-has-children">
+                            <li class="menu-item">
                                 <a href="my-account.html">прайс</a>
                             </li>
                             <li class="menu-item">
@@ -376,19 +377,10 @@
                                 <div class="media-project-item">
                                     <article class="media media-project">
 
-                                        <div class="wrapper">
-                                            <div class="before">
-                                                <img class="content-image" src="images/1_after.jpg" draggable="false" />
-                                            </div>
-                                            <div class="after">
-                                                <img class="content-image" src="images/1_before.jpg" draggable="false" />
-                                            </div>
-                                            <div class="scroller">
-                                                <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100"
-                                                    height="100" viewBox="0 0 100 100">
-                                                    <polygon points="0 50 37 68 37 32 0 50" style="fill:#fff" />
-                                                    <polygon points="100 50 64 32 64 68 100 50" style="fill:#fff" /></svg>
-                                            </div>
+                                        <div class="media-project-item-wrapper">
+                                            <img class="content-image" src="images/1_before.jpg" />
+
+                                            <img class="content-image" src="images/1_after.jpg" />
                                         </div>
 
                                     </article>
@@ -402,19 +394,10 @@
                                 </div>
                                 <div class="media-project-item">
                                     <article class="media media-project">
-                                        <div class="wrapper-second">
-                                            <div class="before-second">
-                                                <img class="content-image" src="images/2_after.jpg" draggable="false" />
-                                            </div>
-                                            <div class="after-second">
-                                                <img class="content-image" src="images/2_before.jpg" draggable="false" />
-                                            </div>
-                                            <div class="scroller-second">
-                                                <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100"
-                                                    height="100" viewBox="0 0 100 100">
-                                                    <polygon points="0 50 37 68 37 32 0 50" style="fill:#fff" />
-                                                    <polygon points="100 50 64 32 64 68 100 50" style="fill:#fff" /></svg>
-                                            </div>
+                                        <div class="media-project-item-wrapper">
+                                            <img class="content-image" src="images/1_before.jpg" />
+
+                                            <img class="content-image" src="images/1_after.jpg" />
                                         </div>
                                     </article>
                                     <div class="media-project_desc">
@@ -427,19 +410,10 @@
                                 </div>
                                 <div class="media-project-item">
                                     <article class="media media-project">
-                                        <div class="wrapper-third">
-                                            <div class="before-third">
-                                                <img class="content-image" src="images/3_after.jpg" draggable="false" />
-                                            </div>
-                                            <div class="after-third">
-                                                <img class="content-image" src="images/3_before.jpg" draggable="false" />
-                                            </div>
-                                            <div class="scroller-third">
-                                                <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100"
-                                                    height="100" viewBox="0 0 100 100">
-                                                    <polygon points="0 50 37 68 37 32 0 50" style="fill:#fff" />
-                                                    <polygon points="100 50 64 32 64 68 100 50" style="fill:#fff" /></svg>
-                                            </div>
+                                        <div class="media-project-item-wrapper">
+                                            <img class="content-image" src="images/1_before.jpg" />
+
+                                            <img class="content-image" src="images/1_after.jpg" />
                                         </div>
                                     </article>
                                     <div class="media-project_desc">
@@ -452,6 +426,13 @@
                                 </div>
 
                             </div>
+
+                            <a class="au-btn au-btn--arrow au-btn-works" href="project-grid-full.html">Больше проектов
+                                <svg width="173" height="50" viewBox="0 0 173 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M169.793 44V49H1.40094V4H5.41026" stroke="#555555" />
+                                    <rect x="5.1084" y="0.5" width="167.392" height="44" fill="" stroke="#555555" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -741,6 +722,18 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
+
+    <script src="js/jquery.event.move.js" type="text/javascript"></script>
+    <script src="js/jquery.twentytwenty.js" type="text/javascript"></script>
+
+    <script>
+        $(function () {
+            $(".media-project-item-wrapper").twentytwenty({
+                before_label: 'До', // Set a custom before label
+                after_label: 'После', // Set a custom after label
+            });
+        });
+    </script>
 
 </body>
 
