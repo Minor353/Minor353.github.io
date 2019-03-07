@@ -368,6 +368,23 @@ button {
   stroke: #555555;
 }
 
+.au-btn-works .au-btn svg rect {
+  stroke: #555555;
+  fill: transparent;
+  transition: 0.3s !important;
+}
+
+.au-btn-works svg path {
+  stroke: #555555;
+}
+
+.au-btn-works {
+  margin: 0 auto;
+  margin-top: 80px;
+  display: block;
+  width: max-content;
+}
+
 
 .au-btn .ic-arrow,
 .swal-button .ic-arrow {
@@ -3815,7 +3832,8 @@ button {
 
 .au-input,
 .au-textarea {
-  background: #f8f8f8;
+  background: transparent;
+  border: 1px solid #555555;
   line-height: 1.25;
   padding: 17px 20px;
   color: #333;
@@ -3884,7 +3902,7 @@ button {
 
 .au-textarea {
   resize: none;
-  height: 190px
+  height: 195px
 }
 
 .au-textarea--low {
@@ -17399,289 +17417,23 @@ button:focus {
   overflow: hidden;
 }
 
+.media-project-item-wrapper {
+  max-width: 450px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+.media-project-item-wrapper img {
+  height: 600px;
+  width: 565px;
+}
+
 .media-project-item:hover {
   opacity: 1;
   transition: 0.3s;
 }
 
-/* Our wrapper */
-/* You can remove this page div in your website */
 
-/*Первый слайд***************************/
-/* Our wrapper */
-.wrapper {
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-/* Our image information */
-.before,
-.after {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-color: white;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.content-image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.after {
-  width: 125px;
-}
-
-.scroller {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 100px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background-color: transparent;
-  opacity: 0.9;
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.scroller:hover {
-  opacity: 1;
-}
-
-.scrolling {
-  pointer-events: none;
-  opacity: 1;
-  z-index: 1;
-}
-
-.scroller__thumb {
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-}
-
-.scroller:before,
-.scroller:after {
-  content: " ";
-  display: block;
-  width: 7px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -3.5px;
-  z-index: 30;
-  transition: 0.1s;
-}
-
-.scroller:before {
-  top: 100%;
-}
-
-.scroller:after {
-  bottom: 100%;
-}
-
-/* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
-.scroller {
-  border: 5px solid #fff;
-}
-
-.scroller:before,
-.scroller:after {
-  background: #fff;
-}
-
-/*Второй слайд*************************************/
-/* Our wrapper */
-.wrapper-second {
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-/* Our image information */
-.before-second,
-.after-second {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-color: white;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-
-.after-second {
-  width: 125px;
-}
-
-.scroller-second {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 100px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background-color: transparent;
-  opacity: 0.9;
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.scroller-second:hover {
-  opacity: 1;
-}
-
-.scrolling-second {
-  pointer-events: none;
-  opacity: 1;
-  z-index: 1;
-}
-
-.scroller__thumb {
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-}
-
-.scroller-second:before,
-.scroller-second:after {
-  content: " ";
-  display: block;
-  width: 7px;
-  position: absolute;
-  left: 50%;
-  margin-left: -3.5px;
-  z-index: 30;
-  transition: 0.1s;
-}
-
-.scroller-second:before {
-  top: 100%;
-}
-
-.scroller-second:after {
-  bottom: 100%;
-}
-
-/* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
-.scroller-second {
-  border: 5px solid #fff;
-}
-
-.scroller-second:before,
-.scroller-second:after {
-  background: #fff;
-}
-
-/*Третий слайд*************************************/
-/* Our wrapper */
-.wrapper-third {
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-/* Our image information */
-.before-third,
-.after-third {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-color: white;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-
-.after-third {
-  width: 125px;
-}
-
-.scroller-third {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 100px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background-color: transparent;
-  opacity: 0.9;
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.scroller-third:hover {
-  opacity: 1;
-}
-
-.scrolling-third {
-  pointer-events: none;
-  opacity: 1;
-  z-index: 1;
-}
-
-.scroller__thumb {
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-}
-
-.scroller-third:before,
-.scroller-third:after {
-  content: " ";
-  display: block;
-  width: 7px;
-  position: absolute;
-  left: 50%;
-  margin-left: -3.5px;
-  z-index: 30;
-  transition: 0.1s;
-}
-
-.scroller-third:before {
-  top: 100%;
-}
-
-.scroller-third:after {
-  bottom: 100%;
-}
-
-/* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
-.scroller-third {
-  border: 5px solid #fff;
-}
-
-.scroller-third:before,
-.scroller-third:after {
-  background: #fff;
-}
 
 .client-title {
   width: 315px;
@@ -17755,4 +17507,151 @@ button:focus {
 
 .entry-content {
   font-family: 'Istok Web', sans-serif;
+}
+
+.post-image-wrap {
+  margin-bottom: 80px;
+}
+
+.post-image-wrap--last {
+  margin-bottom: 0px;
+}
+
+.post-form {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.post-form-title {
+  font-family: 'Prata', serif;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 40px;
+  text-align: center;
+
+  color: #1B1B1B;
+}
+
+.post-form-subtitle {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 80px;
+  color: #555555;
+}
+
+.au-btn--solid {
+  background: transparent;
+  color: #555555;
+  width: 173px;
+  padding-bottom: 4px;
+}
+
+.au-btn--solid:hover rect {
+  fill: #C44C28;
+}
+
+.au-btn--solid:hover {
+  background: transparent;
+}
+
+.post-form-wrap {
+  padding: 0 15px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url('../images/pattern.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.post-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-slider-img-wrap {
+  width: 70%;
+  height: 690px;
+}
+
+.post-slider-nav-wrap {
+  width: 28%;
+  height: 690px;
+  display: flex;
+}
+
+.post-slider-nav {
+  margin: auto 0;
+}
+
+.post-slider-nav img {
+  margin-bottom: 30px;
+  cursor: pointer;
+  border: 2px solid transparent !important;
+  transition: 0.3s;
+  outline: none;
+}
+
+.post-slider-nav img:hover {
+  border: 2px solid #555555 !important;
+  transition: 0.3s;
+}
+
+.post-slider-img {
+  height: 690px;
+}
+
+.post-slider-img img {
+  width: 100%;
+  height: 690px;
+  object-fit: cover;
+}
+
+
+@media screen and (max-width: 769px) {
+  .post-slider {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .post-slider-img-wrap {
+    width: 100%;
+    margin-bottom: 40px;
+    height: auto;
+  }
+
+  .post-slider-nav-wrap {
+    width: 100%;
+    height: auto;
+  }
+
+  .post-slider-nav {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post-slider-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+
+  .media-project-item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  .post-slider-img-wrap {
+    height: 300px;
+  }
 }
