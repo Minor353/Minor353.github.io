@@ -42,6 +42,38 @@
 
 <body class="animsition js-preloader">
     <div class="page-wrapper">
+        <!-- Popup form-->
+        <div class="popup-form">
+            <div class="popup-form_wrap">
+                <div class="post-form">
+                    <p class="post-form-subtitle">Свяжитесь с нами</p>
+                    <h5 class="post-form-title">Мы поможем вам создать квартируВашей мечты</h5>
+
+                    <form class="form-contact js-contact-form" method="POST" action="#">
+                        <div class="form-row no-gutters">
+                            <div class="col-md-6">
+                                <input class="au-input" type="text" name="name" placeholder="Ваше имя" required="required">
+                                <input class="au-input" type="email" name="email" placeholder="Ваш email" required="required"
+                                    pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+                                <input class="au-input" type="text" name="phone" placeholder="Ваш телефон" required="required">
+                            </div>
+                            <div class="col-md-6 p-r-0">
+                                <textarea class="au-textarea" name="message" placeholder="Ваш комментарий" required="required"></textarea>
+                                <div class="text-right">
+                                    <button class="au-btn au-btn--solid" type="submit">ОТПРАВИТЬ
+                                        <svg width="173" height="50" viewBox="0 0 173 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M169.793 44V49H1.40094V4H5.41026" stroke="#555555" />
+                                            <rect x="5.1084" y="0.5" width="167.392" height="44" fill="" stroke="#555555" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- END Popup form-->
         <!-- HEADER-->
         <header id="header">
             <div class="header header-1 d-none d-lg-block js-header-1">
@@ -54,6 +86,11 @@
                                         <img src="images/icon/logo-black.png" alt="Tatee" />
                                     </a>
                                 </div>
+
+                                <div class="btn-form-popup">
+                                    <a href="#">Свяжитесь с нами</a>
+                                </div>
+
                                 <div class="header__content-right">
                                     <nav class="header-nav-menu">
                                         <ul class="menu nav-menu">
@@ -67,7 +104,7 @@
                                                 <a href="project-grid-full.html">проекты</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="my-account.html">прайс</a>
+                                                <a href="price.html">прайс</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="contact.html">контакты</a>
@@ -132,7 +169,7 @@
                                 <a href="project-grid-full.html">проекты</a>
                             </li>
                             <li class="menu-item">
-                                <a href="my-account.html">прайс</a>
+                                <a href="price.html">прайс</a>
                             </li>
                             <li class="menu-item">
                                 <a href="contact.html">контакты</a>
