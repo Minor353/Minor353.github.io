@@ -17755,6 +17755,97 @@ button:focus {
   z-index: 98;
 }
 
+.btn-form-popup {
+  border: 1px solid #555555;
+  padding: 10px 25px;
+  margin-left: auto;
+  margin-right: 60px;
+}
+
+.btn-form-popup a {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  color: #555555;
+  transition: 0.3s;
+}
+
+.btn-form-popup:hover {
+  background-color: #C44C28;
+  transition: 0.3s;
+}
+
+.btn-form-popup:hover a {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn-form-popup--mobile {
+  border: 1px solid #555555;
+  padding: 5px 15px;
+}
+
+.btn-form-popup--mobile a {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  color: #555555;
+  transition: 0.3s;
+}
+
+.btn-form-popup--mobile:hover {
+  background-color: #C44C28;
+  transition: 0.3s;
+}
+
+.btn-form-popup--mobile:hover a {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.popup-form {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff69;
+  z-index: 99999;
+  display: flex;
+  transition: 0.3s;
+}
+
+.popup-form--active {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s;
+}
+
+.popup-form_wrap {
+  margin: auto;
+
+}
+
+.popup-form_wrap .post-form {
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid grey;
+}
+
+.popup-form_wrap .post-form-subtitle {
+  margin-bottom: 20px;
+  font-family: 'Istok Web', sans-serif;
+  text-transform: lowercase;
+}
+
+.popup-form_wrap .post-form-title {
+  margin-bottom: 60px;
+}
+
 @media screen and (max-width: 769px) {
   .table-price {
     overflow-x: scroll;
@@ -17806,8 +17897,31 @@ button:focus {
 
 
 @media screen and (max-width: 480px) {
+  .popup-form_wrap .post-form-subtitle {
+    margin-bottom: 10px;
+  }
+
+  .popup-form_wrap .post-form {
+    padding: 15px;
+  }
+
+  .popup-form_wrap .post-form-title {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
   .post-image-wrap {
     margin-bottom: 40px;
+  }
+
+  .popup-form_wrap .au-input,
+  .au-textarea {
+    padding: 11px 15px;
+    margin-bottom: 15px;
+  }
+
+  .popup-form_wrap .au-textarea {
+    height: 100px;
   }
 
   .post-slider-img-wrap {

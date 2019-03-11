@@ -941,3 +941,29 @@
 
 
 })(jQuery);
+
+
+
+/**Вызов формы**/
+
+const formPopupBtn = document.querySelector('.btn-form-popup');
+const formPopupBTnMobile = document.querySelector('.btn-form-popup--mobile');
+const formPopup = document.querySelector('.popup-form');
+
+formPopupBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    formPopup.classList.add('popup-form--active');
+});
+
+formPopupBTnMobile.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    formPopup.classList.add('popup-form--active');
+});
+
+formPopup.addEventListener('click', function (event) {
+    if (event.target == formPopup) {
+        formPopup.classList.remove('popup-form--active');
+    }
+})
