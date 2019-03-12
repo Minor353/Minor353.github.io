@@ -1,5 +1,3 @@
-
-
 (function ($) {
     // USE STRICT
     "use strict";
@@ -9,42 +7,41 @@
         var contactFormWrapper = $('.js-contact-form');
 
         contactFormWrapper.each(function () {
-           var that = $(this);
+            var that = $(this);
             that.on('submit', function (e) {
                 var url = "includes/contact-form.php";
-                
+
                 $.ajax({
                     type: "POST",
                     url: url,
                     data: $(this).serialize(),
-                    success: function (data)
-                    {
+                    success: function (data) {
                         var result = JSON.parse(data);
 
                         var message = result.message;
                         var type = result.type;
                         if (type === 1) {
-                            swal ( "Success" ,  message ,  "success" );
+                            swal("Success", message, "success");
                             // that.reset();
                         } else if (type === 0) {
-                            swal ( "Success" ,  message ,  "error" );
+                            swal("Success", message, "error");
                         }
                     },
                     statusCode: {
-                        404: function() {
-                            swal ( "Oops" ,  "File Not Found!" ,  "error" );
+                        404: function () {
+                            swal("Oops", "File Not Found!", "error");
                         }
                     },
-                    error: function (jqXHR, textStatus, errorThrown ) {
+                    error: function (jqXHR, textStatus, errorThrown) {
 
-                        swal ( "Oops" ,  errorThrown  ,  "error" );
+                        swal("Ой", "Произошла ошибка");
                     }
                 });
                 return false;
             });
         });
 
-    } catch(err) {
+    } catch (err) {
         console.log(err)
     }
 

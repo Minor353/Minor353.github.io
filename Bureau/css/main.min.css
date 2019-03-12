@@ -17814,7 +17814,7 @@ button:focus {
   left: 0;
   right: 0;
   background-color: #ffffff69;
-  z-index: 99999;
+  z-index: 9999;
   display: flex;
   transition: 0.3s;
 }
