@@ -1,211 +1,247 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My Works</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="assets/styles/app.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <nav class="nav nav-panel"> 
-        <div class="nav-panel__left-side"></div>
-        <div class="nav-panel__right-side"></div>
-        <ul class="nav-panel__items-wrapper">
-          <li class="nav-panel__item">
-            <div class="nav-panel__decor-left"></div>
-            <div class="nav-panel__decor-right"></div><a class="nav-panel__item-link" href="index.html">Главная</a>
+
+<head>
+  <meta charset="utf-8">
+  <title>My Works</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/styles/app.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="nav nav-panel">
+      <div class="nav-panel__left-side"></div>
+      <div class="nav-panel__right-side"></div>
+      <ul class="nav-panel__items-wrapper">
+        <li class="nav-panel__item">
+          <div class="nav-panel__decor-left"></div>
+          <div class="nav-panel__decor-right"></div><a class="nav-panel__item-link" href="index.html">Главная</a>
+        </li>
+        <li class="nav-panel__item">
+          <div class="nav-panel__decor-left"></div>
+          <div class="nav-panel__decor-right"></div><a class="nav-panel__item-link" href="my-works.html">Мои работы</a>
+        </li>
+        <li class="nav-panel__item">
+          <div class="nav-panel__decor-left"></div>
+          <div class="nav-panel__decor-right"></div><a class="nav-panel__item-link" href="about.html">Обо мне</a>
+        </li>
+        <li class="nav-panel__item">
+          <div class="nav-panel__decor-left"></div>
+          <div class="nav-panel__decor-right"></div><a class="nav-panel__item-link" href="blog.html">Блог</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="about-title" id="about-title">
+      <div class="social-title">
+        <ul class="social">
+          <li class="social__link"><a class="social__link-vk" href="https://vk.com/minorvankertis" target="_blank">
+              <svg class="social__icon social__icon-vk">
+                <use xlink:href="assets/images/sprite.svg#vk"> </use>
+              </svg></a></li>
+          <li class="social__link"><a class="social__link-git" href="https://github.com/Minor353" target="_blank">
+              <svg class="social__icon social__icon-git">
+                <use xlink:href="assets/images/sprite.svg#github"></use>
+              </svg></a></li>
+          <li class="social__link"><a class="social__link-in"
+              href="https://www.linkedin.com/in/hennadii-nikitenko-b68494a0/" target="_blank">
+              <svg class="social__icon social__icon-in">
+                <use xlink:href="assets/images/sprite.svg#in"></use>
+              </svg></a></li>
+        </ul>
+      </div><a class="burger" href="#">
+        <div class="burger__btn"> </div>
+      </a>
+      <div class="about-title__greeting"><img class="about-title__greeting-bg"
+          src="assets/images/icons/portfolio_header.svg" alt="stars">
+        <section class="greeting">
+          <div class="greeting__foto"><img src="assets/images/content/ava.jpg" alt="ava"></div>
+          <div class="greeting__title">
+            <h3 class="greeting__title-name">Никитенко Геннадий</h3>
+            <div class="greeting__title-text">Личный сайт веб разработчика</div>
+          </div>
+        </section>
+      </div><a class="arrow-btn arrow-btn--position" href="#work">
+        <svg class="arrow">
+          <use xlink:href="assets/images/sprite.svg#arrow_down"></use>
+        </svg></a>
+    </section>
+    <section class="works-main">
+      <div class="triangle-wrap triangle-wrap--position">
+        <svg class="traingle triangle--works" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 288"
+          preserveaspectratio="none">
+          <polygon class="traingle__left" points="0,0   0,288   500.8,288   500.8,85.5"></polygon>
+          <polygon class="traingle__right" points="1000,0   1000,288   500,288   500,85.5"> </polygon>
+        </svg>
+      </div>
+      <div class="works-main__title-wrap">
+        <div class="works-main__title">Мои работы<img class="works-main__title-bg"
+            src="assets/images/icons/works_header.svg" alt="work"></div>
+      </div><a href="#" id="work"></a>
+      <div class="slider"><a class="slider__arrow-prev" href="#"></a><a class="slider__arrow-next" href="#"></a>
+        <div class="slider__wrap">
+          <ul class="slider__items">
+            <li class="slider__item">
+              <div class="slider__img"><img src="assets/images/content/work-2.png" alt="site-foto"></div>
+              <div class="slider__content">
+                <h4 class="slider__content-title">Сайт по продаже франшизы "Перша пекарня"</h4>
+                <div class="slider__content-description">HTML, CSS, JavaScript, WordPress</div><a
+                  class="slider__content-link" href="http://www.pptm.com.ua/" target="_blank">Посмотреть сайт
+                  <svg class="slider__link-icon">
+                    <use xlink:href="assets/images/sprite.svg#link"></use>
+                  </svg></a>
+              </div>
+            </li>
+            <li class="slider__item">
+              <div class="slider__img"><img src="assets/images/content/work-4.png" alt="site-foto"></div>
+              <div class="slider__content">
+                <h4 class="slider__content-title">Сайт по продаже фасадных панелей "Tvins"</h4>
+                <div class="slider__content-description">Pug, SCSS, JS, WordPress</div><a class="slider__content-link"
+                  href="http://tvins.com.ua/" target="_blank">Посмотреть сайт
+                  <svg class="slider__link-icon">
+                    <use xlink:href="assets/images/sprite.svg#link"></use>
+                  </svg></a>
+              </div>
+            </li>
+            <li class="slider__item">
+              <div class="slider__img"><img src="assets/images/content/work-5.png" alt="site-foto"></div>
+              <div class="slider__content">
+                <h4 class="slider__content-title">Сайт СТО "Gallak"</h4>
+                <div class="slider__content-description">Pug, SCSS, JS, WordPress</div><a class="slider__content-link"
+                  href="https://minor353.github.io/Gallak/" target="_blank">Посмотреть сайт
+                  <svg class="slider__link-icon">
+                    <use xlink:href="assets/images/sprite.svg#link"></use>
+                  </svg></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="slider__paginator"><a class="slider__paginator-item slider__paginator-item--active" href="#"></a><a
+            class="slider__paginator-item" href="#"></a><a class="slider__paginator-item" href="#"> </a></div>
+      </div>
+      <section class="my-feedback">
+        <h3 class="my-feedback__title">Что обо мне говорят<img class="my-feedback__title-bg"
+            src="assets/images/icons/about_header.svg" alt="About"></h3>
+        <ul class="my-feedback__comment-wrap">
+          <li class="my-feedback__comment-item">
+            <div class="my-feedback__coment-ava"><img src="assets/images/content/dima.png" alt="avatar"></div>
+            <div class="my-feedback__comment-text">Этот парень проходил обучение веб-разработке не где-то, а в
+              LoftSchool! 4 месяца только самых тяжелых испытаний и бессонных ночей!
+              <div class="my-feedback__comment-bg"></div>
+            </div>
+            <div class="my-feedback__comment-name">
+              <div class="my-feedback__name">Ковальчук Дмитрий</div>
+              <div class="my-feedback__description">- основатель Loftschool</div>
+            </div>
           </li>
-          <li class="nav-panel__item">
-            <div class="nav-panel__decor-left"></div>
-            <div class="nav-panel__decor-right"></div><a class="nav-panel__item-link" href="my-works.html">Мои работы</a>
-          </li>
-          <li class="nav-panel__item">
-            <div class="nav-panel__decor-left"></div>
-            <div class="nav-panel__decor-right"></div><a class="nav-panel__item-link" href="about.html">Обо мне</a>
-          </li>
-          <li class="nav-panel__item">
-            <div class="nav-panel__decor-left"></div>
-            <div class="nav-panel__decor-right"></div><a class="nav-panel__item-link" href="blog.html">Блог</a>
+          <li class="my-feedback__comment-item">
+            <div class="my-feedback__coment-ava"><img src="assets/images/content/vova.png" alt="avatar"></div>
+            <div class="my-feedback__comment-text">Этот код выдержеит любые испытания. Только пожалуйста, не загружается
+              сайт на слишком старых браузерах!
+              <div class="my-feedback__comment-bg"></div>
+            </div>
+            <div class="my-feedback__comment-name">
+              <div class="my-feedback__name">Сабанцев Владимир</div>
+              <div class="my-feedback__description">- преподаватель Loftschool</div>
+            </div>
           </li>
         </ul>
-      </nav>
-      <section class="about-title" id="about-title">
-        <div class="social-title">
-          <ul class="social">
-            <li class="social__link"><a class="social__link-vk" href="https://vk.com/minorvankertis" target="_blank">
-                <svg class="social__icon social__icon-vk">
-                  <use xlink:href="assets/images/sprite.svg#vk"> </use>
-                </svg></a></li>
-            <li class="social__link"><a class="social__link-git" href="https://github.com/Minor353" target="_blank">
-                <svg class="social__icon social__icon-git">
-                  <use xlink:href="assets/images/sprite.svg#github"></use>
-                </svg></a></li>
-            <li class="social__link"><a class="social__link-in" href="https://www.linkedin.com/in/hennadii-nikitenko-b68494a0/" target="_blank">
-                <svg class="social__icon social__icon-in">
-                  <use xlink:href="assets/images/sprite.svg#in"></use>
-                </svg></a></li>
-          </ul>
-        </div><a class="burger" href="#">
-          <div class="burger__btn"> </div></a>
-        <div class="about-title__greeting"><img class="about-title__greeting-bg" src="assets/images/icons/portfolio_header.svg" alt="stars">
-          <section class="greeting">
-            <div class="greeting__foto"><img src="assets/images/content/ava.jpg" alt="ava"></div>
-            <div class="greeting__title">
-              <h3 class="greeting__title-name">Никитенко Геннадий</h3>
-              <div class="greeting__title-text">Личный сайт веб разработчика</div>
+        <div class="my-feedback__form">
+          <form class="form form" action="server.php" method="post" id="form">
+            <h3 class="form__title">Связатся со мной</h3>
+            <input class="form__field" type="text" required placeholder="Ваше имя" name="name">
+            <input class="form__field" type="text" required placeholder="Ваш email" name="email">
+            <textarea class="form__area" required placeholder="Ваше сообщение" name="text"></textarea>
+            <div class="form__btn-wrap">
+              <button class="form__btn form__btn-submit" type="submit">Отправить</button>
+              <button class="form__btn form__btn-reset" type="reset">Очистить </button>
             </div>
-          </section>
-        </div><a class="arrow-btn arrow-btn--position" href="#work">
-          <svg class="arrow">
-            <use xlink:href="assets/images/sprite.svg#arrow_down"></use>
-          </svg></a>
-      </section>
-      <section class="works-main">
-        <div class="triangle-wrap triangle-wrap--position">
-          <svg class="traingle triangle--works" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 288" preserveaspectratio="none">
-            <polygon class="traingle__left" points="0,0   0,288   500.8,288   500.8,85.5"></polygon>
-            <polygon class="traingle__right" points="1000,0   1000,288   500,288   500,85.5"> </polygon>
-          </svg>
+          </form>
         </div>
-        <div class="works-main__title-wrap">
-          <div class="works-main__title">Мои работы<img class="works-main__title-bg" src="assets/images/icons/works_header.svg" alt="work"></div>
-        </div><a href="#" id="work"></a>
-        <div class="slider"><a class="slider__arrow-prev" href="#"></a><a class="slider__arrow-next" href="#"></a>
-          <div class="slider__wrap">
-            <ul class="slider__items">
-              <li class="slider__item">
-                <div class="slider__img"><img src="assets/images/content/work-1.png" alt="site-foto"></div>
-                <div class="slider__content">
-                  <h4 class="slider__content-title">Сайт Portfolio</h4>
-                  <div class="slider__content-description">HTML, CSS, JavaScript, Pug, SCSS, PHP</div><a class="slider__content-link" href="http://front-dev.com/" target="_blank">Посмотреть сайт
-                    <svg class="slider__link-icon">
-                      <use xlink:href="assets/images/sprite.svg#link"></use>
-                    </svg></a>
-                </div>
-              </li>
-              <li class="slider__item">
-                <div class="slider__img"><img src="assets/images/content/work-2.png" alt="site-foto"></div>
-                <div class="slider__content"> 
-                  <h4 class="slider__content-title">Сайт бургерной "Mr Burger"</h4>
-                  <div class="slider__content-description">HTML, CSS, JavaScript, PHP</div><a class="slider__content-link" href="http://front-dev.com/burger" target="_blank">Посмотреть сайт
-                    <svg class="slider__link-icon">
-                      <use xlink:href="assets/images/sprite.svg#link"></use>
-                    </svg></a>
-                </div>
-              </li>
-              <li class="slider__item">
-                <div class="slider__img"><img src="assets/images/content/work-3.png" alt="site-foto"></div>
-                <div class="slider__content">
-                  <h4 class="slider__content-title">Сайт для приложения "PINK"</h4>
-                  <div class="slider__content-description">HTML, CSS</div><a class="slider__content-link" href="http://front-dev.com/pink" target="_blank">Посмотреть сайт
-                    <svg class="slider__link-icon">
-                      <use xlink:href="assets/images/sprite.svg#link"></use>
-                    </svg></a>
-                </div>
-              </li>
+      </section><a class="arrow-btn arrow-btn--up" href="#about-title">
+        <svg class="arrow">
+          <use xlink:href="assets/images/sprite.svg#arrow_down"></use>
+        </svg></a>
+      <div class="form-popup">
+        <div class="form-popup__wrapper">
+          <h5 class="form-popup__name"></h5><a class="close-btn" href="#">Закрыть</a>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__content-wrap">
+          <div class="footer__text">
+            <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+          </div>
+          <div class="footer__links">
+            <ul class="footer__nav">
+              <li class="footer__nav-item"><a class="footer__nav-link" href="index.html">Главная</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="my-works.html">Мои работы</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="about.html">Обо мне</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="blog.html">Блог</a></li>
+            </ul>
+            <div class="footer__social-wrap">
+              <ul class="social">
+                <li class="social__link"><a class="social__link-vk" href="https://vk.com/minorvankertis"
+                    target="_blank">
+                    <svg class="social__icon social__icon-vk social__icon--color">
+                      <use xlink:href="assets/images/sprite.svg#vk"> </use>
+                    </svg></a></li>
+                <li class="social__link"><a class="social__link-git" href="https://github.com/Minor353" target="_blank">
+                    <svg class="social__icon social__icon-git social__icon--color">
+                      <use xlink:href="assets/images/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="social__link"><a class="social__link-in"
+                    href="https://www.linkedin.com/in/hennadii-nikitenko-b68494a0/" target="_blank">
+                    <svg class="social__icon social__icon-in social__icon--color">
+                      <use xlink:href="assets/images/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__contact-links">
+            <ul class="footer__contact-wrap">
+              <li class="footer__contact-item"><a class="footer__contact-link" href="#">vankert25</a></li>
+              <li class="footer__contact-item"><a class="footer__contact-link" href="#">vankert353@gmail.com</a></li>
+              <li class="footer__contact-item"><a class="footer__contact-link" href="#">+3 8 093 403 77 67</a></li>
+              <li class="footer__contact-item"><a class="footer__contact-link" href="#">Днепр пр.Героев д. 18</a></li>
             </ul>
           </div>
-          <div class="slider__paginator"><a class="slider__paginator-item slider__paginator-item--active" href="#"></a><a class="slider__paginator-item" href="#"></a><a class="slider__paginator-item" href="#"> </a></div>
         </div>
-        <section class="my-feedback">
-          <h3 class="my-feedback__title">Что обо мне говорят<img class="my-feedback__title-bg" src="assets/images/icons/about_header.svg" alt="About"></h3>
-          <ul class="my-feedback__comment-wrap">
-            <li class="my-feedback__comment-item">
-              <div class="my-feedback__coment-ava"><img src="assets/images/content/dima.png" alt="avatar"></div>
-              <div class="my-feedback__comment-text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4 месяца только самых тяжелых испытаний и бессонных ночей!
-                <div class="my-feedback__comment-bg"></div>
-              </div>
-              <div class="my-feedback__comment-name"> 
-                <div class="my-feedback__name">Ковальчук Дмитрий</div>
-                <div class="my-feedback__description">- основатель Loftschool</div>
-              </div>
-            </li>
-            <li class="my-feedback__comment-item">
-              <div class="my-feedback__coment-ava"><img src="assets/images/content/vova.png" alt="avatar"></div>
-              <div class="my-feedback__comment-text">Этот код выдержеит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-                <div class="my-feedback__comment-bg"></div>
-              </div>
-              <div class="my-feedback__comment-name"> 
-                <div class="my-feedback__name">Сабанцев Владимир</div>
-                <div class="my-feedback__description">- преподаватель Loftschool</div>
-              </div>
-            </li>
-          </ul>
-          <div class="my-feedback__form">
-            <form class="form form" action="server.php" method="post" id="form">
-              <h3 class="form__title">Связатся со мной</h3>
-              <input class="form__field" type="text" required placeholder="Ваше имя" name="name">
-              <input class="form__field" type="text" required placeholder="Ваш email" name="email">
-              <textarea class="form__area" required placeholder="Ваше сообщение" name="text"></textarea>
-              <div class="form__btn-wrap">
-                <button class="form__btn form__btn-submit" type="submit">Отправить</button>
-                <button class="form__btn form__btn-reset" type="reset">Очистить </button>
-              </div>
-            </form>
-          </div>
-        </section><a class="arrow-btn arrow-btn--up" href="#about-title">
-          <svg class="arrow">
-            <use xlink:href="assets/images/sprite.svg#arrow_down"></use>
-          </svg></a>
-        <div class="form-popup">
-          <div class="form-popup__wrapper">
-            <h5 class="form-popup__name"></h5><a class="close-btn" href="#">Закрыть</a>
-          </div>
+        <div class="footer__copyright">© Владимир Астахов | создано с любовью в LoftSchool | 2018</div>
+      </footer>
+      <div id="hellopreloader">
+        <div id="hellopreloader_preload">
+          <div class="hellopreloader-bg"></div>
         </div>
-        <footer class="footer">
-          <div class="footer__content-wrap">
-            <div class="footer__text">
-              <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
-            </div>
-            <div class="footer__links">
-              <ul class="footer__nav">
-                <li class="footer__nav-item"><a class="footer__nav-link" href="index.html">Главная</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="my-works.html">Мои работы</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="about.html">Обо мне</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="blog.html">Блог</a></li>
-              </ul>
-              <div class="footer__social-wrap">
-                <ul class="social">
-                  <li class="social__link"><a class="social__link-vk" href="https://vk.com/minorvankertis" target="_blank"> 
-                      <svg class="social__icon social__icon-vk social__icon--color">
-                        <use xlink:href="assets/images/sprite.svg#vk"> </use>
-                      </svg></a></li>
-                  <li class="social__link"><a class="social__link-git" href="https://github.com/Minor353" target="_blank">
-                      <svg class="social__icon social__icon-git social__icon--color">
-                        <use xlink:href="assets/images/sprite.svg#github"></use>
-                      </svg></a></li>
-                  <li class="social__link"><a class="social__link-in" href="https://www.linkedin.com/in/hennadii-nikitenko-b68494a0/" target="_blank">
-                      <svg class="social__icon social__icon-in social__icon--color">
-                        <use xlink:href="assets/images/sprite.svg#in"></use>
-                      </svg></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer__contact-links">
-              <ul class="footer__contact-wrap">
-                <li class="footer__contact-item"><a class="footer__contact-link" href="#">vankert25</a></li>
-                <li class="footer__contact-item"><a class="footer__contact-link" href="#">vankert353@gmail.com</a></li>
-                <li class="footer__contact-item"><a class="footer__contact-link" href="#">+3 8 093 403 77 67</a></li>
-                <li class="footer__contact-item"><a class="footer__contact-link" href="#">Днепр пр.Героев д. 18</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer__copyright">© Владимир Астахов | создано с любовью в LoftSchool | 2018</div>
-        </footer>
-        <div id="hellopreloader">
-          <div id="hellopreloader_preload">
-            <div class="hellopreloader-bg"></div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};</script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="assets/scripts/work-min.js"></script>
-  </body>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript">
+    var hellopreloader = document.getElementById("hellopreloader_preload");
+
+    function fadeOutnojquery(el) {
+      el.style.opacity = 1;
+      var interhellopreloader = setInterval(function () {
+        el.style.opacity = el.style.opacity - 0.05;
+        if (el.style.opacity <= 0.05) {
+          clearInterval(interhellopreloader);
+          hellopreloader.style.display = "none";
+        }
+      }, 16);
+    }
+    window.onload = function () {
+      setTimeout(function () {
+        fadeOutnojquery(hellopreloader);
+      }, 1000);
+    };
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="assets/scripts/work-min.js"></script>
+</body>
+
 </html>
