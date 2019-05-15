@@ -49,6 +49,9 @@
           </div>
         </div>
       </header>
+      <div class="popup-succes">
+        <div class="popup-succes_wrap"><img src="assets/images/content/popup.png" alt="succes"/></div>
+      </div>
       <section class="service-page-main service-page-main--landing">
         <div class="service-page-main_wrap">
           <div class="service-page-main_title">Создание Landing page</div>
@@ -178,14 +181,14 @@
         <div class="service-page-form_wrap"> 
           <div class="service-page-form_title">ОБСУДИТЬ ПРОЕКТ</div>
           <div class="service-page-form_subtitle">Крутые проекты начинаются с заполнения этой формы</div>
-          <form action="#" method="post">
+          <form action="assets/server.php" method="post" id="form">
             <div class="service-page-form_input">
-              <input type="text" placeholder="Имя"/>
-              <input type="text" placeholder="Телефон"/>
-              <input type="text" placeholder="Email"/>
+              <input type="text" name="name" placeholder="Имя" required="required"/>
+              <input type="text" name="phone" placeholder="Телефон" required="required"/>
+              <input type="text" name="email" placeholder="Email"/>
             </div>
             <div class="service-page-form_textarea">
-              <textarea name="" placeholder="Расскажите о Вашей идее"></textarea>
+              <textarea name="text" placeholder="Расскажите о Вашей идее"></textarea>
             </div>
             <button class="service-page-form_btn" type="submit">отправить </button>
           </form>
@@ -240,20 +243,7 @@
           <p>© Copyright 2018 AS | All Rights Reserved</p>
         </div>
       </footer>
-      <script>
-        function initMap() {
-          var myMap = {lat: 48.476484, lng: 35.018890};  
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
-              center: myMap
-          });
-          var marker = new google.maps.Marker({
-            position: myMap,
-            map: map
-          });
-        }
-      </script>
-      <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuLjb-iV3X_4aUsa2TbUyXn4NxU_RdUv4&amp;callback=initMap"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <script src="assets/scripts/index-min.js"></script>
     </div>
   </body>

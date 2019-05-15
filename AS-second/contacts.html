@@ -49,6 +49,9 @@
           </div>
         </div>
       </header>
+      <div class="popup-succes">
+        <div class="popup-succes_wrap"><img src="assets/images/content/popup.png" alt="succes"/></div>
+      </div>
       <section class="contact-map">
         <div id="map"></div>
       </section>
@@ -93,22 +96,22 @@
             </li>
           </ul>
           <div class="contact-content_form">
-            <form action="#" method="post">
+            <form action="assets/server.php" method="post" id="form">
               <label>
                 <div>Ваше имя</div>
-                <input type="text"/>
+                <input type="text" name="name" required="required"/>
+              </label>
+              <label>
+                <div>Ваш телефон</div>
+                <input type="text" name="phone" required="required"/>
               </label>
               <label>
                 <div>Ваш Email</div>
-                <input type="text"/>
-              </label>
-              <label>
-                <div>Тема</div>
-                <input type="text"/>
+                <input type="text" name="email"/>
               </label>
               <label>
                 <div>Ваше сообщение</div>
-                <textarea name=""></textarea>
+                <textarea name="text"></textarea>
               </label>
               <button class="contact_btn" type="submit">Отправить</button>
             </form>
@@ -127,6 +130,20 @@
           </svg>
         </div>
       </section>
+      <script>
+        function initMap() {
+          var myMap = {lat: 48.476484, lng: 35.018890};  
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+              center: myMap
+          });
+          var marker = new google.maps.Marker({
+            position: myMap,
+            map: map
+          });
+        }
+      </script>
+      <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuLjb-iV3X_4aUsa2TbUyXn4NxU_RdUv4&amp;callback=initMap"></script>
       <footer class="footer">
         <div class="footer_wrap"> 
           <div class="footer_logo">
@@ -176,20 +193,7 @@
           <p>© Copyright 2018 AS | All Rights Reserved</p>
         </div>
       </footer>
-      <script>
-        function initMap() {
-          var myMap = {lat: 48.476484, lng: 35.018890};  
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
-              center: myMap
-          });
-          var marker = new google.maps.Marker({
-            position: myMap,
-            map: map
-          });
-        }
-      </script>
-      <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuLjb-iV3X_4aUsa2TbUyXn4NxU_RdUv4&amp;callback=initMap"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <script src="assets/scripts/index-min.js"></script>
     </div>
   </body>
