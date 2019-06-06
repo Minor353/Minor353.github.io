@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Tehno-Dnepr || Контакты</title>
+    <title>Эдем || Контакты</title>
     <link rel="stylesheet" href="assets/styles/app.min.css"/>
   </head>
   <body>
@@ -45,48 +45,92 @@
             <h4 class="contact-main_content-title">Наши контакты</h4>
             <ul class="contact-main_content-list">
               <li class="contact-main_list-item">
-                <div class="contact-main_list-img"><img src="assets/images/icons/treasure-map.svg" alt="icon"/></div>
-                <div class="contact-main_list-data">
-                  <div class="contact-main_data-title">Адрес</div>
-                  <div class="contact-main_data-text">пр. Яворницкого, 111 г. Днепр</div>
+                <div class="contact-main_item-img"><img src="assets/images/icons/treasure-map.svg" alt="contact"/></div>
+                <div class="contact-main_item-content">
+                  <div class="contact-main_item-content-title">Адрес</div>
+                  <div class="contact-main_content-text">пр. Яворницкого, 111 г. Днепр</div>
                 </div>
               </li>
               <li class="contact-main_list-item">
-                <div class="contact-main_list-img"><img src="assets/images/icons/clock.svg" alt="icon"/></div>
-                <div class="contact-main_list-data">
-                  <div class="contact-main_data-title">график работы</div>
-                  <div class="contact-main_data-text">Вторник-воскресенье с 10:00 до 17:00</div>
+                <div class="contact-main_item-img"><img src="assets/images/icons/clock.svg" alt="contact"/></div>
+                <div class="contact-main_item-content">
+                  <div class="contact-main_item-content-title">график работы</div>
+                  <div class="contact-main_content-text">Вторник-воскресенье с 10:00 до 17:00</div>
                 </div>
               </li>
               <li class="contact-main_list-item">
-                <div class="contact-main_list-img"><img src="assets/images/icons/smartphone.svg" alt="icon"/></div>
-                <div class="contact-main_list-data">
-                  <div class="contact-main_data-title">Телефон</div>
-                  <div class="contact-main_data-text">+380960241602</div>
+                <div class="contact-main_item-img"><img src="assets/images/icons/mobile.svg" alt="contact"/></div>
+                <div class="contact-main_item-content">
+                  <div class="contact-main_item-content-title">Телефон</div>
+                  <div class="contact-main_content-text">+380960241602</div>
                 </div>
               </li>
               <li class="contact-main_list-item">
-                <div class="contact-main_list-img"><img src="assets/images/icons/envelope.svg" alt="icon"/></div>
-                <div class="contact-main_list-data">
-                  <div class="contact-main_data-title">Email</div>
-                  <div class="contact-main_data-text">example@mail.com</div>
+                <div class="contact-main_item-img"><img src="assets/images/icons/envelope.svg" alt="contact"/></div>
+                <div class="contact-main_item-content">
+                  <div class="contact-main_item-content-title">Email</div>
+                  <div class="contact-main_content-text">example@mail.com</div>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="contact-main_map">
-            <div id="map"></div>
-          </div>
         </section>
-        <section class="instagram--contact-ps">
-          <div class="instagram">
-            <div class="instagram_wrap">
-              <h4 class="instagram_title">Наш профиль в Instagram</h4>
-              <div class="instagram_widget"></div>
+        <section class="map">
+          <ul class="map_list">
+            <li class="map_list-item">
+              <div class="map_item-map">
+                <div class="map-canvas" id="map-canvas-left"></div>
+              </div>
+              <div class="map_item-content map_item-content--first">
+                <div class="map_content-title">Ритуальная служба «Эдем»<br/> на Кирова</div>
+                <div class="map_content-contact map_content-contact--first">г. Днепр, пр. А. Поля, 131</div>
+                <div class="map_content-contact map_content-contact--second">+380 (50) 123 45 67</div>
+                <div class="map_content-contact map_content-contact--third">example@mail.com</div>
+              </div>
+            </li>
+            <li class="map_list-item">
+              <div class="map_item-map">
+                <div class="map-canvas" id="map-canvas-center"></div>
+              </div>
+              <div class="map_item-content map_item-content--second">
+                <div class="map_content-title">
+                   Ритуальная служба «Эдем» <br/>на Калиновой</div>
+                <div class="map_content-contact map_content-contact--first">г. Днепр, ул. Калиновая, 72</div>
+                <div class="map_content-contact map_content-contact--second">+380 (50) 123 45 67</div>
+                <div class="map_content-contact map_content-contact--third">example@mail.com</div>
+              </div>
+            </li>
+            <li class="map_list-item">
+              <div class="map_item-map">
+                <div class="map-canvas" id="map-canvas-right"></div>
+              </div>
+              <div class="map_item-content map_item-content--third">
+                <div class="map_content-title">
+                   Ритуальная служба «Эдем»<br/>на Победе</div>
+                <div class="map_content-contact map_content-contact--first">г. Днепр, пр. Героев, 21а</div>
+                <div class="map_content-contact map_content-contact--second">+380 (50) 123 45 67</div>
+                <div class="map_content-contact map_content-contact--third">example@mail.com</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="form--about-ps">
+          <div class="form">
+            <h4 class="form_title">Остались вопросы?</h4>
+            <div class="form_content">
+              <form class="form_wrap" action="#" method="post">
+                <div class="form_area">
+                  <input type="text" placeholder="Имя"/>
+                  <input type="text" placeholder="Телефон"/>
+                  <textarea name="#" placeholder="Комментарий"></textarea>
+                  <button class="form_btn" type="submit">Отправить</button>
+                </div>
+              </form>
             </div>
           </div>
         </section>
       </main>
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCo7hljuelb86soVC97y4atK-n_brWfc34&amp;"></script>
       <footer class="footer">
         <div class="footer_wrap">
           <div class="footer_item">
