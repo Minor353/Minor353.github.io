@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/styles/app.min.css"/>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper other-page">
       <header class="header">
         <div class="header_wrap">
           <div class="header_header">
@@ -101,6 +101,13 @@
           <div class="header_footer">
             <nav class="nav">
               <ul class="nav_list">
+                <li class="nav_list-item-burger">
+                  <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+                    <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                    <path class="line middle" d="m 30,50 h 40"></path>
+                    <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                  </svg>
+                </li>
                 <li class="nav_list-item"><a class="nav_item-link" href="index.html">Главная</a></li>
                 <li class="nav_list-item"><a class="nav_item-link" href="catalog.html">Каталог</a></li>
                 <li class="nav_list-item"><a class="nav_item-link" href="service.html">Услуги</a></li>
@@ -112,59 +119,65 @@
           </div>
         </div>
       </header>
-      <section class="about-page">
-        <div class="about-page_wrap">
-          <h4 class="about-page_title">Что мы можем сказать о себе</h4>
-          <h5 class="about-page_subtitle">Энергия солнца для обогащения мира</h5>
-          <div class="about-page_text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах</div>
-          <div class="about-page_content">
-            <ul class="about-page_content-icons">
-              <li class="about-page_icons-item"><img src="#" alt="icon"/></li>
-              <li class="about-page_icons-item"><img src="#" alt="icon"/></li>
-              <li class="about-page_icons-item"><img src="#" alt="icon"/></li>
-              <li class="about-page_icons-item"><img src="#" alt="icon"/></li>
-            </ul><a class="about-page_link" href="#">Каталог</a>
+      <div class="about-bg"> 
+        <section class="about-page">
+          <div class="about-page_wrap">
+            <div class="about-page_wrap-content">
+              <h4 class="about-page_title">Что мы можем сказать о себе</h4>
+              <h5 class="about-page_subtitle">Энергия солнца для обогащения мира</h5>
+              <div class="about-page_text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах</div>
+              <div class="about-page_content">
+                <ul class="about-page_content-icons">
+                  <li class="about-page_icons-item"><img src="#" alt="icon"/></li>
+                  <li class="about-page_icons-item"><img src="#" alt="icon"/></li>
+                  <li class="about-page_icons-item"><img src="#" alt="icon"/></li>
+                  <li class="about-page_icons-item"><img src="#" alt="icon"/></li>
+                </ul><a class="about-page_link btn-submit" href="#">Каталог</a>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="advantages">
-        <div class="advantages_wrap">
-          <div class="advantages_content">
-            <h5 class="advantages_content-subtitle">Почему выбирают нас</h5>
-            <div class="advantages_content-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков</div>
+        </section>
+        <section class="advantages">
+          <div class="advantages_wrap">
+            <div class="advantages_wrap-content">
+              <div class="advantages_content">
+                <h5 class="advantages_content-subtitle">Почему выбирают нас</h5>
+                <div class="advantages_content-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков</div>
+              </div>
+              <ul class="advantages_list">
+                <li class="advantages_list-item">
+                  <div class="advantages_item-img"><img src="#" alt="icon"/></div>
+                  <div class="advantages_item-wrap">
+                    <div class="advantages_item-title">Преимущество</div>
+                    <div class="advantages_item-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</div>
+                  </div>
+                </li>
+                <li class="advantages_list-item">
+                  <div class="advantages_item-img"><img src="#" alt="icon"/></div>
+                  <div class="advantages_item-wrap">
+                    <div class="advantages_item-title">Преимущество</div>
+                    <div class="advantages_item-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</div>
+                  </div>
+                </li>
+                <li class="advantages_list-item">
+                  <div class="advantages_item-img"><img src="#" alt="icon"/></div>
+                  <div class="advantages_item-wrap">
+                    <div class="advantages_item-title">Преимущество</div>
+                    <div class="advantages_item-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</div>
+                  </div>
+                </li>
+                <li class="advantages_list-item">
+                  <div class="advantages_item-img"><img src="#" alt="icon"/></div>
+                  <div class="advantages_item-wrap">
+                    <div class="advantages_item-title">Преимущество</div>
+                    <div class="advantages_item-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <ul class="advantages_list">
-            <li class="advantages_list-item">
-              <div class="advantages_item-img"><img src="#" alt="icon"/></div>
-              <div class="advantages_item-wrap">
-                <div class="advantages_item-title">Преимущество</div>
-                <div class="advantages_item-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</div>
-              </div>
-            </li>
-            <li class="advantages_list-item">
-              <div class="advantages_item-img"><img src="#" alt="icon"/></div>
-              <div class="advantages_item-wrap">
-                <div class="advantages_item-title">Преимущество</div>
-                <div class="advantages_item-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</div>
-              </div>
-            </li>
-            <li class="advantages_list-item">
-              <div class="advantages_item-img"><img src="#" alt="icon"/></div>
-              <div class="advantages_item-wrap">
-                <div class="advantages_item-title">Преимущество</div>
-                <div class="advantages_item-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</div>
-              </div>
-            </li>
-            <li class="advantages_list-item">
-              <div class="advantages_item-img"><img src="#" alt="icon"/></div>
-              <div class="advantages_item-wrap">
-                <div class="advantages_item-title">Преимущество</div>
-                <div class="advantages_item-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
+        </section>
+      </div>
       <section class="how-works">
         <div class="how-works_wrap">
           <h4 class="how-works_title">процесс работы</h4>

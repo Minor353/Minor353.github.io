@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/styles/app.min.css"/>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper other-page">
       <header class="header">
         <div class="header_wrap">
           <div class="header_header">
@@ -101,6 +101,13 @@
           <div class="header_footer">
             <nav class="nav">
               <ul class="nav_list">
+                <li class="nav_list-item-burger">
+                  <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+                    <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                    <path class="line middle" d="m 30,50 h 40"></path>
+                    <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                  </svg>
+                </li>
                 <li class="nav_list-item"><a class="nav_item-link" href="index.html">Главная</a></li>
                 <li class="nav_list-item"><a class="nav_item-link" href="catalog.html">Каталог</a></li>
                 <li class="nav_list-item"><a class="nav_item-link" href="service.html">Услуги</a></li>
@@ -112,62 +119,55 @@
           </div>
         </div>
       </header>
-      <section class="catalog-list">
-        <div class="catalog-list_wrap">
-          <h4 class="catalog-list_title">Что вас интересует</h4>
-          <h5 class="catalog-list_subtitle">Каталог  солнечных панелей</h5>
-          <ul class="catalog-list_list">
-            <li class="catalog-list_list-item"><a class="catalog-list_item-link" href="#">
-                <div class="catalog-list_item-num">01</div>
-                <div class="catalog-list_item-img"><img src="#" alt="product"/></div>
-                <div class="catalog-list_item-title">Название категории</div></a></li>
-            <li class="catalog-list_list-item"><a class="catalog-list_item-link" href="#">
-                <div class="catalog-list_item-num">02</div>
-                <div class="catalog-list_item-img"><img src="#" alt="product"/></div>
-                <div class="catalog-list_item-title">Название категории</div></a></li>
-            <li class="catalog-list_list-item"><a class="catalog-list_item-link" href="#">
-                <div class="catalog-list_item-num">03</div>
-                <div class="catalog-list_item-img"><img src="#" alt="product"/></div>
-                <div class="catalog-list_item-title">Название категории</div></a></li>
+      <section class="catalog-page-list">
+        <div class="catalog-page-list_wrap">
+          <h4 class="catalog-page-list_title">Что вас интересует</h4>
+          <h5 class="catalog-page-list_subtitle">Каталог  солнечных панелей</h5>
+          <ul class="catalog-page-list_list">
+            <li class="catalog-page-list_list-item"><a class="catalog-page-list_item-link" href="#">
+                <div class="catalog-page-list_item-num">01</div>
+                <div class="catalog-page-list_item-img"><img src="assets/images/content/tovar1.png" alt="product"/></div>
+                <div class="catalog-page-list_item-title">Название категории</div></a></li>
+            <li class="catalog-page-list_list-item"><a class="catalog-page-list_item-link" href="#">
+                <div class="catalog-page-list_item-num">02</div>
+                <div class="catalog-page-list_item-img"><img src="assets/images/content/tovar2.png" alt="product"/></div>
+                <div class="catalog-page-list_item-title">Название категории</div></a></li>
+            <li class="catalog-page-list_list-item"><a class="catalog-list_item-link" href="#">
+                <div class="catalog-page-list_item-num">03</div>
+                <div class="catalog-page-list_item-img"><img src="assets/images/content/tovar3.png" alt="product"/></div>
+                <div class="catalog-page-list_item-title">Название категории</div></a></li>
           </ul>
         </div>
       </section>
       <section class="product-list">
         <div class="product-list_wrap">
-          <h5 class="product-list_title"></h5>
+          <h5 class="product-list_title">Название выбранной категории</h5>
           <ul class="product-list_list">
             <li class="product-list_list-item"><a href="product-cart.html">
-                <div class="product-list_item-img"><img src="#" alt="product"/></div>
-                <div class="product-list_item-title">Название товара</div>
-                <div class="product-list_item-price">2 658 грн</div></a></li>
+                <div class="product-list_item-img"><img src="assets/images/content/product-1.jpg" alt="product"/></div>
+                <div class="product-list_item-title">Название товара</div></a></li>
             <li class="product-list_list-item"><a href="product-cart.html">
-                <div class="product-list_item-img"><img src="#" alt="product"/></div>
-                <div class="product-list_item-title">Название товара</div>
-                <div class="product-list_item-price">2 658 грн</div></a></li>
+                <div class="product-list_item-img"><img src="assets/images/content/product-2.jpg" alt="product"/></div>
+                <div class="product-list_item-title">Название товара</div></a></li>
             <li class="product-list_list-item"><a href="product-cart.html">
-                <div class="product-list_item-img"><img src="#" alt="product"/></div>
-                <div class="product-list_item-title">Название товара</div>
-                <div class="product-list_item-price">2 658 грн</div></a></li>
+                <div class="product-list_item-img"><img src="assets/images/content/product-3.jpg" alt="product"/></div>
+                <div class="product-list_item-title">Название товара</div></a></li>
             <li class="product-list_list-item"><a href="product-cart.html">
-                <div class="product-list_item-img"><img src="#" alt="product"/></div>
-                <div class="product-list_item-title">Название товара</div>
-                <div class="product-list_item-price">2 658 грн</div></a></li>
+                <div class="product-list_item-img"><img src="assets/images/content/product-2.jpg" alt="product"/></div>
+                <div class="product-list_item-title">Название товара</div></a></li>
             <li class="product-list_list-item"><a href="product-cart.html">
-                <div class="product-list_item-img"><img src="#" alt="product"/></div>
-                <div class="product-list_item-title">Название товара</div>
-                <div class="product-list_item-price">2 658 грн</div></a></li>
+                <div class="product-list_item-img"><img src="assets/images/content/product-3.jpg" alt="product"/></div>
+                <div class="product-list_item-title">Название товара</div></a></li>
             <li class="product-list_list-item"><a href="product-cart.html">
-                <div class="product-list_item-img"><img src="#" alt="product"/></div>
-                <div class="product-list_item-title">Название товара</div>
-                <div class="product-list_item-price">2 658 грн</div></a></li>
+                <div class="product-list_item-img"><img src="assets/images/content/product-1.jpg" alt="product"/></div>
+                <div class="product-list_item-title">Название товара</div></a></li>
           </ul>
         </div>
       </section>
       <section class="seo-text">
         <div class="seo-text_wrap">
           <div class="seo-text_title">Заголовок SEO-текста</div>
-          <div class="seo-text_content">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</div>
-          <div class="seo-text_btn">читать</div>
+          <div class="seo-text_content">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</div><a class="seo-text_btn" href="#">читать</a>
         </div>
       </section>
       <footer class="footer">

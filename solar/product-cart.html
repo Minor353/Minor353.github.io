@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/styles/app.min.css"/>
   </head>
   <body> 
-    <div class="wrapper">
+    <div class="wrapper other-page">
       <header class="header">
         <div class="header_wrap">
           <div class="header_header">
@@ -101,6 +101,13 @@
           <div class="header_footer">
             <nav class="nav">
               <ul class="nav_list">
+                <li class="nav_list-item-burger">
+                  <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+                    <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                    <path class="line middle" d="m 30,50 h 40"></path>
+                    <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                  </svg>
+                </li>
                 <li class="nav_list-item"><a class="nav_item-link" href="index.html">Главная</a></li>
                 <li class="nav_list-item"><a class="nav_item-link" href="catalog.html">Каталог</a></li>
                 <li class="nav_list-item"><a class="nav_item-link" href="service.html">Услуги</a></li>
@@ -113,38 +120,37 @@
         </div>
       </header>
       <section class="product">
-        <div class="product_wrap"><a class="product_link-prev" href="#">Назад в каталог</a>
+        <div class="product_wrap"><a class="product_link-prev" href="catalog.html">Назад в каталог</a>
           <div class="product_card">
             <div class="product_card-list">
-              <div class="product_card-list-img"><img src="#" alt="product"/></div>
+              <div class="product_card-list-img"><img src="assets/images/content/mariana-proenca-big-unsplash.png" alt="product"/></div>
               <div class="product_card-list-content">
-                <div class="product_content-price">2 658 грн</div>
-                <div class="product_content-title">Название товара</div>
+                <div class="product_content-price">Название товара</div>
                 <div class="product_content-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.</div>
-                <div class="product_card-btn"><a href="#">Оставить заявку</a>
-                  <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</p>
+                <div class="product_card-btn"><a class="product_card-btn-link" href="#">Оставить заявку</a>
+                  <p class="product_card-btn-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне</p>
                 </div>
               </div>
             </div>
             <ul class="product_card-info">
               <li class="product_info-item">
                 <div>Производитель</div>
-                <div></div>
+                <div class="product_info-item-decor"></div>
                 <div>Master Wood</div>
               </li>
               <li class="product_info-item">
                 <div>Страна производитель</div>
-                <div></div>
+                <div class="product_info-item-decor"></div>
                 <div>Украина</div>
               </li>
               <li class="product_info-item">
                 <div>Материал</div>
-                <div></div>
+                <div class="product_info-item-decor"></div>
                 <div>Отсутствует</div>
               </li>
               <li class="product_info-item">
                 <div>Размер</div>
-                <div></div>
+                <div class="product_info-item-decor"></div>
                 <div>2х0,77х0,42 м</div>
               </li>
             </ul>
