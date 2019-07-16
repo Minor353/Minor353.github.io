@@ -398,7 +398,7 @@ button {
 }
 
 .au-btn:hover svg rect {
-  fill: #C44C28;
+  fill: #1B4764;
   transition: 0.3s !important;
 }
 
@@ -714,6 +714,10 @@ a:hover {
   padding: 0 10px;
   font-size: 13px;
   color: #333
+}
+
+.header--fixed .list-social__item a {
+  color: #fff;
 }
 
 .list-social__item a i {
@@ -2464,7 +2468,8 @@ a:hover {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -50px
+  bottom: -50px;
+  display: none;
 }
 
 .media-testi .media__title {
@@ -2816,7 +2821,7 @@ a:hover {
 }
 
 .rev-btn-1:hover svg rect {
-  fill: #C44C28;
+  fill: #1B4764;
   transition: 0.3s !important;
 }
 
@@ -5379,12 +5384,26 @@ button {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
   -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
-  background: rgba(255, 255, 255, .95);
+  background: rgba(27, 71, 100, .95);
   z-index: 9999
 }
 
 .header--fixed .menu-item a {
-  padding: 17px 22px
+  padding: 17px 22px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.header--fixed .menu-item a:hover {
+  color: #fff;
+}
+
+.header--fixed .btn-form-popup {
+  border: 1px solid #FFFFFF;
+}
+
+.header--fixed .btn-form-popup a {
+  color: #fff;
 }
 
 .menu a {
@@ -17760,6 +17779,7 @@ button:focus {
   padding: 10px 25px;
   margin-left: auto;
   margin-right: 60px;
+  transition: 0.3s;
 }
 
 .btn-form-popup a {
@@ -17772,12 +17792,22 @@ button:focus {
 }
 
 .btn-form-popup:hover {
-  background-color: #C44C28;
+  background-color: #1B4764;
   transition: 0.3s;
 }
 
 .btn-form-popup:hover a {
   color: #fff;
+  transition: 0.3s;
+}
+
+.header--fixed .btn-form-popup:hover {
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.header--fixed .btn-form-popup:hover a {
+  color: #333333;
   transition: 0.3s;
 }
 
