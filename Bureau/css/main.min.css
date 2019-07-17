@@ -3519,6 +3519,11 @@ button {
   line-height: calc(50/38)
 }
 
+.title-1--font {
+  max-width: 1500px;
+  font-weight: normal;
+}
+
 .title-2 {
   font-size: 700;
   font-size: 48px;
@@ -17652,6 +17657,61 @@ button:focus {
   object-fit: cover;
 }
 
+
+/*FAQ*/
+
+.faq {
+  padding: 0;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+}
+
+.faq_item {
+  background: #FFFFFF;
+  border: 1px solid #555555;
+  box-sizing: border-box;
+  padding: 11px 40px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.faq_item-title {
+  font-family: 'Istok Web', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.faq_item-text {
+  font-family: 'Istok Web', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  color: #555555;
+  padding-left: 40px;
+  font-size: 0px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.faq_item--active .faq_item-title {
+  margin-bottom: 20px;
+}
+
+.faq_item--active .faq_item-text {
+  opacity: 1;
+  font-size: 14px;
+  height: auto;
+  transition: opacity 0.3s, height 0.55s;
+}
 
 /*ТАблица прайса*/
 

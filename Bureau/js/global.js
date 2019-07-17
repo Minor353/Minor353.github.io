@@ -966,4 +966,18 @@ formPopup.addEventListener('click', function (event) {
     if (event.target == formPopup) {
         formPopup.classList.remove('popup-form--active');
     }
-})
+});
+
+/**FAQ */
+const faqItem = document.querySelectorAll('.faq_item');
+
+faqItem[0].classList.add('faq_item--active');
+
+for (let i = 0; i < faqItem.length; i++) {
+    faqItem[i].addEventListener('click', function () {
+        for (let i = 0; i < faqItem.length; i++) {
+            faqItem[i].classList.remove('faq_item--active');
+        }
+        faqItem[i].classList.add('faq_item--active');
+    })
+}
