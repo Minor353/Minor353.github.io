@@ -981,3 +981,34 @@ for (let i = 0; i < faqItem.length; i++) {
         faqItem[i].classList.add('faq_item--active');
     })
 }
+
+
+/******Попап для квиза****** */
+const testForm = document.querySelector('.test-form');
+const testFormCross = document.querySelector('.test-form_cross');
+const testFormOpenBtn = document.querySelector('.test-btn');
+
+if (testForm) {
+    testFormOpenBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        testForm.classList.add('test-form--active');
+    });
+
+    testFormCross.addEventListener('click', function () {
+        testForm.classList.remove('test-form--active');
+    });
+}
+
+
+
+$('.test-form_form-slider').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow: '.test-form_btn-prev',
+    nextArrow: '.test-form_btn-next',
+    dotsClass: 'test-form_pagination',
+    fade: true,
+    cssEase: 'linear'
+});
