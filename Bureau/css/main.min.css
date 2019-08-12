@@ -18211,7 +18211,7 @@ button:focus {
   text-transform: uppercase;
 
   color: #1B1B1B;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .test-form_pagination {
@@ -18315,11 +18315,11 @@ button:focus {
 }
 
 .test-form_form-slider-item-ques {
-  font-family: 'Istok Web', sans-serif;
+  font-family: 'Prata', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 170%;
+  font-size: 30px;
+  line-height: 41px;
   text-align: center;
 
   color: #555555;
