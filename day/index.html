@@ -9,7 +9,7 @@
     </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header header--active">
         <div class="header_wrap">
           <div class="header_logo">
             <div class="logo"><a class="logo_link" href="#"><img src="assets/images/content/XDay.jpg" alt="logo"/></a></div>
@@ -40,8 +40,12 @@
       <div class="main">
         <div class="present">
           <div class="present_wrap">
-            <div class="present_video"></div>
-            <div class="present_mask"></div>
+            <div class="present_video">
+              <video muted="true" preload="auto" autoplay="autoplay" loop="loop" width="100%" height="100%">
+                <source src="assets/video/header-video.mp4" type="video/mp4"/>
+              </video>
+            </div>
+            <div class="present_mask"><img src="assets/images/content/Exclude.png" alt="mask"/></div>
             <div class="present_btn"><a class="button" href="#">Выбрать дату     </a></div>
           </div>
         </div>
@@ -237,7 +241,7 @@
                     <div class="reviews_content-name">Max Morozov</div>
                   </div>
                   <div class="reviews_item-text">Создали современные корпоративные мероприятия и уникальные частные праздники для успешного бизнеса и ярких личностей! Рекомендую</div>
-                  <div class="reviews_btn"><a class="button" href="#">Профиль Instagram</a></div>
+                  <div class="reviews_btn"><a class="button button--insta" href="#">Профиль Instagram</a></div>
                 </div>
               </li>
               <li class="reviews_slider-item"> 
@@ -247,7 +251,7 @@
                     <div class="reviews_content-name">Max Morozov</div>
                   </div>
                   <div class="reviews_item-text">Создали современные корпоративные мероприятия и уникальные частные праздники для успешного бизнеса и ярких личностей! Рекомендую</div>
-                  <div class="reviews_btn"><a class="button" href="#">Профиль Instagram</a></div>
+                  <div class="reviews_btn"><a class="button button--insta" href="#">Профиль Instagram</a></div>
                 </div>
               </li>
               <li class="reviews_slider-item"> 
@@ -257,7 +261,7 @@
                     <div class="reviews_content-name">Max Morozov</div>
                   </div>
                   <div class="reviews_item-text">Создали современные корпоративные мероприятия и уникальные частные праздники для успешного бизнеса и ярких личностей! Рекомендую</div>
-                  <div class="reviews_btn"><a class="button" href="#">Профиль Instagram</a></div>
+                  <div class="reviews_btn"><a class="button button--insta" href="#">Профиль Instagram</a></div>
                 </div>
               </li>
             </ul>
@@ -406,6 +410,7 @@
         </div>
         <div class="footer_allright"><a href="https://absolute.international">3A Event place. Development by AS - All right reserves</a></div>
       </div>
+      <script src="assets/scripts/index-min.js"></script>
     </div>
   </body>
 </html>
