@@ -157,7 +157,7 @@
             <div class="main-baner_btn"><a class="button" href="#">Выбрать</a></div>
           </div>
         </div>
-        <div class="bg-main-wraper">
+        <div class="bg-wraper">
           <section class="last-work">
             <div class="last-work_wrap">
               <h4 class="last-work_title main-title">Последние работы</h4>
@@ -244,9 +244,11 @@
             <div class="home-form_wrap">
               <div class="main-form">
                 <div class="main-form_title main-title">У вас появился вопрос?</div>
-                <div class="main-form_text">Начните вводить текст</div>
+                <div class="main-form_text">Задайте его нам</div>
                 <form class="main-form_form" action="#" method="post">
-                  <input class="main-form_form-input" type="text" placeholder="Ваше имя"/>
+                  <input class="main-form_form-input" type="text" placeholder="Ваше имя" reqvired="reqvired"/>
+                  <input class="main-form_form-input" type="text" placeholder="Ваша почта"/>
+                  <input class="main-form_form-input" type="text" placeholder="Ваш номер телефона"/>
                 </form>
               </div>
             </div>
@@ -339,9 +341,18 @@
               </label>
               <label class="call-form_label">
                 <div class="call-form_label-text">и провести незабываемый праздник</div>
-                <fieldset class="call-form_label-fieldset">
+                <fieldset class="call-form_label-fieldset call-form_label-fieldset--padding">
                   <legend>Выберите событие</legend>
-                  <input type="text" placeholder="Что вы празднуете"/>
+                  <select class="call-form_select" name="list1">
+                    <option class="call-form_select-option">Корпоратив</option>
+                    <option class="call-form_select-option">День рождения</option>
+                    <option class="call-form_select-option">Юбилей</option>
+                    <option class="call-form_select-option">Тимбилдинг</option>
+                    <option class="call-form_select-option">Детский ивент</option>
+                    <option class="call-form_select-option">Фестиваль</option>
+                    <option class="call-form_select-option">Конференция</option>
+                    <option class="call-form_select-option">Свадьба</option>
+                  </select>
                 </fieldset>
               </label>
               <label class="call-form_label">
