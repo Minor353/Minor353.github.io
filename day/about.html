@@ -98,17 +98,17 @@
               <div class="hww">
                 <h4 class="hww_title">Как мы работаем</h4>
                 <ul class="hww_content">
-                  <li class="hww_content-item">
+                  <li class="hww_content-item hww_content-item-first">
                     <div class="hww_item-title">Наша миссия</div>
                     <div class="hww_item-icon"><img src="assets/images/icons/hww-1.svg" alt="icon"/></div>
                     <div class="hww_item-text">Создавать не ивенты, а яркие воспоминания</div>
                   </li>
-                  <li class="hww_content-item">
+                  <li class="hww_content-item hww_content-item-second">
                     <div class="hww_item-title">Наша философия</div>
                     <div class="hww_item-icon"><img src="assets/images/icons/hww-2.svg" alt="icon"/></div>
                     <div class="hww_item-text">Не лить воду, говорить честно, не парить своими проблемами и париться о проблемах своих клиентов.</div>
                   </li>
-                  <li class="hww_content-item">
+                  <li class="hww_content-item hww_content-item-third">
                     <div class="hww_item-title">Наше всё</div>
                     <div class="hww_item-icon"><img src="assets/images/icons/hww-3.svg" alt="icon"/></div>
                     <div class="hww_item-text">Наши KPI – ваше счастье</div>
@@ -328,9 +328,16 @@
                 <div class="main-form_title main-title">У вас появился вопрос?</div>
                 <div class="main-form_text">Задайте его нам</div>
                 <form class="main-form_form" action="#" method="post">
-                  <input class="main-form_form-input" type="text" placeholder="Ваше имя" reqvired="reqvired"/>
-                  <input class="main-form_form-input" type="text" placeholder="Ваша почта"/>
-                  <input class="main-form_form-input" type="text" placeholder="Ваш номер телефона"/>
+                  <label class="main-form_form-label">
+                    <input class="main-form_form-input" type="text" placeholder="Ваше имя" required="required"/>
+                  </label>
+                  <label class="main-form_form-label">
+                    <input class="main-form_form-input" type="text" placeholder="Ваш номер телефона" required="required"/>
+                  </label>
+                  <label class="main-form_form-label">
+                    <input class="main-form_form-input" type="text" placeholder="Ваш вопрос"/>
+                    <button class="button main-form_btn" type="submit">Отправить</button>
+                  </label>
                 </form>
               </div>
             </div>

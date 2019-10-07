@@ -111,9 +111,16 @@
               <div class="main-form_title main-title">У вас появился вопрос?</div>
               <div class="main-form_text">Задайте его нам</div>
               <form class="main-form_form" action="#" method="post">
-                <input class="main-form_form-input" type="text" placeholder="Ваше имя" reqvired="reqvired"/>
-                <input class="main-form_form-input" type="text" placeholder="Ваша почта"/>
-                <input class="main-form_form-input" type="text" placeholder="Ваш номер телефона"/>
+                <label class="main-form_form-label">
+                  <input class="main-form_form-input" type="text" placeholder="Ваше имя" required="required"/>
+                </label>
+                <label class="main-form_form-label">
+                  <input class="main-form_form-input" type="text" placeholder="Ваш номер телефона" required="required"/>
+                </label>
+                <label class="main-form_form-label">
+                  <input class="main-form_form-input" type="text" placeholder="Ваш вопрос"/>
+                  <button class="button main-form_btn" type="submit">Отправить</button>
+                </label>
               </form>
             </div>
           </div>
