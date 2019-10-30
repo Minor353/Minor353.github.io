@@ -78,7 +78,7 @@
 									Pico-light10</h2>
 								<div class="item-service-layout_description-text">Современная бесконтактная методика
 									коррекция возрастных изменений кожи и морщин</div><a href="#"
-								 class="button button--red">Записаться</a>
+								 class="button button--red js-form-popup">Записаться</a>
 							</div>
 							<div class="item-service-layout_description-img"><img src="images/green-leaves.png"
 								 alt="image"></div>
@@ -138,7 +138,8 @@
 										эластина и коллагена</span></li>
 							</ul>
 						</div>
-						<div class="item-service-layout_btn"><a href="#" class="button button--red">Записаться</a></div>
+						<div class="item-service-layout_btn"><a href="#"
+							 class="button button--red js-form-popup">Записаться</a></div>
 					</div>
 				</section>
 				<section class="main-form main-form--item-service">
@@ -147,10 +148,11 @@
 						<div class="main-form_subtitle">Поможем подобрать комплекс процедур индивидуально для Вас</div>
 						<form action="#" method="post" class="main-form_form"><label class="main-form_form-label">
 								<div class="main-form_label-text">Как к Вам можно обращаться</div><input type="text"
-								 placeholder="Ваше имя" class="main-form_form-input">
+								 placeholder="Ваше имя" pattern="^[А-Яа-яЁёs]+$" required class="main-form_form-input">
 							</label><label class="main-form_form-label">
 								<div class="main-form_label-text">Оставьте свой номер телефона для связи</div><input
-								 type="text" placeholder="+380 (__) ___ __ __" class="main-form_form-input">
+								 type="text" placeholder="+380 (__) ___ __ __" required id="phone-input"
+								 class="main-form_form-input">
 							</label><button type="submit" class="main-form_btn">Отправить</button></form>
 					</div>
 				</section>
@@ -181,6 +183,28 @@
 			<div class="footer_allright"> <a href="https://absolute.international" target="_blank">Rakitskaya Studio.
 					Development by AS - All right reserves</a></div>
 		</footer>
+		<div class="popup-form">
+			<div class="popup-form_content">
+				<div class="popup-form_content-cross"></div>
+				<div class="popup-form_success">
+					<div class="popup-form_success-content">
+						<div class="popup-form_success-title">Успешно отправлено</div>
+						<div class="popup-form_success-subtitle">Мы перезвоним Вам в ближайшее время</div>
+					</div>
+				</div>
+				<div class="popup-form_content-img"><img src="images/bg_parallaxs_form.png" alt="leaf"></div>
+				<h2 class="main-form_title">запишитесь сейчас</h2>
+				<div class="main-form_subtitle">Мы перезвоним Вам в ближайшее время</div>
+				<form action="popupMail.php" method="post" id="popupForm" class="main-form_form"><label
+					 class="main-form_form-label">
+						<div class="main-form_label-text">Как к Вам можно обращаться</div><input type="text"
+						 placeholder="Ваше имя" pattern="^[А-Яа-яЁёs]+$" required class="main-form_form-input">
+					</label><label class="main-form_form-label">
+						<div class="main-form_label-text">Оставьте свой номер телефона для связи</div><input type="text"
+						 placeholder="+380 (__) ___ __ __" required id="phone-input" class="main-form_form-input">
+					</label><button type="submit" class="main-form_btn">Отправить</button></form>
+			</div>
+		</div>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="assets/scripts/app.min.js"></script>
