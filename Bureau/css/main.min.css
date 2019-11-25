@@ -360,6 +360,12 @@ button {
   right: 0px
 }
 
+
+
+.media__body-item {
+  margin-top: 100px;
+}
+
 .media__body .au-btn svg rect {
   stroke: #555555;
   fill: transparent;
@@ -4218,7 +4224,8 @@ button {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0
+  left: 0;
+  z-index: 15;
 }
 
 .page-coming .section-content,
@@ -4260,12 +4267,13 @@ button {
 
 .page-line {
   right: 0;
-  z-index: 0
+  z-index: 0;
+  pointer-events: none;
 }
 
 .page-line-slider,
 .section {
-  z-index: 9
+  z-index: 10
 }
 
 .page-line.light .page-line__inner {
@@ -17449,9 +17457,8 @@ button:focus {
 }
 
 .media-project-item-wrapper {
-  max-width: 450px;
   max-height: 500px;
-  margin: 0 auto;
+  margin: 0 20px;
 }
 
 .media-project-item-wrapper img {
@@ -17777,11 +17784,15 @@ button:focus {
 
 .table-price_item-link td a {
   color: #4F4F4F;
+  font-family: 'Istok Web', sans-serif;
+  font-weight: 800;
+  border-bottom: 1px solid transparent;
   transition: 0.3s;
 }
 
 .table-price_item-link td a:hover {
-  color: #C44C28;
+  color: #589bca;
+  border-bottom: 1px solid #589bca;
   transition: 0.3s;
 }
 
@@ -17909,6 +17920,26 @@ button:focus {
   transition: 0.3s;
 }
 
+.popup-form-price {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff69;
+  z-index: 9999;
+  display: flex;
+  transition: 0.3s;
+}
+
+.popup-form-price--active {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s;
+}
+
 .popup-form--active {
   opacity: 1;
   pointer-events: all;
@@ -17918,6 +17949,10 @@ button:focus {
 .popup-form_wrap {
   margin: auto;
 
+}
+
+.none-input {
+  display: none;
 }
 
 .popup-form_wrap .post-form {
@@ -18360,6 +18395,10 @@ div {
   transition: 0.3s;
 }
 
+.test-form_ques-img-wrap:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 .test-form_ques-checkbox:checked+.test-form_ques-img-wrap {
   background-color: #1B4764;
 }
@@ -18515,4 +18554,183 @@ div {
   .test_wrap {
     display: none;
   }
+}
+
+
+
+.main-slider_list {
+  padding: 0 80px;
+}
+
+.main-slider_list-item {
+  position: relative;
+  height: 90vh;
+  min-height: 780px;
+  display: flex !important;
+  z-index: 8;
+}
+
+.main-slider_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 8;
+}
+
+.main-slider_item-content {
+  position: relative;
+  z-index: 9;
+  max-width: 995px;
+  margin: auto;
+}
+
+.main-slider_item-title {
+  color: #FFFFFF;
+  transform: translateX(-40px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.main-slider_item-title p {
+  margin: 10px 0;
+}
+
+.main-slider_item-title p:nth-child(1) {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.main-slider_item-title p:nth-child(2) {
+  font-size: 44px;
+  line-height: 60px;
+}
+
+.main-slider_item-title p:nth-child(3) {
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.main-slider_item-btn-wrap {
+  margin-top: 60px;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.main-slider_item-btn-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.main-slider_item-btn-wrap .au-btn {
+  color: #fff;
+}
+
+.main-slider .slick-arrow {
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+
+}
+
+.main-slider .slick-prev {
+  left: 30px;
+  transform: rotate(45deg);
+}
+
+.main-slider .slick-next {
+  right: 30px;
+  transform: rotate(225deg);
+}
+
+.slick-current .main-slider_item-title {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1.5s;
+}
+
+.slick-current .main-slider_item-btn-wrap {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1.5s;
+}
+
+.price-item {
+  width: 100%;
+  margin: 10px 15px;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+
+.price-item_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.price-item_title {
+  padding-bottom: 60px;
+  font-family: 'Istok Web', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.price-item_content {
+  position: absolute;
+  top: 82%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 16px;
+  z-index: 3;
+  background-color: rgba(201, 184, 114, 0);
+  transition: 0.5s;
+}
+
+.price-item:hover .price-item_content {
+  background-color: rgba(201, 184, 114, 0.6);
+  top: 0%;
+}
+
+
+
+.price-item_content-text {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 15px;
+  line-height: 170%;
+  color: #FFFFFF;
+
+}
+
+.price-item_content-price {
+  font-size: 40px;
+  line-height: 54px;
+  color: #FFFFFF;
+  margin-top: auto;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
