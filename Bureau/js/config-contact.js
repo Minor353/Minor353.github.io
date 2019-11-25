@@ -1,48 +1,74 @@
-(function ($) {
-    // USE STRICT
-    "use strict";
+/****************Обработка отправки формы в хедере************************ */
 
-    try {
+$('.js-contact-form').on('submit', submitForm);
 
-        var contactFormWrapper = $('.js-contact-form');
+function submitForm(e) {
+    e.preventDefault();
 
-        contactFormWrapper.each(function () {
-            var that = $(this);
-            that.on('submit', function (e) {
-                var url = "includes/contact-form.php";
+    var form = $(e.target),
+        data = form.serialize(),
+        url = form.attr('action');
 
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: $(this).serialize(),
-                    success: function (data) {
-                        var result = JSON.parse(data);
+    var request = $.ajax({
+        type: 'POST',
+        url: url,
+        data: data
+    });
 
-                        var message = result.message;
-                        var type = result.type;
-                        if (type === 1) {
-                            swal("Success", message, "success");
-                            // that.reset();
-                        } else if (type === 0) {
-                            swal("Success", message, "error");
-                        }
-                    },
-                    statusCode: {
-                        404: function () {
-                            swal("Oops", "File Not Found!", "error");
-                        }
-                    },
-                    error: function (jqXHR, textStatus, errorThrown) {
+    const popupBlock = document.querySelector('.swal-overlay');
+    const popupForm = document.querySelector('.popup-form--header');
 
-                        swal("Ой", "Произошла ошибка");
-                    }
-                });
-                return false;
-            });
-        });
-
-    } catch (err) {
-        console.log(err)
+    function closePopup() {
+        popupBlock.classList.remove('swal-overlay--show-modal');
+        document.querySelector('.js-contact-form').reset();
+        popupForm.classList.remove('popup-form--active');
     }
 
-})(jQuery);
+    request.done(function (msg) {
+        popupBlock.classList.add('swal-overlay--show-modal');
+        setTimeout(closePopup, 2500);
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        popupBlock.classList.add('swal-overlay--show-modal');
+        setTimeout(closePopup, 2500);
+    })
+};
+
+
+/****************Обработка отправки формы в прайсе************************ */
+
+$('.js-price-form').on('submit', submitPriceForm);
+
+function submitPriceForm(e) {
+    e.preventDefault();
+
+    var form = $(e.target),
+        data = form.serialize(),
+        url = form.attr('action');
+
+    var request = $.ajax({
+        type: 'POST',
+        url: url,
+        data: data
+    });
+
+    const popupBlock = document.querySelector('.swal-overlay');
+    const priceForm = document.querySelector('.popup-form-price');
+
+    function closePopup() {
+        popupBlock.classList.remove('swal-overlay--show-modal');
+        document.querySelector('.js-contact-form').reset();
+        priceForm.classList.remove('popup-form-price--active');
+    }
+
+    request.done(function (msg) {
+        popupBlock.classList.add('swal-overlay--show-modal');
+        setTimeout(closePopup, 2500);
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        popupBlock.classList.add('swal-overlay--show-modal');
+        setTimeout(closePopup, 2500);
+    })
+};

@@ -968,20 +968,47 @@ formPopup.addEventListener('click', function (event) {
     }
 });
 
+
+/**Вызов формы прайса**/
+
+const formPrice = document.querySelector('.popup-form-price');
+const formPriceBtns = document.querySelectorAll('.popup-form-price_btn');
+const noneInput = document.querySelector('.none-input');
+
+if (formPrice) {
+    for (let i = 0; i < formPriceBtns.length; i++) {
+        formPriceBtns[i].addEventListener('click', function (e) {
+            let priceName = formPriceBtns[i].dataset.name;
+            noneInput.value = priceName;
+            e.preventDefault();
+            formPrice.classList.add('popup-form-price--active');
+        });
+    };
+
+    formPrice.addEventListener('click', function (event) {
+        if (event.target == formPrice) {
+            formPrice.classList.remove('popup-form-price--active');
+        }
+    });
+}
+
+
 /**FAQ */
 const faqItem = document.querySelectorAll('.faq_item');
 
-faqItem[0].classList.add('faq_item--active');
+if (faqItem) {
+    faqItem[0].classList.add('faq_item--active');
 
-for (let i = 0; i < faqItem.length; i++) {
-    faqItem[i].addEventListener('click', function () {
-        for (let i = 0; i < faqItem.length; i++) {
-            faqItem[i].classList.remove('faq_item--active');
-        }
-        faqItem[i].classList.add('faq_item--active');
-    })
+    for (let i = 0; i < faqItem.length; i++) {
+        faqItem[i].addEventListener('click', function () {
+            for (let i = 0; i < faqItem.length; i++) {
+                faqItem[i].classList.remove('faq_item--active');
+            }
+            faqItem[i].classList.add('faq_item--active');
+        })
+    }
+
 }
-
 
 /******Попап для квиза****** */
 const testForm = document.querySelector('.test-form');
@@ -1011,4 +1038,15 @@ $('.test-form_form-slider').slick({
     dotsClass: 'test-form_pagination',
     fade: true,
     cssEase: 'linear'
+});
+
+
+$('.main-slider_list').slick({
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 5000
 });
