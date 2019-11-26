@@ -18734,3 +18734,208 @@ div {
   height: 100%;
   object-fit: cover;
 }
+
+.price-block {
+  background-image: url('../images/Rectangle-price.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.price-block_title {
+  max-width: 823px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 51px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.price-block_text {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.price-block .au-btn {
+  color: #fff;
+  margin-top: 60px;
+}
+
+.price-block .au-btn path {
+  stroke: #fff;
+}
+
+.price-block .au-btn rect {
+  stroke: #fff;
+}
+
+.hww {
+  position: relative;
+  z-index: 10;
+}
+
+.hww_subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hww_title {
+  max-width: 100%;
+  text-align: center;
+}
+
+.hww_list {
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hww_list-item {
+  width: 210px;
+  position: relative;
+}
+
+.hww_list-item::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 33%;
+  transform: translateY(-50%);
+  left: 185px;
+  width: 160px;
+  height: 9px;
+  background-image: url('../images/icon/Arrow1.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hww_list-item:last-child::after {
+  display: none;
+}
+
+.hww_item-num {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.hww_item-text {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+}
+
+.style-block_subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.style-block_title {
+  max-width: 100%;
+  text-align: center;
+}
+
+.style-block {
+  position: relative;
+  z-index: 10;
+}
+
+.style_list {
+  padding: 0 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.style_list-item {
+  width: 328px;
+  margin-top: 80px;
+}
+
+.style_item-img {
+  width: 328px;
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+.style_item-title {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: #1B1B1B;
+}
+
+.style_item-text {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 15px;
+  line-height: 170%;
+  color: #555555;
+}
+
+.main-fom-title {
+  font-size: 40px;
+  line-height: 54px;
+  margin-bottom: 20px;
+  color: #1B1B1B;
+}
+
+.main-form-text {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 20px;
+  line-height: 29px;
+  padding-right: 100px;
+  color: #1B1B1B;
+}
+
+.map-wrap {
+  height: 370px;
+}
+
+.map-contact-list {
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.map-contact-list_item {
+  margin-top: 16px;
+  min-width: 185px;
+}
+
+.map-contact-list_item-title {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height, or 120% */
+
+  text-transform: uppercase;
+
+  color: #222222;
+}
+
+.map-contact-list_item-text {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 14px;
+  line-height: 32px;
+  /* identical to box height, or 231% */
+
+
+  color: #222222;
+}
