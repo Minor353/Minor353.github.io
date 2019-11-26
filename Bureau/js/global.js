@@ -996,7 +996,7 @@ if (formPrice) {
 /**FAQ */
 const faqItem = document.querySelectorAll('.faq_item');
 
-if (faqItem) {
+if (faqItem[0]) {
     faqItem[0].classList.add('faq_item--active');
 
     for (let i = 0; i < faqItem.length; i++) {
