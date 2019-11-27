@@ -18996,12 +18996,17 @@ div {
     padding-top: 20px;
   }
 
+  .style_list {
+    padding: 0 20px;
+  }
+
   .style_list-item {
     margin-top: 50px;
+    width: 100%;
   }
 
   .style_item-img {
     margin-bottom: 20px;
-
+    width: 100%;
   }
 }
