@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'ArialMT';
+	src: url('../fonts/ArialMT.woff') format('woff'), url('../fonts/ArialMT.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-FFFD;
+}
+
+@font-face {
+	font-family: 'Arial-BoldMT';
+	src: url('../fonts/Arial-BoldMT.woff') format('woff'), url('../fonts/Arial-BoldMT.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-FFFD;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap&subset=cyrillic,cyrillic-ext');
+/*font-family: 'Comfortaa', cursive;*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/

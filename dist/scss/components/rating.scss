@@ -1,0 +1,30 @@
+.rating {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.rating__item {
+  list-style-type: none;
+  margin-right: 3px;
+
+  svg {
+    path {
+      fill: none;
+      stroke: #CCC;
+    }
+  }
+}
+
+.rating__item--active {
+  svg {
+    path {
+      fill: #ffd36b;
+      stroke: #ffd36b;
+    }
+  }
+}
+
+.rating__item:last-child {
+  margin-right: 0px;
+}
