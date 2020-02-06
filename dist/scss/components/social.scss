@@ -1,0 +1,60 @@
+.social {
+  margin-right: auto;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+}
+
+.social-list__item {
+  list-style-type: none;
+}
+
+.social-list__link {
+  width: 32px;
+  height: 32px;
+  border: solid 1px #333333;
+  font-family: 'icomoon';
+  font-size: 15px;
+  display: flex;
+
+  &:before {
+    content: "\e926";
+    color: #333333;
+    margin: auto;
+  }
+
+}
+
+.social-list__link_fb {
+  &:before {
+    content: "\e91e";
+  }
+}
+
+.social-list__link_b {
+  &:before {
+    content: "\e927";
+  }
+}
+
+.social-list__link_inst {
+  &:before {
+    content: "\e922";
+  }
+}
+
+
+.social-list__item:nth-child(2) {
+  .social-list__link {
+    margin: 0 10px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .social {
+    margin: 20px 0;
+  }
+}

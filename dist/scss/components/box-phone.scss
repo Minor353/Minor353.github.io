@@ -1,0 +1,38 @@
+.box-phone {
+  display: flex;
+  align-items: center;
+  margin-right: 29px;
+}
+
+.box-phone__icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 11px;
+  border: solid 1px #333333;
+  border-radius: 50%;
+  font-family: 'icomoon';
+  font-size: 15px;
+  display: flex;
+
+  &:before {
+    content: "\e926";
+    color: #333333;
+    margin: auto;
+  }
+}
+
+.box-phone__number {
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.09px;
+  color: #333333;
+  white-space: nowrap;
+
+  span:first-child {
+    font-weight: 300;
+  }
+
+  span:last-child {
+    font-weight: 500;
+  }
+}

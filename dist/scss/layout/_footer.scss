@@ -4,8 +4,8 @@
 ================================================================================
 */
 footer {
-	background: #939393;
-	height: 80px;
+	background: transparent;
+	padding: 7px 0 29px 0;
 	text-align: left;
 	width: 100%;
 	min-width: $min-width;
@@ -13,6 +13,11 @@ footer {
 	-webkit-order: 3;
 }
 
+
+.footer-list {
+	display: flex;
+	align-items: center;
+}
 
 
 @media screen and (max-width: 1200px) {}
@@ -24,3 +29,9 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 991px) {}
 
 @media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 650px) {
+	.footer-list {
+		flex-direction: column;
+	}
+}

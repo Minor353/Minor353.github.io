@@ -1,0 +1,36 @@
+.box-lang {
+  padding-top: 7px;
+}
+
+.list-lang {
+  display: flex;
+  align-items: center;
+}
+
+.list-lang__item {
+  list-style-type: none;
+}
+
+.list-lang__link {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.07px;
+  color: #333333;
+  padding: 5px 5px 5px 5px;
+  border: solid 1px transparent;
+  display: block;
+}
+
+.list-lang__item.active {
+  .list-lang__link {
+    border-color: #333333;
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .box-lang {
+    order: 3;
+  }
+}

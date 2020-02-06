@@ -5,13 +5,33 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+	<meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
+	<meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
 	<title>Главная</title>
 	<meta name='description' content="" />
 	<meta name="keywords" content="" />
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.custom-scrollbar.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<style>
+		.loaded .main-wrapper {
+			opacity: 0;
+		}
+
+		.icon-load {
+			background: url(img/loader.gif) no-repeat left top;
+			width: 40px;
+			height: 40px;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin-left: -20px;
+			margin-left: -20px;
+			display: none;
+		}
+
+		.loaded .icon-load {
+			display: block;
+		}
+	</style>
 </head>
 
 <body class="loaded">
@@ -21,548 +41,223 @@
 
 	<div class="main-wrapper">
 
+		<div class="box-slick">
+			<div class="box-slick_mask"></div>
+
+			<div class="box-slick_wrapper">
+				<div class="box-slick_img">
+					<img src="img/slide-1.png" alt="slide">
+				</div>
+				<div class="box-slick_img">
+					<img src="img/slide-1.png" alt="slide">
+				</div>
+				<div class="box-slick_img">
+					<img src="img/slide-1.png" alt="slide">
+				</div>
+			</div>
+		</div>
 		<!-- BEGIN CONTENT -->
 
 		<main class="content">
 			<div class="wrapper">
 
-				<h2 class="page-title">Одежда для девочек</h2>
+				<div class="main-layout">
 
-				<div class="content-wrap">
+					<div class="main-layout__column">
 
-					<!-- BEGIN FILTER   -->
-					<div class="filter-btn">Фильтры</div>
-					<div class="filter">
-						<form action="#" method="get" class="filter__form">
-							<ul class="filter__list">
-								<li class="filter__list-item">
-									<div class="accordion">
-										<button class="accordion__toggle" id="category" type="button">Категории</button>
-										<div class="accordion__wrap" id="category-wrap">
-											<ul class="accordion__inner container default-skin">
-												<li class="accordion__inner-item accordion__inner-item--active">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="up">
-													<label for="up" class="accordion__item-label">
-														Верхняя одежда
-													</label>
-												</li>
-												<li class="accordion__inner-item">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="hat">
-													<label for="hat" class="accordion__item-label">
-														Шапки
-													</label>
-												</li>
-												<li class="accordion__inner-item">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="shoes">
-													<label for="shoes" class="accordion__item-label">
-														Обувь
-													</label>
-												</li>
-											</ul>
+						<div class="description">
+							<div class="description__text">
+								<p>Онлайн бронирование номеров в отеле «Люблю-Но» - простота и комфорт. С помощью приведенной формы вы
+									сможете забронировать наши номера в режиме онлайн и получить гарантированную бронь. Заказ номера
+									займет у вас считанные минуты. Наши менеджеры работают оперативно и без ошибок, поэтому вы можете не
+									сомневаться, что, когда Вы приедете, номер уже будет подготовлен к вашему приезду.</p>
+
+								<p>Оплата проживания в нашем отеле может быть осуществлена наличными по прибытии в отель.</p>
+
+								<p>Если у вас возникли вопросы или трудности в ходе бронирования – звоните нам по номеру
+									<a href="tel:+">+7 (495) 351-00-29</a></p>
+							</div>
+						</div>
+
+						<div class="rooms">
+							<div class="rooms__title">Свободные номера подходящие вашим критериям</div>
+
+							<ul class="rooms-list">
+								<li class="rooms-list__item">
+									<a href="" class="rooms-list__link">
+										<img src="img/room-photo.png" alt="room" class="rooms-list__img">
+										<div class="rooms-list__description">
+											<span class="rooms-list__description-icon"></span>
+											<span class="rooms-list__description-text">(эконом)</span>
 										</div>
-									</div>
+									</a>
 								</li>
-								<li class="filter__list-item">
-									<div class="multiselect">
-										<div class="multiselect__title">Размер</div>
-										<div class="multiselect__wrap">
-											<input type="text" class="multiselect__input-area" id="size-input" value="" placeholder="Размер">
-											<div class="multiselect__btn" id="size"></div>
-											<ul class="multiselect__list" id="size-wrap">
-												<li class="multiselect__list-item">56</li>
-												<li class="multiselect__list-item">48</li>
-												<li class="multiselect__list-item">42</li>
-												<li class="multiselect__list-item">35</li>
-												<li class="multiselect__list-item">28</li>
-												<li class="multiselect__list-item">18</li>
-											</ul>
+								<li class="rooms-list__item">
+									<a href="" class="rooms-list__link">
+										<img src="img/room-photo.png" alt="room" class="rooms-list__img">
+										<div class="rooms-list__description">
+											<span class="rooms-list__description-icon"></span>
+											<span class="rooms-list__description-text">(эконом)</span>
 										</div>
-									</div>
+									</a>
 								</li>
-								<li class="filter__list-item">
-									<div class="multiselect">
-										<div class="multiselect__title">Цвет</div>
-										<div class="multiselect__wrap">
-											<input type="text" class="multiselect__input-area" id="color-input" value="" placeholder="Цвет">
-											<div class="multiselect__btn" id="color"></div>
-											<ul class="multiselect__list" id="color-wrap">
-												<li class="multiselect__list-item">Синий</li>
-												<li class="multiselect__list-item">Красный</li>
-												<li class="multiselect__list-item">Желтый</li>
-												<li class="multiselect__list-item">Белый</li>
-											</ul>
+								<li class="rooms-list__item">
+									<a href="" class="rooms-list__link">
+										<img src="img/room-photo.png" alt="room" class="rooms-list__img">
+										<div class="rooms-list__description">
+											<span class="rooms-list__description-icon"></span>
+											<span class="rooms-list__description-text">(эконом)</span>
 										</div>
-									</div>
+									</a>
 								</li>
-								<li class="filter__list-item">
-									<div class="accordion">
-										<button class="accordion__toggle" id="material" type="button">Материал</button>
-										<div class="accordion__wrap" id="material-wrap">
-											<ul class="accordion__inner container default-skin scrollable">
-												<li class="accordion__inner-item accordion__inner-item--active">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="all">
-													<label for="all" class="accordion__item-label">
-														Все
-													</label>
-												</li>
-												<li class="accordion__inner-item">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="coton">
-													<label for="coton" class="accordion__item-label">
-														100% хлопок
-													</label>
-												</li>
-												<li class="accordion__inner-item">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="knitwear">
-													<label for="knitwear" class="accordion__item-label">
-														Трикотаж
-													</label>
-												</li>
-												<li class="accordion__inner-item">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="wool">
-													<label for="wool" class="accordion__item-label">
-														Шерсть
-													</label>
-												</li>
-												<li class="accordion__inner-item">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="jean">
-													<label for="jean" class="accordion__item-label">
-														Джинсовый
-													</label>
-												</li>
-												<li class="accordion__inner-item">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="composite">
-													<label for="composite" class="accordion__item-label">
-														Составной
-													</label>
-												</li>
-												<li class="accordion__inner-item">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="velvet">
-													<label for="velvet" class="accordion__item-label">
-														Бархат
-													</label>
-												</li>
-												<li class="accordion__inner-item">
-													<input type="checkbox" name="#" class="accordion__item-checkbox" id="chintz">
-													<label for="chintz" class="accordion__item-label">
-														Ситец
-													</label>
-												</li>
-											</ul>
+								<li class="rooms-list__item">
+									<a href="" class="rooms-list__link">
+										<img src="img/room-photo.png" alt="room" class="rooms-list__img">
+										<div class="rooms-list__description">
+											<span class="rooms-list__description-icon"></span>
+											<span class="rooms-list__description-text">(эконом)</span>
 										</div>
-									</div>
+									</a>
 								</li>
-								<li class="filter__list-submit">
-									<button type="submit" class="filter__submit-btn">Применить фильтр</button>
+								<li class="rooms-list__item">
+									<a href="" class="rooms-list__link">
+										<img src="img/room-photo.png" alt="room" class="rooms-list__img">
+										<div class="rooms-list__description">
+											<span class="rooms-list__description-icon"></span>
+											<span class="rooms-list__description-text">(эконом)</span>
+										</div>
+									</a>
+								</li>
+								<li class="rooms-list__item">
+									<a href="" class="rooms-list__link">
+										<img src="img/room-photo.png" alt="room" class="rooms-list__img">
+										<div class="rooms-list__description">
+											<span class="rooms-list__description-icon"></span>
+											<span class="rooms-list__description-text">(эконом)</span>
+										</div>
+									</a>
 								</li>
 							</ul>
-						</form>
-					</div>
-
-					<!-- BEGIN PRODUCT   -->
-					<div class="product-list">
-
-						<!-- BEGIN MAIN PRODUCT   -->
-						<div class="product-list__product">
-
-							<a href="#" class="product-list__item-link">
-								<div class="product-card">
-									<div class="product-card__marker product-card__marker--new">Новинка</div>
-
-									<div class="product-card__img">
-										<img src="img/product1.png" alt="product">
-									</div>
-
-									<ul class="rating">
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-									</ul>
-
-									<h5 class="product-card__title">Свитер в полоску</h5>
-
-									<div class="product-card__price">123 грн</div>
-								</div>
-							</a>
-
-
-							<a href="#" class="product-list__item-link">
-								<div class="product-card">
-									<div class="product-card__marker product-card__marker--hit">Хит продаж</div>
-
-									<div class="product-card__img">
-										<img src="img/product2.png" alt="product">
-									</div>
-
-									<ul class="rating">
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-									</ul>
-
-									<h5 class="product-card__title">Платье с цветочным принтом</h5>
-
-									<div class="product-card__price">123 грн</div>
-								</div>
-							</a>
-
-
-							<a href="#" class="product-list__item-link">
-								<div class="product-card">
-									<div class="product-card__marker"></div>
-
-									<div class="product-card__img">
-										<img src="img/product3.png" alt="product">
-									</div>
-
-									<ul class="rating">
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item rating__item--active">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-										<li class="rating__item">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-												<path fill="" stroke=""
-													d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-											</svg>
-										</li>
-									</ul>
-
-									<h5 class="product-card__title">Джинсовый комбинезон</h5>
-
-									<div class="product-card__price">123 грн</div>
-								</div>
-							</a>
-
-							</li>
-						</div>
-
-						<!-- BEGIN RELATED PRODUCT   -->
-						<div class="product-list__related">
-							<div class="product-list__related-title">Похожие товары</div>
-							<div class="product-list__related-list">
-
-								<a href="#" class="product-list__related-link">
-									<div class="product-card">
-										<div class="product-card__marker"></div>
-
-										<div class="product-card__img">
-											<img src="img/product1.png" alt="product">
-										</div>
-
-										<ul class="rating">
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-										</ul>
-
-										<h5 class="product-card__title">Свитер в полоску</h5>
-
-										<div class="product-card__price">123 грн</div>
-									</div>
-								</a>
-
-								<a href="#" class="product-list__related-link">
-									<div class="product-card">
-										<div class="product-card__marker"></div>
-
-										<div class="product-card__img">
-											<img src="img/product2.png" alt="product">
-										</div>
-
-										<ul class="rating">
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-										</ul>
-
-										<h5 class="product-card__title">Платье с цветочным принтом</h5>
-
-										<div class="product-card__price">123 грн</div>
-									</div>
-								</a>
-
-								<a href="#" class="product-list__related-link">
-									<div class="product-card">
-										<div class="product-card__marker"></div>
-
-										<div class="product-card__img">
-											<img src="img/product3.png" alt="product">
-										</div>
-
-										<ul class="rating">
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-										</ul>
-
-										<h5 class="product-card__title">Джинсовый комбинезон</h5>
-
-										<div class="product-card__price">123 грн</div>
-									</div>
-								</a>
-
-								<a href="#" class="product-list__related-link">
-									<div class="product-card">
-										<div class="product-card__marker"></div>
-
-										<div class="product-card__img">
-											<img src="img/product3.png" alt="product">
-										</div>
-
-										<ul class="rating">
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-										</ul>
-
-										<h5 class="product-card__title">Джинсовый комбинезон</h5>
-
-										<div class="product-card__price">123 грн</div>
-									</div>
-								</a>
-
-								<a href="#" class="product-list__related-link">
-									<div class="product-card">
-										<div class="product-card__marker"></div>
-
-										<div class="product-card__img">
-											<img src="img/product3.png" alt="product">
-										</div>
-
-										<ul class="rating">
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item rating__item--active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-											<li class="rating__item">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="16.5">
-													<path fill="" stroke=""
-														d="M7.997.49l2.305 5.771h5.186l-4.034 3.464 1.729 5.772-5.186-3.463-5.187 3.463 1.729-5.772L.505 6.261h5.187s-.01.025 0 0C5.943 5.672 7.997.49 7.997.49" />
-												</svg>
-											</li>
-										</ul>
-
-										<h5 class="product-card__title">Джинсовый комбинезон</h5>
-
-										<div class="product-card__price">123 грн</div>
-									</div>
-								</a>
-
-
-							</div>
-
-							<div class="product-list__related-navigate">
-								<div class="arrow prev-arrow"></div>
-								<div class="my-dots"></div>
-								<div class="arrow next-arrow"></div>
-							</div>
-
 						</div>
 					</div>
 
+					<div class="main-layout__column">
+
+						<div class="box-form">
+							<form>
+
+								<div class="box-field">
+									<div class="box-field__label">
+										<div class="box-field__label-name">Тип номера</div>
+										<div class="box-field__input">
+											<select class="styled box-field__input-type">
+												<option class="box-field__input-option-two">(эконом)</option>
+												<option class="box-field__input-option-one">(эконом)</option>
+												<option class="box-field__input-option-two">(эконом)</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="box-field box-field_flex">
+									<div class="box-field__label">
+										<div class="box-field__label-name">Взрослые</div>
+										<div class="box-field__input">
+											<select class="styled box-field__input-sum">
+												<option>1</option>
+												<option>2</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="box-field__label">
+										<div class="box-field__label-name box-field__label-name_width">Дети</div>
+										<div class="box-field__input">
+											<select class="styled box-field__input-sum">
+												<option>1</option>
+												<option>2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="box-field box-field_flex">
+									<div class="box-field__label">
+										<div class="box-field__label-name">Заезд</div>
+										<div class="box-field__input box-field__input-datepicker">
+											<input type="text" class="datepicker">
+										</div>
+									</div>
+
+									<div class="box-field__label">
+										<div class="box-field__label-name box-field__label-name_width">Отъезд</div>
+										<div class="box-field__input box-field__input-datepicker">
+											<input type="text" class="datepicker">
+										</div>
+									</div>
+								</div>
+
+								<div class="box-field">
+									<div class="box-field__label">
+										<div class="box-field__label-name">E-mail</div>
+										<div class="box-field__input box-field__input-text">
+											<input type="email">
+										</div>
+									</div>
+								</div>
+
+								<div class="box-field">
+									<div class="box-field__label">
+										<div class="box-field__label-name">Телефон</div>
+										<div class="box-field__input box-field__input-text">
+											<input type="number">
+										</div>
+									</div>
+								</div>
+
+								<div class="box-list-check">
+									<div class="box-list-check__title">Дополнительные услуги</div>
+
+									<ul class="list-check">
+										<li class="list-check__item">
+											<label class="list-check__label">
+												<input type="checkbox" name="check_1" class="list-check__label-input">
+												<span class="label-text">бизнес ланч</span>
+											</label>
+										</li>
+										<li class="list-check__item">
+											<label class="list-check__label">
+												<input type="checkbox" name="check_2" class="list-check__label-input">
+												<span class="label-text">ужин</span>
+											</label>
+										</li>
+										<li class="list-check__item">
+											<label class="list-check__label">
+												<input type="checkbox" name="check_2" class="list-check__label-input">
+												<span class="label-text">полдник</span>
+											</label>
+										</li>
+										<li class="list-check__item">
+											<label class="list-check__label">
+												<input type="checkbox" name="check_2" class="list-check__label-input">
+												<span class="label-text">шампанское</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+
+								<div class="box-price">
+									<div class="box-price_name">Итого: <span class="box-price_name-num">26 400 р.</span></div>
+								</div>
+
+								<button type="submit" class="button">Заказать</button>
+
+							</form>
+						</div>
+
+					</div>
 				</div>
+
 			</div>
 		</main>
 
@@ -573,6 +268,72 @@
 		<header>
 			<div class="wrapper">
 
+				<div class="header-list">
+
+					<a href="http://" class="logo">
+						<img src="img/icons/logo.svg" alt="logo" class="logo__img">
+					</a>
+
+					<svg class="ham hamRotate ham7" viewBox="0 0 100 100" width="40">
+						<path class="line top"
+							d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
+						<path class="line middle" d="m 70,50 h -40" />
+						<path class="line bottom"
+							d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
+					</svg>
+
+					<div class="control-list">
+						<nav class="main-nav">
+							<ul class="main-nav-list">
+								<li class="main-nav-list__item">
+									<a href="#" class="main-nav-list__link">Об отеле</a>
+								</li>
+								<li class="main-nav-list__item">
+									<a href="#" class="main-nav-list__link">Номера</a>
+								</li>
+								<li class="main-nav-list__item">
+									<a href="#" class="main-nav-list__link">Контакты</a>
+								</li>
+								<li class="main-nav-list__item">
+									<a href="#" class="main-nav-list__link">Правила проживания</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="box-lang">
+							<ul class="list-lang">
+								<li class="list-lang__item active">
+									<a class="list-lang__link" href="#">Ru</a>
+								</li>
+								<li class="list-lang__item">
+									<a class="list-lang__link" href="#">En</a>
+								</li>
+								<li class="list-lang__item">
+									<a class="list-lang__link" href="#">Ch</a>
+								</li>
+							</ul>
+						</div>
+
+						<nav class="secondary-nav">
+							<ul class="secondary-nav-list">
+								<li class="secondary-nav-list__item">
+									<a href="#" class="secondary-nav-list__link">Отзывы</a>
+								</li>
+								<li class="secondary-nav-list__item">
+									<a href="#" class="secondary-nav-list__link">Новости</a>
+								</li>
+								<li class="secondary-nav-list__item">
+									<a href="#" class="secondary-nav-list__link">Услуги</a>
+								</li>
+								<li class="secondary-nav-list__item">
+									<a href="#" class="secondary-nav-list__link">Спецпредложения</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+				</div>
+
 			</div>
 		</header>
 
@@ -582,6 +343,40 @@
 
 		<footer>
 			<div class="wrapper">
+
+				<div class="footer-list">
+
+					<div class="box-phone">
+						<div class="box-phone__icon"></div>
+						<a href="tel:+" class="box-phone__number">
+							<span>+7 (495)</span>
+							<span> 351-03-03</span>
+						</a>
+					</div>
+
+					<div class="social">
+						<ul class="social-list">
+							<li class="social-list__item">
+								<a href="http://" target="_blank" class="social-list__link social-list__link_fb"></a>
+							</li>
+							<li class="social-list__item">
+								<a href="http://" target="_blank" class="social-list__link social-list__link_b"></a>
+							</li>
+							<li class="social-list__item">
+								<a href="http://" target="_blank" class="social-list__link social-list__link_inst"></a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer-links">
+						<ul class="links-list">
+							<li class="links-list__item">
+								<a href="http://" target="_blank" class="links-list__link">О сайте Группа компаний «Вест»</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
 
 			</div>
 		</footer>
@@ -594,14 +389,19 @@
 
 	<!-- BODY EOF   -->
 
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
 	<script src="js/jquery-3.0.0.min.js"></script>
 	<script src="js/jquery-migrate-1.4.1.min.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script src="js/components/jquery.custom-scrollbar.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/components/jquery.formstyler.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+	<script src="js/components/slick.js"></script>
 	<!--
 	<script src="js/components/jquery.fancybox.js" ></script>
-	<script src="js/components/jquery.formstyler.js" ></script>
-	<script src="js/components/slick.js" ></script>
+	
+	
+	<script src="js/components/jquery.mCustomScrollbar.js" ></script>
 	-->
 	<script src="js/custom.js"></script>
 </body>

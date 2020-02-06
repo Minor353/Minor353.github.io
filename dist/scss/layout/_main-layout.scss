@@ -1,0 +1,18 @@
+.main-layout {
+  display: flex;
+}
+
+.main-layout__column {
+  width: 50%;
+}
+
+
+@media screen and (max-width: 991px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .main-layout__column {
+    width: 100%;
+  }
+}

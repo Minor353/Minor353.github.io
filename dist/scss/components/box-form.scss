@@ -1,0 +1,14 @@
+.box-form {
+  padding-top: 28px;
+  padding-left: 50px;
+  padding-right: 110px;
+}
+
+
+@media screen and (max-width: 991px) {
+  .box-form {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 33px;
+  }
+}

@@ -4,8 +4,19 @@ $(window).on('load', function () {
 	} else {
 		$('body').addClass('web');
 	};
-	$('body').removeClass('loaded');
+	setTimeout(function () {
+		$(".js-bg").each(function () {
+			$(this).css('background-image', 'url(' + $(this).data("preload") + ')');
+		});
+		$(".js-img").each(function () {
+			$(this).attr('src', $(this).data("src"));
+		});
+	}, 200);
+	setTimeout(function () {
+		$('body').removeClass('loaded');
+	}, 400);
 });
+
 /* viewport width */
 function viewport() {
 	var e = window,
@@ -20,6 +31,8 @@ function viewport() {
 	}
 };
 /* viewport width */
+
+
 $(function () {
 	/* placeholder*/
 	$('input, textarea').each(function () {
@@ -41,74 +54,95 @@ $(function () {
 
 	/* components */
 
-	/*
-	if($('.styled').length) {
+	if ($('.styled').length) {
 		$('.styled').styler();
 	};
+
+
+	/**Datepicker */
+	if ($('.datepicker').length) {
+		$(".datepicker").datepicker({
+			dateFormat: "dd-mm-yy",
+			minDate: new Date($('#hiddendelivdate').val()),
+			monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+			dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+		});
+	};
+
+
+
+	/**Lazy Load */
+	let images = document.querySelectorAll(".rooms-list__img");
+	lazyload(images);
+
+
+	/**Slick Slider */
+	$('.box-slick_wrapper').slick({
+		dots: false,
+		arrows: false,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		cssEase: 'linear'
+	});
+
+
+	/**Burger Menu*/
+	if ($('.ham').length) {
+		$('.ham').click(function () {
+			$(this).toggleClass('active');
+			$('.control-list').toggleClass('control-list_active');
+		});
+	}
+
+
+	/*
+
+
 	if($('.fancybox').length) {
 		$('.fancybox').fancybox({
 			margin  : 10,
 			padding  : 10
 		});
 	};
-
-	
-	*/
-
-
-
-	/* Slide related product*/
-
-	if ($('.product-list__related-link').length > 3) {
-		$('.product-list__related-list').addClass('slick-slider');
-
+	if($('.slick-slider').length) {
 		$('.slick-slider').slick({
 			dots: true,
-			appendDots: $('.my-dots'),
-			prevArrow: $('.prev-arrow'),
-			nextArrow: $('.next-arrow'),
 			infinite: false,
 			speed: 300,
-			slidesToShow: 3,
-			slidesToScroll: 3,
-			variableWidth: true,
-			responsive: [{
-					breakpoint: 1201,
-					settings: {
-						slidesToShow: 3,
-						slidesToScroll: 1,
-						variableWidth: false
-					}
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			responsive: [
+				{
+				  breakpoint: 1024,
+				  settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					infinite: true,
+					dots: true
+				  }
 				},
 				{
-					breakpoint: 900,
-					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 1,
-						variableWidth: false
-					}
-				},
-				{
-					breakpoint: 600,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						variableWidth: false
-					}
-				}
+				  breakpoint: 600,
+				  settings: "unslick"
+				}				
 			]
 		});
-
-	} else {
-		$('.product-list__related-navigate').addClass('product-list__related-navigate--none');
-		$('.product-list__related-list').addClass('product-list__related-list--noslide');
-	}
+	};
 
 
-
-
-
-
+	if($('.scroll').length) {
+		$(".scroll").mCustomScrollbar({
+			axis:"x",
+			theme:"dark-thin",
+			autoExpandScrollbar:true,
+			advanced:{autoExpandHorizontalScroll:true}
+		});
+	};
+	
+	*/
 
 	/* components */
 
@@ -133,61 +167,3 @@ var handler = function () {
 }
 $(window).bind('load', handler);
 $(window).bind('resize', handler);
-
-
-
-
-/****FILTER SCRIPTS****/
-
-if ($('.container').length) {
-	$(".container").customScrollbar();
-};
-
-$('.filter-btn').click(function () {
-	$('.filter').toggleClass('filter--active');
-});
-
-
-$(function () {
-	/**Open Close*/
-	$('#category').click(function () {
-		$('#category-wrap').toggleClass('accordion__wrap--active');
-		$('#category').toggleClass('accordion__toggle--active');
-	});
-
-	$('#material').click(function () {
-		$('#material-wrap').toggleClass('accordion__wrap--active');
-		$('#material').toggleClass('accordion__toggle--active');
-	});
-
-	$('#size').click(function () {
-		$('#size-wrap').toggleClass('multiselect__list--active');
-		$('#size').toggleClass('multiselect__btn--active');
-	});
-
-	$('#color').click(function () {
-		$('#color-wrap').toggleClass('multiselect__list--active');
-		$('#color').toggleClass('multiselect__btn--active');
-	});
-
-	/**Select element*/
-	$("#size-wrap .multiselect__list-item").each(function () {
-		$(this).click(function () {
-			$('#size-input').attr('value', $(this).text());
-			$('#size').toggleClass('multiselect__btn--active');
-			$('#size-wrap').toggleClass('multiselect__list--active');
-		});
-
-	});
-
-	$("#color-wrap .multiselect__list-item").each(function () {
-		$(this).click(function () {
-			$('#color-input').attr('value', $(this).text());
-			$('#color').toggleClass('multiselect__btn--active');
-			$('#color-wrap').toggleClass('multiselect__list--active');
-		});
-
-	});
-
-
-});
