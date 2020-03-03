@@ -79,7 +79,7 @@ $(function () {
 	$('input, textarea').each(function () {
 		var placeholder = $(this).attr('placeholder');
 		$(this).focus(function () {
-			$(this).attr('placeholder', 'Enter text');
+			$(this).attr('placeholder', '');
 			$(this).addClass('sm-placeholder');
 		});
 		$(this).focusout(function () {
@@ -123,10 +123,30 @@ $(function () {
 		return false;
 	});
 
+	$('.js-search-full-tags').click(function () {
+		$('.search-full-tags').addClass('show-popup');
+		return false;
+	});
+	$('.js-search-close-tags').click(function () {
+		$('.search-full-tags').removeClass('show-popup');
+		return false;
+	});
+
 	$('.js-main-nav').click(function () {
 		$("body").addClass('blur-bg');
 		$('.mask-tablet').addClass('active');
 		$('.main-nav').addClass('show-popup');
+		$('.main-nav-sport').removeClass('show-popup');
+		if ($(document).height() > $(window).height()) {
+			var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop();
+			$('html').addClass('noscroll').css('top', -scrollTop);
+		}
+		return false;
+	});
+	$('.js-main-nav-sport').click(function () {
+		$("body").addClass('blur-bg');
+		$('.mask-tablet').addClass('active');
+		$('.main-nav-sport').addClass('show-popup');
 		if ($(document).height() > $(window).height()) {
 			var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop();
 			$('html').addClass('noscroll').css('top', -scrollTop);
@@ -139,6 +159,7 @@ $(function () {
 		$("body").removeClass('blur-bg');
 		$('.mask-tablet').removeClass('active');
 		$('.main-nav').removeClass('show-popup');
+		$('.main-nav-sport').removeClass('show-popup');
 		var scrollTop = parseInt($('html').css('top'));
 		$('html').removeClass('noscroll');
 		$('html,body').scrollTop(-scrollTop);
@@ -150,6 +171,7 @@ $(function () {
 		$("body").removeClass('blur-bg');
 		$('.mask-tablet').removeClass('active');
 		$('.main-nav').removeClass('show-popup');
+		$('.main-nav-sport').removeClass('show-popup');
 		var scrollTop = parseInt($('html').css('top'));
 		$('html').removeClass('noscroll');
 		$('html,body').scrollTop(-scrollTop);
@@ -388,7 +410,7 @@ $(function () {
 				var $topPosition = Math.max(0, $sidebarTop - $scrollTop);
 
 				if ($scrollTop + $sidebarHeight > $footerTop) {
-					var $topPosition = Math.min($topPosition, $footerTop - $scrollTop - $sidebarHeight);
+					var $topPosition = Math.min($topPosition, $footerTop - $scrollTop - $sidebarHeight - 150);
 				}
 
 				$sidebar.css("top", ($topPosition));
@@ -402,22 +424,34 @@ $(function () {
 		$('.contacts-map__adress').mCustomScrollbar({
 			axis: "y"
 		});
+
+		$('.contacts-map__adress .contacts-item').mCustomScrollbar({
+			axis: "y"
+		});
 	};
 	/**^^^scroll adress on page contact.html^^^**/
 
 
 	/**open adress on page contact.html**/
 	if ($('.contacts-map__adress').length) {
+
+
 		function windowSizeContact() {
+			$('.content-contact .js-toggle-contacts-btn').off();
+			$('.content-contact .contacts-item__cross').click(function (e) {
+				$('.contacts-item__more a').text('Подробнее');
+			})
 			if ($(window).width() >= '1024') {
-				$('.content-contact .js-toggle-contacts-btn').off('click');
 				$('.content-contact .js-toggle-contacts-btn').click(function (e) {
 					e.preventDefault();
+					e.stopPropagation();
 					let btnInnerText = $(this).text();
 					if (btnInnerText == 'Подробнее') {
 						$(this).text('Свернуть');
-					} else {
+					} else if (btnInnerText == 'Свернуть') {
 						$(this).text('Подробнее');
+					} else if (btnInnerText == '') {
+						return false;
 					}
 
 					$(this).closest(".js-toggle-contacts-container").find(".js-toggle-contacts-content").slideToggle("slow", function () {
@@ -425,11 +459,29 @@ $(function () {
 							$(this).closest(".js-toggle-contacts-container").removeClass("active");
 						else $(this).closest(".js-toggle-contacts-container").addClass("active");
 					});
+
+					$('.contacts-item-mask').toggleClass('active');
+
+
+
+
 				});
-			} else {
-				$('.content-contact .js-toggle-contacts-btn').off('click');
+
+			} else if ($(window).width() < '1024') {
+
 				$('.content-contact .js-toggle-contacts-btn').click(function (e) {
 					e.preventDefault();
+					e.stopPropagation();
+
+					let btnInnerText = $(this).text();
+					if (btnInnerText == 'Подробнее') {
+						$(this).text('Свернуть');
+					} else if (btnInnerText == 'Свернуть') {
+						$(this).text('Подробнее');
+					} else if (btnInnerText == '') {
+						return false;
+					}
+
 					$('.contacts-item-mask').toggleClass('active');
 
 					$(this).closest(".js-toggle-contacts-container").find(".js-toggle-contacts-content").slideToggle("slow", function () {
@@ -438,6 +490,7 @@ $(function () {
 						else $(this).closest(".js-toggle-contacts-container").addClass("active");
 					});
 				});
+
 			};
 
 		}
@@ -453,12 +506,14 @@ $(function () {
 	if ($('.articles-category__btn-js').length) {
 		$('.articles-category__btn-js').click(function (e) {
 			e.preventDefault();
+			$('.articles-category__btn-js').toggleClass('active');
 			$('.articles-category__wrap').toggleClass('articles-category__wrap_active');
 			$('.articles-category__mask').addClass('articles-category__mask_active');
 		});
 
 		$('.category-close-js').click(function (e) {
 			e.preventDefault();
+			$('.articles-category__btn-js').removeClass('active');
 			$('.articles-category__wrap').removeClass('articles-category__wrap_active');
 			$('.articles-category__mask').removeClass('articles-category__mask_active');
 		});
@@ -638,8 +693,8 @@ $(function () {
 			lazyLoad: 'ondemand',
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			prevArrow: "<a href='#' class='slick-prev btn-slider'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></a>",
-			nextArrow: "<a href='#' class='slick-next btn-slider'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></a>",
+			prevArrow: "<span class='slick-prev btn-slider'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></span>",
+			nextArrow: "<span class='slick-next btn-slider'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></span>",
 		});
 	};
 
@@ -651,8 +706,8 @@ $(function () {
 			slidesToShow: 2,
 			slidesToScroll: 1,
 			variableWidth: true,
-			prevArrow: "<a href='#' class='slick-prev btn-slider'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></a>",
-			nextArrow: "<a href='#' class='slick-next btn-slider'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></a>",
+			prevArrow: "<span href='#' class='slick-prev btn-slider'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></span>",
+			nextArrow: "<span href='#' class='slick-next btn-slider'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></span>",
 		});
 	};
 	if ($('.js-fancybox').length) {
@@ -696,8 +751,8 @@ $(function () {
 
 
 	/*
-	
-	
+
+
 	if($('.fancybox').length) {
 		$('.fancybox').fancybox({
 			margon  : 10,
@@ -736,7 +791,7 @@ $(function () {
 			advanced:{autoExpandHorizontalScroll:true}
 		});
 	};
-	
+
 	*/
 
 	/* components */
@@ -756,21 +811,18 @@ var handler = function () {
 	var wd = parseInt($(document).width() - parseInt($('.wrapper').width())) / 2;
 	$('.works, .contacts, .reviews').css('padding-left', wd);
 
-	if (viewport_wid <= 1023) {
-		if ($('.catalog-main .show-bar').length) {
-			$('.catalog-main .show-bar').detach().insertBefore($('.catalog-side .tabs-menu_side'));
-		}
-		if ($('.calc-data__title .icon-help').length) {
-			$('.calc-data__title .icon-help').detach().insertAfter($('.calc-data__select'));
-		}
-	}
+
 
 	if (viewport_wid <= 767) {
 		if ($('.js-informer-list').length) {
 			$('.js-informer-list').slick("getSlick").refresh();
 		};
-		if ($('.calc-data .icon-help').length) {
-			$('.calc-data .icon-help').detach().insertAfter($('.calc-data__type .calc-data__radio-label'));
+
+		if ($('.finding-form-step').length) {
+			$('.finding-form-step').detach().insertAfter($('.content'));
+		}
+		if ($('.calc-data__question-block').length) {
+			$('.calc-data__question-block').detach().insertAfter($('.content'));
 		}
 	}
 
@@ -814,14 +866,11 @@ $(document).ready(function () {
 		centerPadding: '0',
 		adaptiveHeight: true,
 		infinite: true,
+		lazyLoad: 'ondemand',
 		asNavFor: '.gallery-slider__preview',
 		touchThreshold: 30,
 		prevArrow: "<a class='slick-prev'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></a>",
-		nextArrow: "<a class='slick-next'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></a>",
-		responsive: [{
-			breakpoint: 1009,
-			settings: {}
-		}]
+		nextArrow: "<a class='slick-next'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></a>"
 	});
 
 	$('.gallery-slider__preview').slick({
@@ -833,6 +882,7 @@ $(document).ready(function () {
 		centerPadding: '0',
 		adaptiveHeight: true,
 		infinite: true,
+		lazyLoad: 'ondemand',
 		asNavFor: '.gallery-slider__main',
 		touchThreshold: 30,
 		focusOnSelect: true,
@@ -851,13 +901,11 @@ $(document).ready(function () {
 		centerPadding: '0',
 		adaptiveHeight: true,
 		infinite: true,
+		lazyLoad: 'ondemand',
 		touchThreshold: 30,
 		prevArrow: "<a class='slick-prev'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></a>",
-		nextArrow: "<a class='slick-next'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></a>",
-		responsive: [{
-			breakpoint: 767,
-			settings: {}
-		}]
+		nextArrow: "<a class='slick-next'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></a>"
+
 	});
 
 	$('.items-wrapper-mod2').slick({
@@ -868,6 +916,7 @@ $(document).ready(function () {
 		fade: false,
 		centerPadding: '0',
 		adaptiveHeight: true,
+		lazyLoad: 'ondemand',
 		infinite: true,
 		touchThreshold: 30,
 		prevArrow: "<a class='slick-prev'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></a>",
@@ -887,6 +936,7 @@ $(document).ready(function () {
 		centerPadding: '0',
 		adaptiveHeight: true,
 		infinite: true,
+		lazyLoad: 'ondemand',
 		touchThreshold: 30,
 		prevArrow: "<a class='slick-prev'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></a>",
 		nextArrow: "<a class='slick-next'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></a>",
@@ -1024,7 +1074,7 @@ $('.content-articles-single .article-section-interest-slide').slick({
 	responsive: [{
 		breakpoint: 767,
 		settings: {
-			slidesToShow: 1.05,
+			slidesToShow: 1.09,
 			infinite: false,
 			arrows: false
 		}
@@ -1053,7 +1103,7 @@ $('.content_materials-card .items-wrapper-card-slide').slick({
 	}, {
 		breakpoint: 760,
 		settings: {
-			slidesToShow: 1.05,
+			slidesToShow: 1.09,
 			arrows: false
 		}
 	}]
@@ -1063,7 +1113,6 @@ $('.content_materials-card .items-wrapper-card-slide').slick({
 $('.content_materials .items-wrapper-mod2').slick({
 	slidesToShow: 4,
 	slidesToScroll: 1,
-	lazyLoad: 'ondemand',
 	arrows: true,
 	dots: false,
 	fade: false,
@@ -1097,8 +1146,6 @@ $('.content_materials .items-wrapper-mod2').slick({
 		}
 	]
 });
-
-
 
 /**Slider Video on page materials-card.html**/
 $('.content_materials-card .video-wrapper').slick({
@@ -1172,7 +1219,7 @@ $('.content_materials-card .doc-card_wrap').slick({
 			breakpoint: 760,
 			settings: {
 				rows: 2,
-				slidesToShow: 2.01,
+				slidesToShow: 2,
 				slidesToScroll: 2
 			}
 		},
@@ -1185,7 +1232,7 @@ $('.content_materials-card .doc-card_wrap').slick({
 
 /**Services cards on page materials-card.html**/
 $('.content_materials-card .step-item-list').slick({
-	slidesToShow: 1.05,
+	slidesToShow: 1.09,
 	arrows: false,
 	dots: false,
 	slidesToScroll: 1,
@@ -1210,16 +1257,16 @@ $('.content_materials-card .step-item-list').slick({
 
 $('.content_materials .works-slider').slick({
 	slidesToShow: 4,
-	slidesToScroll: 1,
 	arrows: true,
 	dots: false,
+	slidesToScroll: 1,
 	fade: false,
 	centerPadding: '0',
 	adaptiveHeight: true,
 	infinite: false,
 	touchThreshold: 30,
-	prevArrow: "<a class='slick-prev'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></a>",
-	nextArrow: "<a class='slick-next'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></a>",
+	prevArrow: "<span class='slick-prev'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-left'></use></svg></span>",
+	nextArrow: "<span class='slick-next'><svg class='icon'><use xlink:href='img/symbol/sprite.svg#arrow-right'></use></svg></span>",
 	responsive: [{
 			breakpoint: 1023,
 			settings: {
@@ -1245,8 +1292,6 @@ $('.content_materials .works-slider').slick({
 	]
 });
 
-
-
 function createFullPage() {
 	var myFullpage = new fullpage('#fullpage', {
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -1258,10 +1303,37 @@ function createFullPage() {
 		fitToSection: false,
 		navigation: true
 	});
+
+	var myFullpage2 = new fullpage('#fullpage2', {
+		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+		anchors: ['advantages', 'principle', 'vacancies'],
+		menu: '#js-menu',
+		slidesNavigation: false,
+		scrollingSpeed: 1000,
+		autoScrolling: true,
+		fitToSection: false,
+		navigation: true
+	});
+	var myFullpageSport = new fullpage('#fullpage-sport', {
+		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+		anchors: ['sportMain', 'finding', 'quality', 'related', 'works', 'reviews', 'questions'],
+		menu: '#js-menu',
+		slidesNavigation: false,
+		scrollingSpeed: 1000,
+		autoScrolling: true,
+		fitToSection: false,
+		navigation: true
+	});
 };
 $(window).load(function () {
 	if (($(window).height() >= 620) && ($(window).width() >= 1024)) {
 		if ($('#fullpage').length) {
+			createFullPage();
+		}
+		if ($('#fullpage2').length) {
+			createFullPage();
+		}
+		if ($('#fullpage-sport').length) {
 			createFullPage();
 		}
 	} else {
@@ -1277,6 +1349,12 @@ $(window).resize(function (e) {
 		if ($('#fullpage').length) {
 			createFullPage();
 		}
+		if ($('#fullpage2').length) {
+			createFullPage();
+		}
+		if ($('#fullpage-sport').length) {
+			createFullPage();
+		}
 	} else {
 		if ($('.fp-enabled').length) {
 			fullpage_api.destroy('all');
@@ -1288,236 +1366,84 @@ $(window).resize(function (e) {
 
 
 
-/****Google map on contacts.html*****/
+/****Yandex map on contacts.html*****/
 
-if ($('.contacts-map__map').length) {
-
-	var map;
-
-	function initMap() {
-		map = new google.maps.Map(
-			document.getElementById('map'), {
-				center: {
-					lat: 52.995150,
-					lng: 149.375659
-				},
-				zoom: 4.5,
-				disableDefaultUI: true,
-				styles: [{
-						"featureType": "all",
-						"elementType": "labels.text.fill",
-						"stylers": [{
-								"saturation": 36
-							},
-							{
-								"color": "#333333"
-							},
-							{
-								"lightness": 40
-							}
-						]
-					},
-					{
-						"featureType": "all",
-						"elementType": "labels.text.stroke",
-						"stylers": [{
-								"visibility": "on"
-							},
-							{
-								"color": "#ffffff"
-							},
-							{
-								"lightness": 16
-							}
-						]
-					},
-					{
-						"featureType": "all",
-						"elementType": "labels.icon",
-						"stylers": [{
-							"visibility": "off"
-						}]
-					},
-					{
-						"featureType": "administrative",
-						"elementType": "geometry.fill",
-						"stylers": [{
-								"color": "#fefefe"
-							},
-							{
-								"lightness": 20
-							}
-						]
-					},
-					{
-						"featureType": "administrative",
-						"elementType": "geometry.stroke",
-						"stylers": [{
-								"color": "#fefefe"
-							},
-							{
-								"lightness": 17
-							},
-							{
-								"weight": 1.2
-							}
-						]
-					},
-					{
-						"featureType": "landscape",
-						"elementType": "geometry",
-						"stylers": [{
-								"color": "#fafafa"
-							},
-							{
-								"lightness": 20
-							}
-						]
-					},
-					{
-						"featureType": "poi",
-						"elementType": "geometry",
-						"stylers": [{
-								"color": "#f5f5f5"
-							},
-							{
-								"lightness": 21
-							}
-						]
-					},
-					{
-						"featureType": "poi.park",
-						"elementType": "geometry",
-						"stylers": [{
-								"color": "#ffffff"
-							},
-							{
-								"lightness": 21
-							}
-						]
-					},
-					{
-						"featureType": "road.highway",
-						"elementType": "geometry.fill",
-						"stylers": [{
-								"color": "#ffffff"
-							},
-							{
-								"lightness": 17
-							}
-						]
-					},
-					{
-						"featureType": "road.highway",
-						"elementType": "geometry.stroke",
-						"stylers": [{
-								"color": "#ffffff"
-							},
-							{
-								"lightness": 29
-							},
-							{
-								"weight": 0.2
-							}
-						]
-					},
-					{
-						"featureType": "road.arterial",
-						"elementType": "geometry",
-						"stylers": [{
-								"color": "#ffffff"
-							},
-							{
-								"lightness": 18
-							}
-						]
-					},
-					{
-						"featureType": "road.local",
-						"elementType": "geometry",
-						"stylers": [{
-								"color": "#ffffff"
-							},
-							{
-								"lightness": 16
-							}
-						]
-					},
-					{
-						"featureType": "transit",
-						"elementType": "geometry",
-						"stylers": [{
-								"color": "#f2f2f2"
-							},
-							{
-								"lightness": 19
-							}
-						]
-					},
-					{
-						"featureType": "water",
-						"elementType": "geometry",
-						"stylers": [{
-								"color": "#ededed"
-							},
-							{
-								"lightness": 17
-							}
-						]
-					}
-				]
-			});
-
-		var iconBase = '../img/geo.png';
-
-		var features = [{
-			position: new google.maps.LatLng(56.117270, 157.039628)
-		}, {
-			position: new google.maps.LatLng(57.841132, 135.550370)
-		}, {
-			position: new google.maps.LatLng(52.665597, 142.581620)
-		}, {
-			position: new google.maps.LatLng(48.831322, 142.317948)
-		}, {
-			position: new google.maps.LatLng(48.334215, 138.187089)
-		}, {
-			position: new google.maps.LatLng(51.586499, 132.693925)
-		}, {
-			position: new google.maps.LatLng(56.043702, 129.881425)
-		}];
-
-		var titlePointer = ['Хабаровск1', 'Хабаровск2', 'Хабаровск3', 'Хабаровск4', 'Хабаровск5', 'Хабаровск6', 'Хабаровск7'];
-
-		// Create markers.
-		let markers = [];
-		for (var i = 0; i < features.length; i++) {
-			var marker = new google.maps.Marker({
-				position: features[i].position,
-				icon: iconBase,
-				map: map,
-				title: titlePointer[i]
-
-			});
-			markers.push(marker);
-		};
-
-
-		$('.contacts-item').on('click', function () {
-			$('.contacts-item').removeClass('contacts-item_active');
-			$(this).addClass('contacts-item_active');
-			$title = $(this).attr('title');
-
-			for (var i = 0; i < features.length; i++) {
-				markers[i].setIcon('../img/geo.png');
-				if (markers[i].title == $title) {
-					markers[i].setIcon('../img/squer.png');
-					map.setCenter(markers[i].getPosition());
-					map.setZoom(5);
-				}
+setTimeout(function () {
+	if ($('#map-contact').length) {
+		setTimeout(function () {
+			const mapContact = document.querySelector('#map-contact');
+			const markets = [].slice.call(document.querySelectorAll('.contacts-item'));
+			const datapin = {
+				pin: 'img/geo.png',
+				pinHovered: 'img/squer.png'
 			}
 
-		});
+			const coords = [
+				[56.117270, 157.039628],
+				[57.841132, 135.550370],
+				[52.665597, 142.581620],
+				[48.831322, 142.317948]
+			];
+			window.ymaps.ready(() => {
+				const ymap = new window.ymaps.Map(mapContact, {
+					center: [56.117270, 157.039628],
+					zoom: 4.5,
+					controls: [],
+				});
+				ymap.behaviors.disable('scrollZoom');
+
+				const myCollection = new window.ymaps.GeoObjectCollection({}, {
+					iconLayout: 'default#image',
+					iconImageHref: datapin.pin,
+					iconImageSize: [57, 57],
+				});
+
+
+
+				for (let i = 0; i < coords.length; i += 1) {
+					myCollection.add(new window.ymaps.Placemark(coords[i]));
+				}
+
+
+
+				ymap.geoObjects.add(myCollection);
+
+				if (markets.length > 0) {
+					markets.forEach((market) => {
+						market.addEventListener('click', (e) => {
+
+							/**Возвращаем вид маркеров в состояние по умолчанию */
+							for (let i = 0; i < coords.length; i++) {
+								myCollection.get(i).options.set('iconImageHref', datapin.pin);
+								myCollection.get(i).options.set({
+									iconImageSize: [57, 57]
+								});
+							}
+
+							/**Смена активно класса у адреса из списка */
+							$('.contacts-item').removeClass("contacts-item__active");
+							$(market).addClass("contacts-item__active");
+
+							/**Смена позиции карты */
+							ymap.setCenter(
+								coords[Number(market.dataset.index)], 6
+							);
+
+							/**Смена активного маркера */
+							let pointIndex = Number(market.dataset.index);
+							myCollection.get(pointIndex).options.set('iconImageHref', datapin.pinHovered);
+							myCollection.get(pointIndex).options.set({
+								iconImageSize: [20, 20]
+							});
+							/***********************************************/
+						});
+					});
+				}
+			});
+			/*map*/
+		}, 1000);
+
 
 	}
-
-}
+	/*map*/
+}, 1000);

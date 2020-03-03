@@ -70,12 +70,18 @@ if ($('.js-styled-search').length) {
 };
 
 if ($('.calc-data__question').length) {
-  $('.calc-data__question').click(function () {
+  $('.calc-data__question').click(function (e, index) {
+    let questionBlock = $(this).index('.calc-data__question');
     $('.calc-data__question-block').removeClass('active');
-    $(this).parent().parent().find('.calc-data__question-block').toggleClass('active');
+    $('.calc-data__question-block').eq(questionBlock).addClass('active');
+    if (viewport().width < 767) {
+      $("body").addClass('blur-bg no-scroll');
+    }
+    
   });
   $('.calc-data__question-block-close').click(function () {
-    $(this).parent().removeClass('active');
+    $('.calc-data__question-block').removeClass('active');
+    $("body").removeClass('blur-bg no-scroll');
   });
 };
 
@@ -388,7 +394,6 @@ if ($('.header-nav__drop').length) {
     function(){ $('body').removeClass('no-scroll') }
   )
 };
-
 
 
 // if ($('.cases-item-info').length) {
