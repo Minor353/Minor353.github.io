@@ -3639,11 +3639,7 @@ page: contacts
 @media screen and (max-width: 350px) { .content-contact .contacts-item.active .contacts-item__hidden-item .contacts-item__hidden-row:nth-child(2) { padding-top: 0px; }
   .content-contact .contacts-item.active .contacts-item__hidden-item .contacts-item__hidden-row { margin-left: 0px; }
   .content-contact .contacts-item.active .contacts-item__hidden-item { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; margin-left: 0px; margin-top: 25px; }
-  .content-contact .contacts-item .mCSB_scrollTools { opacity: 1; }
-  .content-contact .contacts-item.active { top: 65px; bottom: 8px; -webkit-transform: translate(-50%, 0%); -ms-transform: translate(-50%, 0%); transform: translate(-50%, 0%); overflow: hidden; }
-  .content-contact .contacts-item.active .mCSB_scrollTools { right: -12px; }
-  .content-contact .contacts-item.active .mCustomScrollBox { overflow: visible; }
-  .content-contact .contacts-item.active .mCSB_container { overflow: visible; } }
+  .content-contact .contacts-item.active { top: 65px; bottom: 8px; -webkit-transform: translate(-50%, 0%); -ms-transform: translate(-50%, 0%); transform: translate(-50%, 0%); overflow-y: auto; } }
 
 /****************************************************
 page: catalog

@@ -425,9 +425,6 @@ $(function () {
 			axis: "y"
 		});
 
-		$('.contacts-map__adress .contacts-item').mCustomScrollbar({
-			axis: "y"
-		});
 	};
 	/**^^^scroll adress on page contact.html^^^**/
 
