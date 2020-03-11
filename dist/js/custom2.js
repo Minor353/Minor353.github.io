@@ -10,19 +10,25 @@ if ($('.js--step-items').length) {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 1023,
+        breakpoint: 769,
         settings: 'unslick'
       }
     ]
   });
 }
+
+$(window).on('orientationchange', function () {
+  if ($('.js--step-items').length) {
+    $('.js--step-items').slick('resize');
+    $('.js--step-items').slick("getSlick").refresh();
+    $('js--case-card__materials-items').slick("getSlick").refresh();
+    $('js--case-card__materials-items').slick('resize');
+    $('js--product-list').slick("getSlick").refresh();
+    $('js--product-list').slick('resize');
+    
+  }
+
+});
 
 if ($('.js--case-card__materials-items').length) {
   $('.js--case-card__materials-items').slick({
@@ -77,7 +83,7 @@ if ($('.calc-data__question').length) {
     if (viewport().width < 767) {
       $("body").addClass('blur-bg no-scroll');
     }
-    
+
   });
   $('.calc-data__question-block-close').click(function () {
     $('.calc-data__question-block').removeClass('active');
@@ -164,11 +170,16 @@ $("#calc-datepicker").datepicker({
   }
 });
 
+$('.box-field__date').click(function (e) {
+  $('#calc-datepicker').datepicker("show");
+  e.preventDefault();
+});
+
 /* calendar */
 
 
 $('.js--link-icon').click(function () {
-  $("body").addClass('blur-bg');
+  $("body").addClass('blur-bg no-scroll');
   $('.mask-tablet').addClass('active');
   $('.calc-popup').addClass('show-popup');
   if ($(document).height() > $(window).height()) {
@@ -178,7 +189,7 @@ $('.js--link-icon').click(function () {
   return false;
 });
 $('.js-calc-close').click(function () {
-  $("body").removeClass('noscroll');
+  $("body").removeClass('no-scroll');
   $("html").removeClass('noscroll');
   $("body").removeClass('blur-bg');
   $('.mask-tablet').removeClass('active');
@@ -305,6 +316,10 @@ if ($('.js--sportMain-info__slider').length) {
   });
 };
 
+$(window).on('orientationchange', function () {
+  $('.js--sportMain-info__slider').slick('resize');
+});
+
 $('.finding-form__btn').click(function (e) {
   $('.finding-form-step1').css('display', 'block');
   $('.finding-form__overlay').css('display', 'block');
@@ -326,6 +341,10 @@ if ($('.js--filter-popup').length) {
   $('.js--filter-btn').click(function (e) {
     e.preventDefault();
     $('.js--filter-popup').addClass('filter-popup_active');
+  });
+
+  $(window).on('orientationchange', function () {
+    $('.js--filter-popup').removeClass('filter-popup_active');
   });
 
   $('.filter-popup__cross').click(function () {
@@ -365,6 +384,21 @@ if ($('.tabs-menu-anchor').length) {
     });
   });
 
+  if ($('.side-block-fixed-js').length) {
+    var objToStick1 = $(".side-block-fixed-js");
+    var topOfObjToStick1 = $(objToStick1).offset().top;
+
+    $(window).scroll(function () {
+      var windowScroll1 = $(window).scrollTop();
+
+      if (windowScroll1 > topOfObjToStick1) {
+        $(objToStick1).addClass("side-block-fixed");
+      } else {
+        $(objToStick1).removeClass("side-block-fixed");
+      };
+    });
+  }
+
   var topMenu = $(".tabs-menu-anchor"),
     topMenuHeight = topMenu.outerHeight() + 15,
     // All list items
@@ -390,10 +424,67 @@ if ($('.tabs-menu-anchor').length) {
 
 if ($('.header-nav__drop').length) {
   $('.header-nav__drop').hover(
-    function(){ $('body').addClass('no-scroll') },
-    function(){ $('body').removeClass('no-scroll') }
+    function () { $('body').addClass('no-scroll') },
+    function () { $('body').removeClass('no-scroll') }
   )
 };
+
+/* phone masks */
+
+$("input[type='tel']").mask("+7 (999) 999-99-99");
+
+$("#inn-input").mask("9999999999");
+
+/* phone masks */
+
+
+if ($('.calc-data__question-block .triangle').length) {
+  $('.calc-data__question').click(function(){
+    var x = $(this).offset();
+    var y = $('.calculator-form').offset();
+    var y2 = $(this).parent().offset();
+    if ($(window).width() > 1600) {
+      $('.calc-data__question-block .triangle').css({
+        'left': x.left - y.left + 10
+      });
+      $('.calc-data__question-block').css({
+        'top': x.top - y2.top + 50,
+        // 'left': x.left - y2.left
+      });
+    } else {
+      $('.calc-data__question-block .triangle').css({
+        'left': -18
+      });
+    }
+    if ($(window).width() > 767 && $(window).width() < 1600) {
+      $('.calc-data__question-block').css({
+        'top': x.top - y2.top + 20,
+        'left': x.left - y2.left + 50
+      });
+    }
+  });
+  
+}
+
+if ($('.js--product-list').length) {
+  $('.js--product-list').slick({
+    slidesToShow: 1.07,
+    arrows: false,
+    dots: true,
+    slidesToScroll: 1,
+    fade: false,
+    centerPadding: '0',
+    adaptiveHeight: true,
+    infinite: false,
+    touchThreshold: 30,
+    mobileFirst: true,
+    responsive: [{
+      breakpoint: 500,
+      settings: 'unslick'
+    }]
+  });
+};
+
 
 
 // if ($('.cases-item-info').length) {
