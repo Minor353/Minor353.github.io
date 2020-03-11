@@ -3498,7 +3498,7 @@ page: contacts
 
 .content-contact .contacts-wrap { position: relative; }
 
-.content-contact .contacts-map__map { position: absolute; z-index: 2; right: 0; top: 0; width: 60%; height: 100%; }
+.content-contact .contacts-map__map { position: absolute; z-index: 2; right: 0; top: 0; width: 64%; height: 100%; }
 
 .content-contact .contacts-map__map #map-contact { height: 100%; }
 

@@ -1,29 +1,39 @@
-@import "base/_reset";
-@import "base/_fonts";
-@import "components/_jquery.formstyler";
-@import "components/_jquery.ui";
-//@import "components/_fancybox";
-@import "components/_slick";
-//@import "components/_mCustomScrollbar";
-@import "components/logo";
-@import "components/main-nav";
-@import "components/box-lang";
-@import "components/secondary-nav";
-@import "components/box-slick";
-@import "components/box-phone";
-@import "components/description";
-@import "components/social";
-@import "components/footer-links";
-@import "components/rooms";
-@import "components/box-form";
-@import "components/box-field";
-@import "components/box-list-check";
-@import "components/list-check";
-@import "components/box-price";
-@import "components/button";
-@import "components/control-list";
-@import "components/ham";
-@import "layout/_header";
-@import "layout/_footer";
-@import "layout/_content";
-@import "layout/_main-layout";
+@import "core/colors";
+@import "core/base";
+@import "core/uikit";
+@import "core/fonts";
+@import "core/btns";
+@import "core/popup";
+
+
+@import "plugins/slick";
+@import "plugins/fullpage";
+@import "plugins/jquery.formstyler";
+@import "plugins/mCustomScrollbar";
+@import "plugins/fancybox";
+
+
+
+
+@import "layout/header";
+@import "layout/footer";
+@import "core/common";
+
+@import "pages/index";
+@import "pages/cases";
+@import "pages/faq";
+@import "pages/contacts";
+@import "pages/catalog";
+@import "pages/services";
+@import "pages/materials";
+@import "pages/materials-category";
+@import "pages/_materials-card";
+@import "pages/_materials-card-mod2";
+@import "pages/calculator";
+@import "pages/articles";
+@import "pages/_articles-single";
+@import "pages/_search-results";
+@import "pages/_about.scss";
+@import "pages/_index-sport.scss";
+
+

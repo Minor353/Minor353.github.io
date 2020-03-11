@@ -1,0 +1,263 @@
+.content_materials-category {
+  .section-gray__section {
+    padding-top: 79px;
+  }
+
+  .product-list {
+    display: flex;
+    margin-left: -40px;
+    flex-wrap: wrap;
+
+
+    .card-item {
+      max-width: 410px;
+      min-width: 340px;
+      margin-left: 40px;
+      flex: 1;
+    }
+  }
+
+  .section-block_padding {
+    padding-top: 38px;
+  }
+
+  .top-bar .title {
+    font-size: 28px;
+  }
+
+  .section-block {
+    padding-bottom: 44px;
+  }
+
+  .section-block_video {
+    padding-top: 22px;
+    padding-bottom: 110px;
+  }
+
+  .top-bar .title_font-size {
+    font-size: 36px;
+  }
+
+  .section-last-works {
+    .card-item__img img {
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    .product-list {
+      margin-left: -10px;
+
+      .card-item {
+        max-width: 268px;
+        min-width: 240px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .top-bar .title {
+      font-size: 18px;
+    }
+
+    .section-block_padding {
+      padding-top: 26px;
+    }
+
+    .card-item__main {
+      padding: 24px 22px 16px 24px;
+    }
+
+    .card-item__title {
+      margin-bottom: 23px;
+    }
+
+    .section-block {
+      padding-bottom: 38px;
+    }
+
+    .section-block_video {
+      padding-top: 21px;
+      padding-bottom: 30px;
+    }
+
+    .section-last-works {
+      .top-bar .title {
+        font-size: 22px;
+      }
+
+      .card-item__main {
+        padding: 28px 22px 28px 24px;
+      }
+
+      .card-item__title {
+        margin-bottom: 25px;
+      }
+    }
+
+    .about-block__col {
+      column-gap: 35px;
+    }
+
+  }
+
+  @media screen and (max-width: 1023px) {
+    .section-block_padding {
+      padding-top: 60px;
+    }
+
+    .top-bar .title {
+      font-size: 22px;
+    }
+
+    .product-list {
+      margin-left: -16px;
+
+      .card-item {
+        max-width: 222px;
+        min-width: 200px;
+        margin-left: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .card-item__main {
+      padding: 20px 20px 16px 20px;
+    }
+
+    .about-block {
+      max-height: 188px;
+    }
+
+    .about-block_active {
+      max-height: 1500px;
+      transition: 0.5s;
+    }
+
+    .card-item__title {
+      margin-bottom: 5px;
+    }
+
+    .card-price {
+      margin-bottom: 28px;
+    }
+
+    .section-block {
+      padding-bottom: 2px;
+    }
+
+    .section-gray__section {
+      margin-top: 60px;
+      padding-top: 52px;
+      padding-bottom: 45px;
+    }
+
+    .section-last-works .top-bar .title {
+      font-size: 28px;
+    }
+
+    .section-last-works .card-item__main {
+      padding: 17px 20px 24px 20px;
+
+      .card-item__title {
+        margin-bottom: 17px;
+      }
+
+      .card-info {
+        margin-bottom: 27px;
+      }
+    }
+
+    .section-block_video {
+      padding-top: 44px;
+    }
+
+    .link-more_read:hover {
+      text-decoration: none;
+      color: #333;
+    }
+
+  }
+
+  @media screen and (max-width: 500px) {
+    .product-list {
+      display: block;
+      margin-left: -11px;
+      margin-right: -20px;
+    }
+
+    .product-list .card-item {
+      max-width: 100%;
+      min-width: 200px;
+      margin-left: 11px;
+      margin-bottom: 0px;
+    }
+
+    .section-block_padding {
+      padding-top: 10px;
+    }
+
+    .top-bar .title {
+      font-size: 14px;
+      padding-bottom: 22px;
+    }
+
+    .section-block {
+      padding-bottom: 29px;
+    }
+
+    .section-gray__section {
+      padding-top: 30px;
+      padding-bottom: 23px;
+    }
+
+    .about-block {
+      max-height: 128px;
+    }
+
+    .about-block_active {
+      max-height: 1500px;
+      transition: 0.5s;
+    }
+
+    .card-item__title {
+      margin-bottom: 22px;
+    }
+
+    .card-price {
+      margin-bottom: 7px;
+    }
+
+    .section-block_video {
+      padding-top: 21px;
+    }
+
+    .section-gray__section {
+      margin-top: 18px;
+    }
+
+    .section-last-works .top-bar .title {
+      font-size: 18px;
+    }
+
+    .top-bar_margin {
+      margin-bottom: 6px;
+    }
+
+    .section-last-works .card-item__main .card-info {
+      margin-bottom: 0px;
+    }
+
+    .section-last-works .card-item__main {
+      padding: 20px 20px 20px 20px;
+    }
+
+    .about-block__col p {
+      font-size: 12px;
+    }
+
+  }
+
+  /*********************************************************/
+
+}

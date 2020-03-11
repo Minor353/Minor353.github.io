@@ -430,9 +430,14 @@ $(function () {
 
 	/**scroll adress on page contact.html**/
 	if ($('.contacts-map__adress').length) {
-		$('.contacts-map__adress').mCustomScrollbar({
+		/*$('.contacts-map__adress').mCustomScrollbar({
 			axis: "y",
 			live: "on"
+		});*/
+
+		$(".contacts-map__adress").niceScroll({
+			opacity: "1",
+			autohidemode: 'leave'
 		});
 
 
@@ -445,7 +450,7 @@ $(function () {
 
 
 		function windowSizeContact() {
-			$('.content-contact .js-toggle-contacts-btn').off();
+			$('.content-contact .js-toggle-contacts-btn').off('click');
 			$('.content-contact .contacts-item__cross').click(function (e) {
 				$('.contacts-item__more a').text('Подробнее');
 			})
@@ -469,9 +474,6 @@ $(function () {
 					});
 
 					$('.contacts-item-mask').toggleClass('active');
-
-
-
 
 				});
 

@@ -1,31 +1,692 @@
-/*
-================================================================================
-|                                     HEADER                                   |
-================================================================================
-*/
-header {
-	background: transparent;
-	width: 100%;
-	padding: 18px 0;
-	min-width: $min-width;
-	text-align: left;
-	order: 1;
-	-webkit-order: 1;
+/****************************************************
+header
+****************************************************/
+header {	
+	width:100%;
+	min-width: 320px;
+	text-align:left;	
+	order: 1;	
+    -webkit-order: 1;
+    background-color: #fff;
+    border-bottom: 1px solid #F7F7F7;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    z-index: 105;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;	
+		padding-right: 0;	
+	}
+	&.header-fixed{		
+		position: fixed;
+		left: 0;
+		top: 0;
+	}
 }
 
-
-.header-list {
+.header-bar {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+	&__item {
+		margin-right: 56px;
+		&_phone{
+			margin-right: 55px;
+		}
+		&_btn{
+			margin-right: 62px;
+		}
+		&_search{
+			margin-right: 74px;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+.header-nav {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	&__item{
+		margin: 0 30px;
+		height: 32px;
+    	line-height: 32px;
+	}
+	&__link{
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 700;
+	}
+}
+
+.link-region {
+	border-bottom: 1px dotted;
+	font-size: 14px;
+	line-height: 20px;
+	&:hover {
+		border-color: transparent;	
+	}
+}
+
+.header-phone {
+	font-size: 14px;
+}
+
+.link-menu {
+	display: flex;
+	align-items: center;
+	&__icon {
+		flex-shrink: 0;
+		width: 24px;
+		height: 11px;
+		margin-right: 14px;
+	}
+}
+
+.btn-nav{
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	line-height: 20px;
+	color: $black;
+	&__humb{
+		margin-right: 14px;
+		width: 20px;
+		height: 20px;
+		margin-right: 14px;
+		display: block;
+		span{
+			width: 20px;
+			height: 1px;
+			background-color: $black;
+			margin: 4px auto;
+			display: block;
+			transition: all 0.3s;
+			&:first-child{
+				transform: translateX(2px);
+			}
+			&:last-child{
+				transform: translateX(-2px);
+			}
+		}		
+	}
+	&:hover{
+		color: $gray;
+		.btn-nav__humb span{
+			background-color: $gray;
+			transform: none;
+		}
+	}
+}
+.logo{
+	img{
+		display: block;
+		max-width: 100%;
+	}
+}
+
+.header-dropdown {
+	position: fixed;
+	left: 0;
+	top: 72px;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #fff;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s linear;
+	overflow: auto;
+	display: none;
+	&__row {
+		display: flex;
+		justify-content: flex-start;
+		padding-top: 100px;
+		position: relative;
+		padding-bottom: 65px;
+		padding-left: 80px;
+		&:last-of-type {
+			padding-bottom: 0px;
+		}
+		&-padding {
+			padding-left: 150px;
+		}
+	}
+	&__type {
+		position: absolute;
+		left: -40px;
+		top: 50%;
+		color: #8F8F8F;
+		opacity: 0.7;
+		transform: rotate(-90deg);
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+	ul {
+		width: 33.3%;
+		padding-right: 10%;
+	}
+	li {
+		margin-bottom: 14px;
+		padding-left: 40px;
+		position: relative;
+		a {
+			font-size: 16px;
+			line-height: 24px;
+			&:hover {
+				text-decoration-line: underline;
+			}
+		}
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			content: '';
+			width: 16px;
+			height: 1px;
+			background: #000000;
+		}
+		&.header-dropdown__row-title {
+			padding-left: 0;
+			font-weight: bold;
+			font-size: 16px;
+			text-transform: uppercase;
+			line-height: 20px;
+			margin-bottom: 40px;
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+.header-nav__drop {
+	position: relative;
+	&:hover {
+		&:after {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -30px;
+			content: '';
+			height: 1px;
+			width: 120%;
+			background-color: #000;
+		}
+		.header-dropdown {
+			opacity: 1;
+			visibility: visible;
+			display: block;
+		}
+	}
+}
+
+.main-categories-list__icon,
+.main-categories-list__submenu {
+	display: none;
+}
+
+@media screen and (max-width: 1700px) {
+	.header-nav__link {
+		font-size: 12px;
+	}
+	.header-nav__item {
+		margin: 0 15px;
+	}
 }
 
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1600px) {
+	header{
+		padding-top: 18px;
+		padding-bottom: 18px;
+	}
+	.logo{
+		width: 110px;
+	}
+	.btn-nav__text{
+		display: none;
+	}
+	header .wrapper{
+		padding-right: 50px;
+	}
+	.btn-nav__humb{
+		margin-right: 2px;
+	}
+	.header-bar__item{
+		margin-right: 33px;
+	}
+	.header-bar__item_search{
+		margin-right: 27px;
+	}
+	.header-bar__item_btn{
+		margin-right: 31px;
+	}
+	.header-bar__item_phone{
+		display: none;
+	}
+	.link-region{
+		font-size: 12px;
+		line-height: 20px;
+	}
 
-@media screen and (min-width: 992px) {}
+	.header {
+		.header-nav__link {
+			font-size: 12px;
+			line-height: 20px;
+		}
+		.header-phone {
+			display: none;
+		}
+		.header-nav__item {
+			margin: 0;
+			margin-left: 32px;
+		}
+		.header-bar__item {
+			margin-right: 0;
+		}
+		.link-region {
+			margin-right: 30px;
+		}
+		.btn-arrs {
+			margin-right: 30px;
+		}
+		.link-menu {
+			font-size: 0;
+		}
+		.btn-search {
+			margin-right: 25px;
+		}
+	}
 
-@media screen and (max-width: 991px) {}
+	.header-dropdown__type {
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.header-dropdown li a {
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.header-dropdown li {
+		line-height: normal;
+	}
+	.header-dropdown li:before {
+		width: 12px;
+	}
+	.header-dropdown li.header-dropdown__row-title {
+		font-size: 12px;
+		line-height: 15px;
+		margin-bottom: 25px;
+	}
+	.header-dropdown__row-padding {
+		padding-left: 100px;
+	}
+	.header-dropdown__row {
+		padding-top: 75px;
+		padding-bottom: 50px;
+	}
+	.header-nav__drop:hover:after {
+		width: 100%;
+		bottom: -15px;
+	}
+}
 
-@media screen and (min-width: 768px) and (max-width: 991px) {}
+@media screen and (max-width: 1200px) {
+	.header-nav {
+		display: none;
+	}
+}
 
-@media screen and (max-width: 767px) {}
+@media screen and (min-width: 1024px) {
+	.progressbar{
+		display: none;
+	}
+}
+@media screen and (max-width: 1023px) {
+	header{
+		padding: 28px 0 20px;
+		height: 80px;
+		.wrapper{
+			padding-right: 129px;
+		}
+	}
+	.logo{
+		width: 130px;
+	}
+	.btn-search{
+		width: 20px;
+		height: 20px;
+	}
+	.btn-nav__humb{
+		margin-right: 15px;
+		width: 25px;
+		height: 25px;
+		span{
+			width: 25px;
+			margin: 5px auto;
+		}
+	}
+	.btn-nav__text{
+		display: block;
+	}
+	.header-bar__item_btn{
+		display: none;
+	}
+	.link-region{
+		display: none;
+	}
+	header .wrapper{
+		flex-direction: row-reverse;
+	}
+	header .logo{
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.header-bar__item_search{
+		position: absolute;
+		right: 35px;
+		margin: 0;
+	}
+	.header-bar__item{
+		margin: 0;
+	}
+	.progressbar{
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		background-color: $black;
+		height: 1px;
+	}
+	.header-nav,
+	.header-bar__item-calc {
+		display: none;
+	}
+	.header-sport {
+		position: fixed;
+		left: 0;
+		top: 0;
+		padding: 28px 0 20px;
+		height: 80px;
+		z-index: 99;
+		.btn-search {
+			margin-right: 0;
+		}
+	}
+	.main-nav-sport {
+		.main-nav__categories {
+			padding-bottom: 28px;
+			margin-bottom: 24px;
+			border-bottom: 1px solid#F7F7F7;
+		}
+		.main-categories-list {
+			display: flex;
+			width: 100%;
+			margin: auto;
+		}
+		.main-categories-list__item {
+			width: 100%;
+			
+			margin-bottom: 8px;
+			padding: 0;
+		}
+		.main-categories-list__img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.main-categories-list__link {
+			width: 100%;
+			height: 60px;
+		}
+		.main-categories-list__title {
+			font-size: 14px;
+			line-height: 21px;
+			height: 100%;
+			max-width: 130px;
+			padding: 0;
+			left: 20px;
+			bottom: auto;
+			height: 100%;
+			top: 50%;
+			transform: translateY(-33%);
+		}
+		.main-categories-list__icon {
+			display: block;
+			fill: #fff;
+			width: 6px;
+			height: 10px;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.main-categories-list__submenu {
+			&.active {
+				display: block;
+			}
+			margin-top: 20px;
+			li {
+				margin-bottom: 20px;
+				a {
+					font-weight: bold;
+					font-size: 14px;
+					line-height: 20px;
+					&:hover {
+						text-decoration-line: underline;
+					}
+				}
+			}
+		}
+		.main-categories-list__item:last-of-type {
+			margin-bottom: 0;
+			.main-categories-list__submenu {
+				li:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.main-categories-list__item.active {
+			.main-categories-list__img {
+				filter: grayscale(0);
+			}
+			.main-categories-list__link {
+				position: relative;
+				&:before {
+					position: absolute;
+					left: 0;
+					top: 0;
+					background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+					width: 100%;
+					height: 100%;
+					content: '';
+					z-index: 1;
+				}
+			}
+			
+			.main-categories-list__icon {
+				opacity: 0;
+			}
+		}
+		.main-categories-list-dropdown {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			z-index: 99;
+			left: 0;
+			top: 0;
+			padding-left: 36px;
+			padding-right: 36px;
+			display: none;
+			&-title {
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 24px;
+			}
+			&-back {
+				font-weight: 300!important;
+				font-size: 12px;
+				line-height: 20px;
+				padding-left: 26px;
+				position: relative;
+				margin-bottom: 20px;
+				display: block;
+				svg {
+					width: 6px;
+					height: 10px;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-60%) rotateY(180deg);
+				}
+			}
+		}
+		.main-categories-list__type {
+			color: rgba($color: #8F8F8F, $alpha: .7);
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 15px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			.icon {
+				width: 10px;
+				height: 6px;
+				transition: .2s linear;
+			}
+			&.active {
+				.icon {
+					transform: rotateX(180deg);
+				}
+			}
+		}
+		.main-categories-list__row {
+			margin-top: 28px;
+			margin-bottom: 28px;
+			ul {
+				margin-top: 20px;
+			}
+			&.withType {
+				ul {
+					display: none;
+				}
+			}
+			&.active {
+				ul {
+					display: block;
+				}
+			}
+			li {
+				position: relative;
+				padding-left: 20px;
+				margin-bottom: 12px;
+				&:before {
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					content: '';
+					height: 1px;
+					background: #000000;
+					width: 10px;
+				}
+				a {
+					font-size: 12px;
+					line-height: 18px;
+					font-weight: 400;
+				}
+			}
+			&-title {
+				font-weight: bold;
+				font-size: 12px;
+				line-height: 15px;
+				text-transform: uppercase;
+				padding-left: 0!important;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.main-nav__row {
+		padding-top: 0;
+	}
+	.main-categories-list__icon,
+	.main-categories-list__submenu {
+		display: block;
+	}
+	.js--main-categories-list__item {
+		display: none!important;
+	}
+	.main-nav-sport .main-categories-list__item {
+		margin-bottom: 0;
+	}
+	.main-nav-sport .main-nav__categories {
+		padding-bottom: 0;
+	}
+	.main-categories-list__drop {
+		a {
+			position: relative;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.icon {
+				width: 6px;
+				height: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	header{
+		padding: 17px 0;
+		height: 60px;
+	}
+	header .wrapper{
+		padding-right: 40px;
+		align-items: center;
+	}
+	.logo{
+		width: 100px;
+	}
+	.btn-nav{
+		margin-top: 4px;
+	}
+	.btn-nav__text{
+		display: none;
+	}
+	.btn-nav__humb{
+		margin-right: 0;
+		width: 20px;
+		height: 20px;
+		span{
+			width: 20px;
+			margin: 4px auto;
+		}
+	}
+	.header-bar__item_search{
+		right: 20px;
+	}
+	.btn-search{
+		width: 16px;
+		height: 16px;
+	}
+	.header-sport {
+		padding: 17px 0;
+		height: 60px;
+	}
+	.main-nav-sport .main-categories-list-dropdown {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
