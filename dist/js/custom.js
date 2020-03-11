@@ -430,13 +430,8 @@ $(function () {
 
 	/**scroll adress on page contact.html**/
 	if ($('.contacts-map__adress').length) {
-		/*$('.contacts-map__adress').mCustomScrollbar({
-			axis: "y",
-			live: "on"
-		});*/
 
 		$(".contacts-map__adress").niceScroll({
-			opacity: "1",
 			autohidemode: 'leave'
 		});
 
