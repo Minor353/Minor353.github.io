@@ -3490,6 +3490,8 @@ page: contacts
 .page-head .title { margin-bottom: 35px; }
 
 /************My style************/
+.nicescroll-rails.nicescroll-rails-vr { opacity: 1 !important; }
+
 .content-contact .container-wrap_width { position: static; }
 
 .content-contact .contacts-map { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
@@ -3542,7 +3544,11 @@ page: contacts
 
 .content-contact .contacts-item.active { background-color: #F7F7F7; }
 
-.content-contact .contacts-map__adress { max-height: 791px; padding: 0; overflow: hidden; position: relative; }
+.content-contact .contacts-map__adress { max-height: 791px; padding: 0; overflow: hidden; position: relative; -ms-touch-action: pan-y; touch-action: pan-y; }
+
+.content-contact .contacts-map__adress .mCustomScrollBox { -ms-touch-action: pan-y; touch-action: pan-y; }
+
+.content-contact .contacts-map__adress .mCustomScrollBox .mCSB_container { -ms-touch-action: pan-y; touch-action: pan-y; }
 
 .content-contact .contacts-map__adress:after { content: ''; pointer-events: none; position: absolute; bottom: 0; left: 0; right: 0; height: 73px; background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#FFFFFF)); background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%); background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%); background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%); }
 
@@ -3621,7 +3627,7 @@ page: contacts
   .content-contact .contacts-item__more { margin-top: 112px; margin-left: auto; margin-right: 87px; }
   .content-contact .contacts-item__cross-wrap { position: relative; }
   .content-contact .contacts-item__hidden { position: absolute; opacity: 0; }
-  .content-contact .contacts-item-mask { display: block; position: fixed; top: 0; right: -100%; width: 100%; height: 100%; z-index: 995; background-color: #8f8f8f66; background-position: center; -webkit-background-size: cover; background-size: cover; background-repeat: no-repeat; -webkit-backdrop-filter: blur(40px); backdrop-filter: blur(40px); pointer-events: all; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -webkit-transition-delay: 0.8s; -o-transition-delay: 0.8s; transition-delay: 0.8s; }
+  .content-contact .contacts-item-mask { display: block; position: fixed; top: 0; right: -100%; width: 100%; height: 100%; z-index: 995; background-color: #8f8f8f66; background-position: center; -webkit-background-size: cover; background-size: cover; background-repeat: no-repeat; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); pointer-events: all; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -webkit-transition-delay: 0.8s; -o-transition-delay: 0.8s; transition-delay: 0.8s; }
   @-moz-document url-prefix() { .content-contact .contacts-item-mask { background-image: url("../img/blur-mask.png"); } }
   .content-contact .contacts-item-mask.active { right: 0; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
   .content-contact .contacts-item { -webkit-transition: 0s; -o-transition: 0s; transition: 0s; }
@@ -6449,7 +6455,7 @@ page: articles
 
 .content-articles-single .side-block-last-articles .article-card-mini__title a:hover { -webkit-text-decoration-line: underline; text-decoration-line: underline; }
 
-.content-articles-single .side-block__wrap { max-width: 370px; position: absolute; top: 1px; right: 0px; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
+.content-articles-single .side-block__wrap { max-width: 370px; position: absolute; top: 11px; right: 11px; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
 
 .content-articles-single .articles-single-wrap { position: relative; z-index: 10; }
 

@@ -98,6 +98,9 @@ page: contacts
 
 
 /************My style************/
+.nicescroll-rails.nicescroll-rails-vr {
+	opacity: 1 !important;
+}
 
 .content-contact {
 	.container-wrap_width {
@@ -115,6 +118,8 @@ page: contacts
 	.contacts-wrap {
 		position: relative;
 	}
+
+
 
 	.contacts-map__map {
 		position: absolute;
@@ -261,6 +266,15 @@ page: contacts
 		padding: 0;
 		overflow: hidden;
 		position: relative;
+		touch-action: pan-y;
+
+		.mCustomScrollBox {
+			touch-action: pan-y;
+
+			.mCSB_container {
+				touch-action: pan-y;
+			}
+		}
 
 		&:after {
 			content: '';
@@ -577,7 +591,7 @@ page: contacts
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
-			backdrop-filter: blur(40px);
+			backdrop-filter: blur(4px);
 			pointer-events: all;
 			transition: 0.3s;
 			transition-delay: 0.8s;
@@ -648,6 +662,7 @@ page: contacts
 		}
 
 	}
+
 
 	@media screen and (max-width: 767px) {
 		.contacts-map__map {

@@ -431,10 +431,11 @@ $(function () {
 	/**scroll adress on page contact.html**/
 	if ($('.contacts-map__adress').length) {
 
-		$(".contacts-map__adress").niceScroll({
-			autohidemode: 'leave'
-		});
 
+		$(".contacts-map__adress").mCustomScrollbar({
+			autoExpandScrollbar: true,
+			scrollInertia: 0,
+		});
 
 	};
 	/**^^^scroll adress on page contact.html^^^**/
@@ -462,11 +463,7 @@ $(function () {
 						return false;
 					}
 
-					$(this).closest(".js-toggle-contacts-container").find(".js-toggle-contacts-content").slideToggle("slow", function () {
-						if ($(this).closest(".js-toggle-contacts-container").hasClass("active"))
-							$(this).closest(".js-toggle-contacts-container").removeClass("active");
-						else $(this).closest(".js-toggle-contacts-container").addClass("active");
-					});
+					$(this).closest(".js-toggle-contacts-container").find(".js-toggle-contacts-content").toggle();
 
 					$('.contacts-item-mask').toggleClass('active');
 
@@ -489,7 +486,7 @@ $(function () {
 
 					$('.contacts-item-mask').toggleClass('active');
 
-					$(this).closest(".js-toggle-contacts-container").find(".js-toggle-contacts-content").slideToggle("slow", function () {
+					$(this).closest(".js-toggle-contacts-container").find(".js-toggle-contacts-content").slideToggle("1", function () {
 						if ($(this).closest(".js-toggle-contacts-container").hasClass("active"))
 							$(this).closest(".js-toggle-contacts-container").removeClass("active");
 						else $(this).closest(".js-toggle-contacts-container").addClass("active");
