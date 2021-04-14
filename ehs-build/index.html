@@ -22,7 +22,7 @@
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Request for proposal</a></li>
+                    <li><a class="js-request-popup" href="#">Request for proposal</a></li>
                   </ul>
                 </nav>
               </div>
@@ -237,6 +237,34 @@
       <footer> <a class="footer__logo" href="https://evoxlab.com.ua/#home" target="_blank"><img src="assets/images/icons/evox-logo.svg" alt="logo"></a>
         <div class="footer__rights"> <span>All Rights Reserved.<br></span><span>Eurohealth Systems 2020</span></div>
       </footer>
+      <div class="proposal-popup"> 
+        <div class="proposal-popup__item"><img class="proposal-popup__logo" src="assets/images/icons/form-logo.svg" alt="logo">
+          <div class="proposal-popup__title">Request for proposal</div>
+          <form action="#" method="post"> 
+            <label class="proposal-popup__label"><img src="assets/images/icons/user.svg" alt="icon">
+              <input type="text" placeholder="Name">
+            </label>
+            <label class="proposal-popup__label"><img src="assets/images/icons/phone.svg" alt="icon">
+              <input type="text" placeholder="Phone">
+            </label>
+            <label class="proposal-popup__label"><img src="assets/images/icons/mail.svg" alt="icon">
+              <input type="text" placeholder="E-mail">
+            </label>
+            <label class="proposal-popup__label"><img src="assets/images/icons/bank.svg" alt="icon">
+              <input type="text" placeholder="Company name">
+            </label>
+            <div class="proposal-popup__label-upload">
+              <label class="proposal-popup__upload-box">
+                <input type="file">
+                <div class="proposal-popup__upload-btn">Choose file</div><span class="proposal-popup__upload-text">No file choosen</span>
+              </label>
+              <button>Upload</button>
+            </div>
+            <button class="popup__btn" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="proposal-popups__links"> <a href="#" target="_blank">Eurohealth Systems</a><span>|</span><a href="#" target="_blank">eurohealthsystems.com</a></div>
+      </div>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <script src="assets/scripts/index-min.js"> </script>
     </div>
