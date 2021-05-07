@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eurohealth Systems Main</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="assets/styles/app.min.css"><link rel="icon" href="favicon.svg">
   </head>
   <body> 
@@ -26,7 +27,7 @@
                 </nav>
               </div>
             </header>
-      <div class="pagination__wrap">
+      <div class="pagination__wrap wow fadeIn">
         <ul class="pagination"> 
           <li class="pagination__item active" id="0"><a class="pagination__item-link" href="#">01</a></li>
           <li class="pagination__item" id="1"> <a class="pagination__item-link" href="#">02</a></li>
@@ -35,8 +36,8 @@
           <li class="pagination__item" id="4"> <a class="pagination__item-link" href="#">05</a></li>
         </ul>
       </div>
-      <section class="main-section section-box" data-idtitle="0"> 
-        <div class="main-section__decor-text"> <img src="assets/images/icons/consultancy-firm.svg" alt="Consultancy firm"></div><img class="main-section__bg" src="assets/images/content/main-section.jpg" alt="city">
+      <section class="main-section section-box wow fadeIn" data-idtitle="0"> 
+        <div class="main-section__decor-text wow fadeInLeft"> <img src="assets/images/icons/consultancy-firm.svg" alt="Consultancy firm"></div><img class="main-section__bg" src="assets/images/content/main-section.jpg" alt="city">
         <div class="main-section__content"> 
           <h1 class="main-section__content-title">Global Healthcare & Consultancy</h1>
           <div class="main-section__content-subtitle">In-depth Expertise, Seamless Solutions</div>
@@ -62,19 +63,10 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.87 1H6.13C3.31001 1 1 3.31001 1 6.13V13.87C1 16.69 3.31001 19 6.13 19H13.87C16.69 19 19 16.69 19 13.87V6.13C19 3.31001 16.69 1 13.87 1ZM13.87 18.4C16.36 18.4 18.4 16.36 18.4 13.87V6.13C18.4 3.64002 16.36 1.60001 13.87 1.60001H6.13C3.64002 1.60001 1.60001 3.63999 1.60001 6.13V13.87C1.60001 16.36 3.63999 18.4 6.13 18.4H13.87Z" fill="#333333"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4 13.87C18.4 16.36 16.36 18.4 13.87 18.4H6.13C3.63999 18.4 1.60001 16.36 1.60001 13.87V6.13C1.60001 3.63999 3.64002 1.60001 6.13 1.60001H13.87C16.36 1.60001 18.4 3.64002 18.4 6.13V13.87ZM6.12989 2.8H13.8699C15.6999 2.8 17.1999 4.30001 17.1999 6.13V13.87C17.1999 15.7 15.6999 17.2 13.8699 17.2H6.12989C4.2999 17.2 2.79989 15.7 2.79989 13.87V6.13C2.79989 4.30001 4.2999 2.8 6.12989 2.8Z" fill="#333333"></path>
               </svg></a></li>
-          <li class="social__item"> <a class="social__item-link" href="#" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.25 1H4.75C2.67925 1 1 2.67925 1 4.75V15.25C1 17.3207 2.67925 19 4.75 19H15.25C17.3215 19 19 17.3207 19 15.25V4.75C19 2.67925 17.3215 1 15.25 1ZM7 15.25H4.75V7H7V15.25ZM5.875 6.049C5.1505 6.049 4.5625 5.4565 4.5625 4.726C4.5625 3.9955 5.1505 3.403 5.875 3.403C6.5995 3.403 7.1875 3.9955 7.1875 4.726C7.1875 5.4565 6.60025 6.049 5.875 6.049ZM16 15.25H13.75V11.047C13.75 8.521 10.75 8.71225 10.75 11.047V15.25H8.5V7H10.75V8.32375C11.797 6.38425 16 6.241 16 10.1807V15.25Z" fill="#333333"></path>
-              </svg></a></li>
-          <li class="social__item"> <a class="social__item-link" href="#" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.8854 3.68664C19.7836 3.58482 19.6139 3.55086 19.478 3.58482L18.7991 3.82246C19.2065 3.34721 19.478 2.83801 19.6478 2.36276C19.7157 2.19303 19.6817 2.05725 19.5799 1.95539C19.478 1.85356 19.3083 1.81961 19.1725 1.88748C18.222 2.29485 17.4073 2.63432 16.7283 2.83797C16.7283 2.87193 16.6944 2.83797 16.6604 2.83797C16.1173 2.53246 14.7934 1.85352 13.8429 1.85352C11.4326 1.88748 9.49768 3.92429 9.49768 6.40239V6.53817C5.96722 5.85923 4.03227 4.84083 1.92756 2.63428L1.58817 2.29481L1.38448 2.70219C0.230292 4.90874 1.04501 6.91159 2.36893 8.26947C1.7579 8.16764 1.35052 7.96395 0.977099 7.65844C0.841319 7.55661 0.671585 7.52266 0.501851 7.62448C0.366071 7.69239 0.298162 7.89604 0.332117 8.06578C0.807364 9.66125 1.9955 10.9513 3.28547 11.732C2.67444 11.732 2.16524 11.6641 1.65604 11.3246C1.52026 11.2567 1.31657 11.2567 1.18079 11.3586C1.04501 11.4605 0.977099 11.6302 1.04501 11.7999C1.65604 13.5312 2.84417 14.4477 4.74521 14.6854C3.76076 15.2625 2.47079 15.7377 0.467935 15.7717C0.264246 15.7717 0.0945121 15.9075 0.0266419 16.0772C-0.0412674 16.2809 0.0266419 16.4506 0.162421 16.5864C1.38452 17.5709 4.10022 18.148 7.46095 18.148C13.4356 18.148 18.3239 12.8183 18.3239 6.26661V6.16479C19.0707 5.79136 19.6818 5.07847 19.9873 4.09402C20.0212 3.9582 19.9872 3.78847 19.8854 3.68664ZM17.8486 5.62159L17.6449 5.6895V6.26661C17.6449 12.4449 13.0621 17.469 7.46091 17.469C4.37174 17.469 2.30102 16.9598 1.18079 16.4167C3.52311 16.2469 4.88098 15.5001 5.93334 14.6854L6.78202 14.0743H5.76361C3.82866 14.0743 2.64052 13.5312 1.96159 12.2412C2.57262 12.4449 3.2176 12.4449 3.93049 12.411C4.20205 12.377 4.47365 12.377 4.74521 12.377L4.84703 11.6981C3.55707 11.3246 2.02946 10.1705 1.28261 8.60893C1.96155 8.91445 2.70836 8.98236 3.38729 8.98236H4.43965L3.59102 8.37129C2.87813 7.86209 0.773449 6.06292 1.79185 3.48295C3.96444 5.62159 6.03521 6.60604 9.76932 7.28498L10.1767 7.35289V6.40239C10.1767 4.29771 11.8061 2.56641 13.8429 2.53246C14.6094 2.49913 15.8665 3.18546 16.2656 3.40335C16.2731 3.40743 16.2802 3.41134 16.2871 3.41508C16.4908 3.51691 16.6945 3.55086 16.8981 3.48299C17.4073 3.31326 18.0183 3.07562 18.6973 2.80406C18.3918 3.31326 17.9844 3.78851 17.4413 4.22984C17.3055 4.33166 17.2715 4.53535 17.3394 4.70509C17.4074 4.87482 17.611 4.94273 17.7807 4.87482L19.1047 4.43353C18.867 4.87478 18.4936 5.38398 17.8486 5.62159Z" fill="#333333"></path>
-                <path d="M17.8486 5.62159L17.6449 5.6895V6.26661C17.6449 12.4449 13.0621 17.469 7.46091 17.469C4.37174 17.469 2.30102 16.9598 1.18079 16.4167C3.52311 16.2469 4.88098 15.5001 5.93334 14.6854L6.78202 14.0743H5.76361C3.82866 14.0743 2.64052 13.5312 1.96159 12.2412C2.57262 12.4449 3.2176 12.4449 3.93049 12.411C4.20205 12.377 4.47365 12.377 4.74521 12.377L4.84703 11.6981C3.55707 11.3246 2.02946 10.1705 1.28261 8.60893C1.96155 8.91445 2.70836 8.98236 3.38729 8.98236H4.43965L3.59102 8.37129C2.87813 7.86209 0.773449 6.06292 1.79185 3.48295C3.96444 5.62159 6.03521 6.60604 9.76932 7.28498L10.1767 7.35289V6.40239C10.1767 4.29771 11.8061 2.56641 13.8429 2.53246C14.6094 2.49913 15.8665 3.18546 16.2656 3.40335L16.2871 3.41508C16.4908 3.51691 16.6945 3.55086 16.8981 3.48299C17.4073 3.31326 18.0183 3.07562 18.6973 2.80406C18.3918 3.31326 17.9844 3.78851 17.4413 4.22984C17.3055 4.33166 17.2715 4.53535 17.3394 4.70509C17.4074 4.87482 17.611 4.94273 17.7807 4.87482L19.1047 4.43353C18.867 4.87478 18.4936 5.38398 17.8486 5.62159Z" fill="#333333"></path>
-              </svg></a></li>
         </ul><a class="scroll-link" href="#">scroll down</a>
       </section>
-      <section class="services-section section-box" data-idtitle="1">
-        <div class="services-section__decor-text"> <img src="assets/images/icons/Services.svg" alt="Services"></div>
+      <section class="services-section section-box wow fadeInUp" data-idtitle="1" data-wow-offset="90"> 
+        <div class="services-section__decor-text wow fadeInLeft" data-wow-offset="90"> <img src="assets/images/icons/Services.svg" alt="Services"></div>
         <div class="services-section__list">
           <ul class="services-section__list-box"> 
             <li class="services-section__box-item"> 
@@ -183,17 +175,17 @@
           </ul>
         </div>
       </section>
-      <section class="glance-section section-box" data-idtitle="2">
-        <div class="glance-section__decor-text"> <img src="assets/images/icons/Glance.svg" alt="Glance"></div>
+      <section class="glance-section section-box wow fadeInUp" data-idtitle="2"> 
+        <div class="glance-section__decor-text wow fadeInLeft"> <img src="assets/images/icons/Glance.svg" alt="Glance"></div>
         <div class="glance-section__banner"> <img src="assets/images/content/banner-glance.png" alt="Banner"></div>
       </section>
-      <section class="reach-section section-box" data-idtitle="3">
-        <div class="reach-section__decor-text"> <img src="assets/images/icons/Reach.svg" alt="Glance"></div>
+      <section class="reach-section section-box wow fadeInUp" data-idtitle="3"> 
+        <div class="reach-section__decor-text wow fadeInLeft"> <img src="assets/images/icons/Reach.svg" alt="Glance"></div>
         <div class="reach-section__map"> <img src="assets/images/content/map.svg" alt="map"></div>
-        <div class="reach-section__partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"><img src="#" alt="partners"></div>
+        <div class="reach-section__partners"><img src="assets/images/content/partner-1.png" alt="partners"><img src="assets/images/content/partner-2.png" alt="partners"><img src="assets/images/content/partner-3.png" alt="partners"><img src="assets/images/content/partner-4.png" alt="partners"><img src="assets/images/content/partner-5.png" alt="partners"><img src="assets/images/content/partner-6.png" alt="partners"><img src="assets/images/content/partner-7.png" alt="partners"><img src="assets/images/content/partner-8.png" alt="partners"><img src="assets/images/content/partner-9.png" alt="partners"><img src="assets/images/content/partner-10.png" alt="partners"><img src="assets/images/content/partner-11.png" alt="partners"><img src="assets/images/content/partner-12.png" alt="partners"><img src="assets/images/content/partner-13.png" alt="partners"><img src="assets/images/content/partner-14.png" alt="partners"><img src="assets/images/content/partner-15.png" alt="partners"><img src="assets/images/content/partner-16.png" alt="partners"><img src="assets/images/content/partner-17.png" alt="partners"><img src="assets/images/content/partner-18.png" alt="partners"><img src="assets/images/content/partner-19.png" alt="partners"><img src="assets/images/content/partner-20.png" alt="partners"><img src="assets/images/content/partner-21.png" alt="partners"><img src="assets/images/content/partner-22.png" alt="partners"><img src="assets/images/content/partner-23.png" alt="partners"></div>
       </section>
-      <section class="contacts-section section-box" data-idtitle="4">
-        <div class="contacts-section__decor-text"> <img src="assets/images/icons/Contacts.svg" alt="contact"></div>
+      <section class="contacts-section section-box wow fadeInUp" data-idtitle="4"> 
+        <div class="contacts-section__decor-text wow fadeInLeft"> <img src="assets/images/icons/Contacts.svg" alt="contact"></div>
         <div class="contacts-section__content"> 
           <h3 class="contacts-section__title">We’d love to hear from you</h3>
           <ul class="contacts-section__list"> 
