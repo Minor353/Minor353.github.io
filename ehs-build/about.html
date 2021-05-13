@@ -16,6 +16,7 @@
             <header>
               <div class="header__wrap"><a class="logo" href="#"><img src="assets/images/icons/logo-color.svg" alt="logo"></a>
                 <nav class="nav">
+                  <div class="nav__cross"></div>
                   <ul> 
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About us</a></li>
@@ -24,7 +25,7 @@
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Contact us</a></li>
                   </ul><a class="nav__form js-request-popup" href="#">Request for proposal</a>
-                </nav>
+                </nav><a class="burger" href="#"> <span></span></a>
               </div>
             </header>
       <div class="aside-img wow fadeInLeft"><img src="assets/images/icons/about-aside.svg" alt="ehs"></div>
@@ -138,7 +139,11 @@
           </ul>
         </div>
         <div class="vision-section__content vision-section__content_img"> 
-          <div class="vision-section__img"> <img src="assets/images/content/vision-banner.jpg" alt="vision"></div>
+          <div class="vision-section__img"> 
+            <picture>
+              <source srcset="assets/images/content/vision-banner-mob.jpg" media="(max-width: 1500px)"><img src="assets/images/content/vision-banner.jpg" alt="vision">
+            </picture>
+          </div>
         </div>
         <div class="vision-section__content"> 
           <h3 class="title-3 vision-section__content-title"></h3>
@@ -171,7 +176,11 @@
       </section>
       <section class="about-video wow fadeInUp"> 
         <div class="about-video__banner">
-          <div class="about-video__play"></div><img src="assets/images/content/about-video.jpg" alt="video">
+          <div class="about-video__play"></div>
+          <picture>
+            <source srcset="assets/images/content/about-video-mob.jpg" media="(max-width: 850px)">
+            <source srcset="assets/images/content/about-video-tab.jpg" media="(max-width: 1500px)"><img src="assets/images/content/about-video.jpg" alt="video">
+          </picture>
         </div>
         <div class="about-video__box">
           <video controls preload>
@@ -192,7 +201,10 @@
         </div>
         <div class="about-popups__links"> <a href="#" target="_blank">Eurohealth Systems</a><span>|</span><a href="#" target="_blank">eurohealthsystems.com</a></div>
       </div>
-      <footer> <a class="footer__logo" href="https://evoxlab.com.ua/#home" target="_blank"><img src="assets/images/icons/evox-logo.svg" alt="logo"></a>
+      <footer> <a class="footer__logo" href="https://evoxlab.com.ua/#home" target="_blank">
+          <picture>
+            <source srcset="assets/images/icons/evox-logo-mob.svg" media="(max-width: 1440px)"><img src="assets/images/icons/evox-logo.svg" alt="logo">
+          </picture></a>
         <div class="footer__rights"> <span>All Rights Reserved.<br></span><span>Eurohealth Systems 2020</span></div>
       </footer>
       <div class="proposal-popup"> 
